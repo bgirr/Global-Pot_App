@@ -1,0 +1,7 @@
+F:/android-ndk-r13b-windows-x86/android-ndk-r13b
+9
+armeabi-v7a
+-O3 -g -DNDEBUG
+
+ -IC:/Users/EliteBook-User/AppData/Local/Fusetools/Packages/Fuse.Scripting.V8/0.42.4 -IC:/Users/EliteBook-User/AppData/Local/Fusetools/Packages/Fuse.Text/0.42.4/harfbuzz/include -IC:/Users/EliteBook-User/AppData/Local/Fusetools/Packages/UnoCore/0.42.5/prebuilt/Android/include
+F:/android-ndk-r13b-windows-x86/android-ndk-r13b/sources/cxx-stl/stlport/stlport
