@@ -158,6 +158,7 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(Fuse.Triggers.IScrolledLengths.ScrollViewSize, "ScrollViewSize");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.Resources.MemoryPolicy.PreloadRetain, "PreloadRetain");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.Resources.MemoryPolicy.UnloadUnused, "UnloadUnused");
+        global::Uno.UX.Resource.SetGlobalKey(Fuse.Resources.MemoryPolicy.UnloadInBackgroundPolicy, "UnloadInBackground");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.Font.PlatformDefault, "PlatformDefault");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.ScalingModes.Identity, "Identity");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Local, "Local");
@@ -178,31 +179,34 @@ public partial class MainView: Fuse.App
     }
     void InitializeUX()
     {
-        var temp = new Fuse.Reactive.FuseJS.Http();
-        var temp1 = new Fuse.Reactive.FuseJS.TimerModule();
-        var temp2 = new Fuse.Triggers.BusyTaskModule();
-        var temp3 = new Fuse.FileSystem.FileSystemModule();
-        var temp4 = new Fuse.Storage.StorageModule();
-        var temp5 = new Polyfills.Window.WindowModule();
-        var temp6 = new FuseJS.Globals();
-        var temp7 = new FuseJS.Lifecycle();
-        var temp8 = new FuseJS.Environment();
-        var temp9 = new FuseJS.Base64();
-        var temp10 = new FuseJS.Bundle();
-        var temp11 = new FuseJS.FileReaderImpl();
-        var temp12 = new FuseJS.UserEvents();
+        var temp = new Fuse.Reactive.FuseJS.DiagnosticsImplModule();
+        var temp1 = new Fuse.Reactive.FuseJS.Http();
+        var temp2 = new Fuse.Reactive.FuseJS.TimerModule();
+        var temp3 = new Fuse.Drawing.BrushConverter();
+        var temp4 = new Fuse.Triggers.BusyTaskModule();
+        var temp5 = new Fuse.FileSystem.FileSystemModule();
+        var temp6 = new Fuse.Storage.StorageModule();
+        var temp7 = new Fuse.WebSocket.WebSocketClientModule();
+        var temp8 = new Polyfills.Window.WindowModule();
+        var temp9 = new FuseJS.Globals();
+        var temp10 = new FuseJS.Lifecycle();
+        var temp11 = new FuseJS.Environment();
+        var temp12 = new FuseJS.Base64();
+        var temp13 = new FuseJS.Bundle();
+        var temp14 = new FuseJS.FileReaderImpl();
+        var temp15 = new FuseJS.UserEvents();
         MainRouter = new Fuse.Navigation.Router();
-        var temp13 = new Fuse.Controls.Navigator();
+        var temp16 = new Fuse.Controls.Navigator();
         var LoginPage = new Template(this, this);
         var OverviewPage = new Template1(this, this);
         var RecipePage = new Template2(this, this);
         MainRouter.Name = __selector0;
-        temp13.DefaultTemplate = "OverviewPage";
-        temp13.Templates.Add(LoginPage);
-        temp13.Templates.Add(OverviewPage);
-        temp13.Templates.Add(RecipePage);
+        temp16.DefaultTemplate = "OverviewPage";
+        temp16.Templates.Add(LoginPage);
+        temp16.Templates.Add(OverviewPage);
+        temp16.Templates.Add(RecipePage);
         this.Children.Add(MainRouter);
-        this.Children.Add(temp13);
+        this.Children.Add(temp16);
     }
     static global::Uno.UX.Selector __selector0 = "MainRouter";
 }

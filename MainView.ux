@@ -3,7 +3,7 @@
 	<Font File="fonts/PatuaOne-Regular.ttf" ux:Global="Patua" />
 	<Font File="fonts/RobotoCondensed-Regular.ttf" ux:Global="Roboto" />
 	<Router ux:Name="MainRouter" />
-	<Navigator DefaultTemplate="OverviewPage">
+	<Navigator DefaultPath="LoginPage">
 		<LoginPage ux:Template="LoginPage" router="MainRouter"/>
 		<OverviewPage ux:Template="OverviewPage" router="MainRouter"/>
 		<RecipePage ux:Template="RecipePage" router="MainRouter"/>

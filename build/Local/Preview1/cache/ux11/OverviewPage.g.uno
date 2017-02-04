@@ -12,18 +12,43 @@ public partial class OverviewPage: Fuse.Controls.Page
             __parent = parent;
             __parentInstance = parentInstance;
         }
-        [Uno.Compiler.UxGenerated]
-        public partial class Template1: Uno.UX.Template
+        global::Uno.UX.Property<string> self_Value_inst;
+        static Template()
         {
-            [Uno.WeakReference] internal readonly Template __parent;
+        }
+        public override object New()
+        {
+            var self = new Fuse.Controls.Text();
+            self_Value_inst = new GlobalPot_FuseControlsTextControl_Value_Property(self, __selector0);
+            var temp = new Fuse.Reactive.DataBinding<string>(self_Value_inst, "recipe.id");
+            self.Visibility = Fuse.Elements.Visibility.Hidden;
+            self.Bindings.Add(temp);
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "Value";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template1: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly OverviewPage __parent;
+        [Uno.WeakReference] internal readonly OverviewPage __parentInstance;
+        public Template1(OverviewPage parent, OverviewPage parentInstance): base(null, false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        [Uno.Compiler.UxGenerated]
+        public partial class Template2: Uno.UX.Template
+        {
+            [Uno.WeakReference] internal readonly Template1 __parent;
             [Uno.WeakReference] internal readonly Fuse.Controls.StackPanel __parentInstance;
-            public Template1(Template parent, Fuse.Controls.StackPanel parentInstance): base(null, false)
+            public Template2(Template1 parent, Fuse.Controls.StackPanel parentInstance): base(null, false)
             {
                 __parent = parent;
                 __parentInstance = parentInstance;
             }
             global::Uno.UX.Property<string> temp_Value_inst;
-            static Template1()
+            static Template2()
             {
             }
             public override object New()
@@ -54,11 +79,11 @@ public partial class OverviewPage: Fuse.Controls.Page
             static global::Uno.UX.Selector __selector0 = "Value";
         }
         [Uno.Compiler.UxGenerated]
-        public partial class Template2: Uno.UX.Template
+        public partial class Template3: Uno.UX.Template
         {
-            [Uno.WeakReference] internal readonly Template __parent;
+            [Uno.WeakReference] internal readonly Template1 __parent;
             [Uno.WeakReference] internal readonly Fuse.Controls.StackPanel __parentInstance;
-            public Template2(Template parent, Fuse.Controls.StackPanel parentInstance): base(null, false)
+            public Template3(Template1 parent, Fuse.Controls.StackPanel parentInstance): base(null, false)
             {
                 __parent = parent;
                 __parentInstance = parentInstance;
@@ -66,7 +91,7 @@ public partial class OverviewPage: Fuse.Controls.Page
             global::Uno.UX.Property<string> self_Url_inst;
             global::Uno.UX.Property<string> __gen1_Right_inst;
             internal Uno.UX.StringConcatOperator __gen1;
-            static Template2()
+            static Template3()
             {
             }
             public override object New()
@@ -90,7 +115,7 @@ public partial class OverviewPage: Fuse.Controls.Page
         }
         global::Uno.UX.Property<object> temp_Items_inst;
         internal Fuse.Reactive.EventBinding temp_eb2;
-        static Template()
+        static Template1()
         {
         }
         public override object New()
@@ -99,8 +124,8 @@ public partial class OverviewPage: Fuse.Controls.Page
             var temp = new Fuse.Reactive.Each();
             temp_Items_inst = new GlobalPot_FuseReactiveEach_Items_Property(temp, __selector0);
             var temp1 = new Fuse.Controls.Panel();
-            var temp2 = new Template1(this, self);
-            var __gen0 = new Template2(this, self);
+            var temp2 = new Template2(this, self);
+            var __gen0 = new Template3(this, self);
             var temp3 = new Fuse.Reactive.DataBinding<object>(temp_Items_inst, "images");
             var temp_eb2 = new Fuse.Reactive.EventBinding("recipe_clicked");
             global::Fuse.Gestures.Clicked.AddHandler(temp1, temp_eb2.OnEvent);
@@ -145,16 +170,16 @@ public partial class OverviewPage: Fuse.Controls.Page
         var temp8 = new Fuse.Controls.Text();
         var temp9 = new Fuse.Controls.Panel();
         var temp10 = new Fuse.Controls.Button();
-        temp_eb1 = new Fuse.Reactive.EventBinding("login_clicked");
+        temp_eb1 = new Fuse.Reactive.EventBinding("overview_clicked");
         var temp11 = new Fuse.Drawing.StaticSolidColor(float4(1f, 1f, 1f, 1f));
         var temp12 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
         var temp13 = new Fuse.Reactive.JavaScript(__g_nametable);
-        var temp14 = new Fuse.Reactive.JavaScript(__g_nametable);
-        var temp15 = new Fuse.Controls.ScrollView();
-        var temp16 = new Fuse.Controls.DockPanel();
+        var temp14 = new Fuse.Controls.ScrollView();
+        var temp15 = new Fuse.Controls.DockPanel();
+        var temp16 = new Fuse.Controls.StackPanel();
         var temp17 = new Fuse.Controls.StackPanel();
-        var temp18 = new Fuse.Controls.StackPanel();
-        var temp19 = new Template(this, this);
+        var temp18 = new Template(this, this);
+        var temp19 = new Template1(this, this);
         var temp20 = new Fuse.Reactive.DataBinding<object>(temp_Items_inst, "recipes");
         var temp21 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
         var temp22 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
@@ -162,7 +187,6 @@ public partial class OverviewPage: Fuse.Controls.Page
         temp2.Children.Add(temp3);
         temp2.Children.Add(temp13);
         temp2.Children.Add(temp14);
-        temp2.Children.Add(temp15);
         global::Fuse.Controls.DockPanel.SetDock(temp3, Fuse.Layouts.Dock.Top);
         temp3.Children.Add(temp4);
         temp4.Background = temp12;
@@ -170,7 +194,7 @@ public partial class OverviewPage: Fuse.Controls.Page
         temp4.Children.Add(temp6);
         temp5.LineNumber = 2;
         temp5.FileName = "TopBar.ux";
-        temp5.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Login.js"));
+        temp5.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Recipes_API.js"));
         temp6.Height = new Uno.UX.Size(45f, Uno.UX.Unit.Unspecified);
         global::Fuse.Controls.DockPanel.SetDock(temp6, Fuse.Layouts.Dock.Top);
         temp6.Background = temp11;
@@ -187,20 +211,19 @@ public partial class OverviewPage: Fuse.Controls.Page
         temp10.Text = "Back";
         global::Fuse.Gestures.Clicked.AddHandler(temp10, temp_eb1.OnEvent);
         temp10.Bindings.Add(temp_eb1);
-        temp13.LineNumber = 8;
+        temp13.LineNumber = 9;
         temp13.FileName = "Overview.ux";
         temp13.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Recipes_API.js"));
-        temp14.LineNumber = 9;
-        temp14.FileName = "Overview.ux";
+        temp14.Children.Add(temp15);
+        global::Fuse.Controls.DockPanel.SetDock(temp15, Fuse.Layouts.Dock.Top);
+        temp15.Background = temp21;
         temp15.Children.Add(temp16);
-        global::Fuse.Controls.DockPanel.SetDock(temp16, Fuse.Layouts.Dock.Top);
-        temp16.Background = temp21;
+        temp16.Margin = float4(0f, 10f, 0f, 0f);
+        temp16.Opacity = 10f;
         temp16.Children.Add(temp17);
-        temp17.Margin = float4(0f, 10f, 0f, 0f);
-        temp17.Opacity = 10f;
-        temp17.Children.Add(temp18);
-        temp18.Orientation = Fuse.Layouts.Orientation.Vertical;
-        temp18.Children.Add(temp);
+        temp17.Orientation = Fuse.Layouts.Orientation.Vertical;
+        temp17.Children.Add(temp);
+        temp.Templates.Add(temp18);
         temp.Templates.Add(temp19);
         temp.Bindings.Add(temp20);
         __g_nametable.This = this;

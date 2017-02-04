@@ -3,36 +3,30 @@
 	<Router ux:Dependency="router" />
 	<DockPanel>
 		<Panel Dock="Top">
-<ux:Include File="TopBar.ux"/>
-</Panel>
-
-		<JavaScript File="Recipes_API.js" />
+			<ux:Include File="TopBar.ux"/>
+		</Panel>
+	<JavaScript File="Recipes_API.js" />
 <ScrollView>
-	<DockPanel Background="#003b59" Dock="Top">	
-			<StackPanel  Margin="0,10,0,0" Opacity="10">
+	<DockPanel Background="#003b59" Dock="Top" >	
+			<StackPanel  Margin="0,10,0,0" Opacity="10" >
 					<StackPanel Orientation="Vertical" >
-							<Button Text="D" Clicked="{foo}" />
-							<Each Items="{items}">
-								<Button Text="{}" Clicked="{foo}" />
-							</Each>
 						<Each Items="{recipes}">
 							<Text Value="{recipe.id}" Visibility="Hidden" />
 							<StackPanel>
 								<Panel Clicked="{recipe_clicked}">
-										<Each Items="{images}">
-									<DockPanel>
-										<Panel Dock="Top" Background="#333" MaxWidth="300" Alignment="Left" Margin="0,20,0,0" Opacity="0.8">
-											<Text  Value="{recipeName}" TextWrapping="Wrap" Alignment="TopLeft" Margin="10" Color="#FFFFFF" Font="Patua" FontSize="20"/>
-										</Panel>
-									</DockPanel>
+									<Each Items="{images}">
+										<DockPanel>
+											<Panel Dock="Top" Background="#333" MaxWidth="300" Alignment="Left" Margin="0,20,0,0" Opacity="0.8">
+												<Text  Value="{recipeName}" TextWrapping="Wrap" Alignment="TopLeft" Margin="10" Color="#FFFFFF" Font="Patua" FontSize="20"/>
+											</Panel>
+										</DockPanel>
 										<Image Url="http://cookingtest-cookingtest.rhcloud.com/static/resource/img/recipeImages/{imageUrl}" Dock="Left" Margin="0,10,0,0"/>	
-										</Each>
-									
+									</Each>
 								</Panel>
 							</StackPanel>
 						</Each>
 					</StackPanel>
-			</StackPanel>		
+			</StackPanel>
 	</DockPanel>
 </ScrollView>
     </DockPanel>

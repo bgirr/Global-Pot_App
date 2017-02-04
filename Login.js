@@ -5,8 +5,9 @@ var recipes = Observable();
 
 function login_clicked()
 {
-    
+    debug_log("Hier bist Du falsch!")
     router.goto("OverviewPage");
+
 }
 
 module.exports = {
