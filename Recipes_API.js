@@ -1,5 +1,13 @@
 var Observable = require("FuseJS/Observable");
 var recipes = Observable();
+var BusyTask = require("FuseJS/BusyTask");
+
+    exports.startLoading = function() {
+        var task = new BusyTask(myContent);
+        setTimeout(function() {
+            task.done();
+        }, 4000);
+    };
 
 
 fetch("http://cookingtest-cookingtest.rhcloud.com/recipes/api/recipes/")
@@ -28,8 +36,14 @@ function recipe_clicked(a){
 		router.push("RecipePage", { recipe: recipe });
 		}
 
+function cooking_clicked(a){
+		var recipe = a.data;
+		router.push("CookingPage", { recipe: recipe });
+		}
+
 		module.exports = {
 		recipes: recipes,
 		recipe_clicked: recipe_clicked,
+		cooking_clicked: cooking_clicked,
 		overview_clicked: overview_clicked,
 		}

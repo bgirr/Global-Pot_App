@@ -1,20 +1,17 @@
 <Page ux:Class="CookingPage" Background="#003b59">
-	<Panel>
+	<iOS.StatusBarConfig IsVisible="false" />
+	<Router ux:Dependency="router" />
+	<DockPanel>
+		<Panel Dock="Top">
+			<ux:Include File="TopBar.ux"/>
+		</Panel>
+		<JavaScript File="Recipe_API.js" />
 		<JavaScript>
 			var Observable = require("FuseJS/Observable");
 
 			var resetting = Observable(false);
 
-			function City(name, imageKey, country, visitors, nonVisitors)
-			{
-				this.name = name;
-				this.imageKey = imageKey;
-				this.country = country;
-				this.visitors = Observable(visitors);
-				this.nonVisitors = Observable(nonVisitors);
-				this.degrees = -4 + (8 * Math.random());
-			}
-
+			
 			function reset(x) {
 				resetting.value = true;
 				setTimeout(backToNormal, 300);
@@ -25,37 +22,7 @@
 			}
 
 			module.exports = {
-			    cities : [
-					new City("Oslo", "Assets/Cities/Oslo.jpg", "NORWAY", 3127, 3943),
-					new City("Paris", "Assets/Cities/Paris.jpg", "FRANCE", 10250, 400),
-					new City("San Francisco", "Assets/Cities/San Francisco.jpg", "USA", 6700, 5421),
-					new City("Seoul", "Assets/Cities/Seoul.jpg", "KOREA", 5713, 4702),
-					new City("Tokyo", "Assets/Cities/Tokyo.jpg", "JAPAN", 4512, 657)
-				],
-				visited: function(x)
-				{
-					debug_log("Visited " + x.data.name);
-				},
-				notVisited: function(x)
-				{
-					debug_log("Not visited " + x.data.name);
-				},
-				addVisitor: function(x)
-				{
-					x.data.visitors.value = x.data.visitors.value + 1;
-				},
-				removeVisitor: function(x)
-				{
-					x.data.visitors.value = x.data.visitors.value - 1;
-				},
-				addNonVisitor: function(x)
-				{
-					x.data.nonVisitors.value = x.data.nonVisitors.value + 1;
-				},
-				removeNonVisitor: function(x) {
-					x.data.nonVisitors.value = x.data.nonVisitors.value - 1;
-				},
-				reset: reset,
+			    reset: reset,
 				resetting: resetting
 			};
 
@@ -64,37 +31,52 @@
 
 		<Panel>
 			<Fuse.iOS.StatusBarConfig Style="Dark" />
-			<Each Items="{cities}">
-				<Panel Margin="0" Height="90%" Width="90%">
+			<Each Items="{recipe.steps}">
+				<Panel Margin="0" Height="40%" Width="90%" Alignment="BottomCenter">
 					<Rotation Degrees="{degrees}" />
-
-					<DockPanel Margin="0" Height="100%" Width="100%">
-
-						<Grid Columns="auto,1*,auto"  Margin="0,14,0,5" Dock="Top">
-							<Image ux:Name="visited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0" Height="40" Alignment="VerticalCenter" />
-							<StackPanel Alignment="VerticalCenter">
-								<Text Value="{name}" FontSize="18" Alignment="Center" Font="Patua" Color="#434343" />
-								<Text Value="{country}" FontSize="12" Alignment="Center" Font="Patua" Color="#c4c4c4" Margin="0,-3,0,10" />
+					<StackPanel Margin="0" Height="100%" Width="100%">
+						<Panel>
+							<Text Value="Schritt {localId}" Font="Patua" FontSize="30" Alignment="Center" Margin="0,0,20,0"/>
+							<Image ux:Name="visited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0" Height="40" Alignment="TopLeft" />
+						</Panel>
+							<StackPanel Alignment="VerticalCenter" MinWidth="100%" MinHeight="100%">
+										<Each Items="{usedIngs}">
+											<DockPanel Background="#003b59" Margin="0,0,0,0" MinWidth="100%" Alignment="Top" MinHeight="100%">
+												<Panel Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
+													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30"/>
+												</Panel>
+												<Panel MinHeight="30 " MinWidth="40" Margin="40,15,0,0">
+													<Text Value="{ingredient.nameDe}" Margin="0,0,0,10" Color="#FFFFFF" Font="Roboto"/>
+												</Panel>
+											</DockPanel>
+										</Each>
+										<Each Items="{usedResults}">
+											<DockPanel Background="#003b59">
+												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
+													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30">
+														<WhileBusy>
+								                            <Rectangle Color="#EEE">
+								                                <Stroke Width="1" Color="#CCC" />
+								                            </Rectangle>
+								                        </WhileBusy>
+							                    	</Image>
+												</Panel>
+												<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
+													<Text Value="{usedStepLocalId}" Margin="0,0,0,0" Color="#FFFFFF" Font="Roboto"/>
+												</Panel>
+											</DockPanel>
+										</Each>
+											<Panel Column="3" MinWidth="100%" Margin="0,0,0,0" Background="#A1D1E9">
+												<Text Value="{procedure.nameDe}" Margin="95,0,0,0"  Font="Roboto"/>
+											</Panel>
 							</StackPanel>
 							<Image ux:Name="notVisited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0"  Height="40" Alignment="VerticalCenter" />
-						</Grid>
+
 
 						<Image ux:Name="visitedOverlay" StretchMode="UniformToFill" File="Assets/Emblems/VisitedOverlay.png" Opacity="0" Dock="Fill" />
 						<Image ux:Name="notVisitedOverlay" StretchMode="UniformToFill" File="Assets/Emblems/VisitedOverlay.png" Opacity="0" Dock="Fill" />
 						<Image File="{imageKey}" Margin="0" StretchMode="UniformToFill" Dock="Fill" />
-
-						<Grid ColumnCount="2" Margin="0,0,0,0"  Background="#e5e5e5" Dock="Bottom" Height="55">
-							<StackPanel Padding="0,5,1,5" Background="#fff" Margin="0,0,1,0">
-								<Text FontSize="22" Alignment="Center" Font="Patua" Value="{visitors}" />
-								<Text FontSize="12" Alignment="Center" Font="Patua" Color="#c4c4c4">HAVE BEEN HERE</Text>
-							</StackPanel>
-
-							<StackPanel Padding="0,5,0,5" Background="#fff">
-								<Text FontSize="22" Alignment="Center" Font="Patua" Value="{visitors}" />
-								<Text FontSize="12" Alignment="Center" Font="Patua" Color="#c4c4c4">HAVEN'T VISITED</Text>
-							</StackPanel>
-						</Grid>
-					</DockPanel>
+					</StackPanel>
 					<Panel Background="White" Margin="0" Height="100%" Width="100%">
 						<DropShadow Distance="0" Size="2" ux:Name="shadow" />
 					</Panel>
@@ -109,21 +91,13 @@
 					</InForceFieldAnimation>
 
 					<InForceFieldAnimation ForceField="notVisitedAttractor" From="0.1" To="0.3">
-						<Change notVisited.Opacity="1" Duration="1" />
-						<Change notVisitedOverlay.Opacity="1" Duration="1" />
+						<Change visited.Opacity="1" Duration="1" />
+						<Change visitedOverlay.Opacity="1" Duration="1" />
 					</InForceFieldAnimation>
 
 					<InForceFieldAnimation ForceField="notVisitedAttractor">
 						<Rotate Degrees="8" />
 					</InForceFieldAnimation>
-
-					<EnteredForceField ForceField="visitedAttractor" Threshold="0.9" Handler="{visited}" />
-					<EnteredForceField ForceField="notVisitedAttractor" Threshold="0.9" Handler="{notVisited}" />
-
-					<EnteredForceField ForceField="visitedAttractor" Threshold="0.05" Handler="{addVisitor}" />
-					<ExitedForceField ForceField="visitedAttractor" Threshold="0.05" Handler="{removeVisitor}" />
-					<EnteredForceField ForceField="notVisitedAttractor" Threshold="0.05" Handler="{addVisitor}" />
-					<ExitedForceField ForceField="notVisitedAttractor" Threshold="0.05" Handler="{removeVisitor}" />
 
 					<Draggable />
 
@@ -148,9 +122,11 @@
 
 		</Panel>
 
-		<Panel>
-			<Image Clicked="{reset}" Height="64" Width="64" File="Assets/Icons/Refresh.png" />
-		</Panel>
+		<DockPanel>
+			<Image Clicked="{reset}" Height="64" Width="64" File="Assets/Icons/Refresh.png" Margin="70,0,0,0"/>
+			<Text Value="Guten Appetit!" Font="Patua" FontSize="30" Alignment="Center" Color="White" Margin="0,140,0,0"/>
+			<Image File="images/logo_v02.png" Height="100"/>
+		</DockPanel>
 
-	</Panel>
+	</DockPanel>
 </Page>

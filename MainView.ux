@@ -7,5 +7,6 @@
 		<LoginPage ux:Template="LoginPage" router="MainRouter"/>
 		<OverviewPage ux:Template="OverviewPage" router="MainRouter"/>
 		<RecipePage ux:Template="RecipePage" router="MainRouter"/>
+		<CookingPage ux:Template="CookingPage" router="MainRouter" />
 	</Navigator>
 </App>

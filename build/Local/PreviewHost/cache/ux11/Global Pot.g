@@ -1,3 +1,4 @@
+build/Local/PreviewHost/cache/ux11/CookingPage.g.uno
 build/Local/PreviewHost/cache/ux11/LoginPage.g.uno
 build/Local/PreviewHost/cache/ux11/WhiteText.g.uno
 build/Local/PreviewHost/cache/ux11/MainView.g.uno
