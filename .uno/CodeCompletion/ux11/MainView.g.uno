@@ -201,7 +201,7 @@ public partial class MainView: Fuse.App
         var OverviewPage = new Template1(this, this);
         var RecipePage = new Template2(this, this);
         MainRouter.Name = __selector0;
-        temp16.DefaultTemplate = "OverviewPage";
+        temp16.DefaultPath = "LoginPage";
         temp16.Templates.Add(LoginPage);
         temp16.Templates.Add(OverviewPage);
         temp16.Templates.Add(RecipePage);

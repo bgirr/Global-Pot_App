@@ -1,0 +1,10 @@
+<Panel Background="#003B59">
+	<JavaScript File="Recipes_API.js"/>
+	<DockPanel Dock="Top" Height="45" Background="#FFFFFF">
+		<Panel Alignment="Center">
+			<Text Value="Global Pot" Color="#003B59" Font="Patua" FontSize="30"/>
+		</Panel>
+		<Panel Alignment="Left">
+		</Panel>
+	</DockPanel>
+</Panel>

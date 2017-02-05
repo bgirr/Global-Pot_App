@@ -5,7 +5,12 @@
 			<Text Value="Global Pot" Color="#003B59" Font="Patua" FontSize="30"/>
 		</Panel>
 		<Panel Alignment="Left">
-			<Button Text="Back" Clicked="{overview_clicked}"/>
+			<Image File="images/left-arrow.png" Clicked="{overview_clicked}" Margin="10,0,0,0" Height="20" Width="50">
+				<Tapped>
+					<Scale Factor="1" Duration="0.8" />
+					<Move X="-3" Duration="0.3" Easing="QuadraticInOut" RelativeTo="Size"/>
+				</Tapped>
+			</Image>	
 		</Panel>
 	</DockPanel>
 </Panel>

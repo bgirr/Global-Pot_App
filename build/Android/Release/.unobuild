@@ -1,0 +1,4 @@
+$: -1244244322
+BuildCommand: build.bat
+RunCommand: run.bat
+Product: "Global Pot.apk"
