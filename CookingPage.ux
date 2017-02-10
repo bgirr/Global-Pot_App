@@ -10,15 +10,7 @@
 			var Observable = require("FuseJS/Observable");
 
 			var resetting = Observable(false);
-			var degrees = Observable();
-
-
-            for (i=0; i<50; i++) {
-                var degree[i].value = -4 + (8 * Math.random());
-                degrees.add(item);
-            };
-
-			
+			            		
 			function reset(x) {
 				resetting.value = true;
 				setTimeout(backToNormal, 300);
@@ -30,8 +22,7 @@
 
 			module.exports = {
 			    reset: reset,
-				resetting: resetting,
-				degrees: degrees
+				resetting: resetting
 				
 			};
 

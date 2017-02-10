@@ -516,7 +516,7 @@ public partial class CookingPage: Fuse.Controls.Page
         temp17.LineNumber = 8;
         temp17.FileName = "CookingPage.ux";
         temp17.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Recipe_API.js"));
-        temp18.Code = "var Observable = require(\"FuseJS/Observable\");\n\n\t\t\tvar resetting = Observable(false);\n\t\t\tvar degrees = [];\n\n\t\t\tfor (i=0; i<Rezept.steps.length; i++) {\n\t\t\t\tvar item = -4 + (8 * Math.random());\n\t\t\t\tdegrees.add(item);\n\t\t\t}\n\t\t\t\n\n\t\t\t\n\t\t\tfunction reset(x) {\n\t\t\t\tresetting.value = true;\n\t\t\t\tsetTimeout(backToNormal, 300);\n\t\t\t}\n\n\t\t\tfunction backToNormal() {\n\t\t\t\tresetting.value = false;\n\t\t\t}\n\n\t\t\tmodule.exports = {\n\t\t\t    reset: reset,\n\t\t\t\tresetting: resetting\n\t\t\t\t\n\t\t\t};\n\n\t\t\treset();";
+        temp18.Code = "var Observable = require(\"FuseJS/Observable\");\n\n\t\t\tvar resetting = Observable(false);\n\t\t\tvar degrees = Observable();\n\n\n            for (i=0; i<50; i++) {\n                var degree[i].value = -4 + (8 * Math.random());\n                degrees.add(item);\n            };\n\n\t\t\t\n\t\t\tfunction reset(x) {\n\t\t\t\tresetting.value = true;\n\t\t\t\tsetTimeout(backToNormal, 300);\n\t\t\t}\n\n\t\t\tfunction backToNormal() {\n\t\t\t\tresetting.value = false;\n\t\t\t}\n\n\t\t\tmodule.exports = {\n\t\t\t    reset: reset,\n\t\t\t\tresetting: resetting,\n\t\t\t\tdegrees: degrees\n\t\t\t\t\n\t\t\t};\n\n\t\t\treset();";
         temp18.LineNumber = 9;
         temp18.FileName = "CookingPage.ux";
         temp19.Children.Add(temp20);
