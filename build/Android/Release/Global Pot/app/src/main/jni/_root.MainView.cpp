@@ -6,6 +6,7 @@
 #include <_root.MainView.Template.h>
 #include <_root.MainView.Template1.h>
 #include <_root.MainView.Template2.h>
+#include <_root.MainView.Template3.h>
 #include <Fuse.Animations.Easing.h>
 #include <Fuse.Animations.IResizeMode.h>
 #include <Fuse.Controls.Navigator.h>
@@ -64,7 +65,7 @@ namespace g{
 
 // public partial sealed class MainView :2
 // {
-// static MainView() :70
+// static MainView() :91
 static void MainView__cctor_1_fn(uType* __type)
 {
     MainView::__selector0_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[0/*"MainRouter"*/]);
@@ -280,19 +281,19 @@ static void MainView_build(uType* type)
     return type;
 }
 
-// public MainView() :176
+// public MainView() :197
 void MainView__ctor_4_fn(MainView* __this)
 {
     __this->ctor_4();
 }
 
-// private void InitializeUX() :180
+// private void InitializeUX() :201
 void MainView__InitializeUX_fn(MainView* __this)
 {
     __this->InitializeUX();
 }
 
-// public MainView New() :176
+// public MainView New() :197
 void MainView__New1_fn(MainView** __retval)
 {
     *__retval = MainView::New1();
@@ -302,14 +303,14 @@ void MainView__New1_fn(MainView** __retval)
 uSStrong< ::g::Fuse::Font*> MainView::Patua_;
 uSStrong< ::g::Fuse::Font*> MainView::Roboto_;
 
-// public MainView() [instance] :176
+// public MainView() [instance] :197
 void MainView::ctor_4()
 {
     ctor_3();
     InitializeUX();
 }
 
-// private void InitializeUX() [instance] :180
+// private void InitializeUX() [instance] :201
 void MainView::InitializeUX()
 {
     ::g::Fuse::Reactive::FuseJS::DiagnosticsImplModule* temp = ::g::Fuse::Reactive::FuseJS::DiagnosticsImplModule::New2();
@@ -333,16 +334,18 @@ void MainView::InitializeUX()
     MainView__Template* LoginPage = MainView__Template::New2(this, this);
     MainView__Template1* OverviewPage = MainView__Template1::New2(this, this);
     MainView__Template2* RecipePage = MainView__Template2::New2(this, this);
+    MainView__Template3* CookingPage = MainView__Template3::New2(this, this);
     uPtr(MainRouter)->Name(MainView::__selector0());
     temp16->DefaultPath(::STRINGS[79/*"LoginPage"*/]);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), LoginPage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), OverviewPage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), RecipePage);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), CookingPage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), MainRouter);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp16);
 }
 
-// public MainView New() [static] :176
+// public MainView New() [static] :197
 MainView* MainView::New1()
 {
     MainView* obj1 = (MainView*)uNew(MainView_typeof());

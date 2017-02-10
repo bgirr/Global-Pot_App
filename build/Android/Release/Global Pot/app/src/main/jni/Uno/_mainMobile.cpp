@@ -44,16 +44,29 @@ namespace g{uClassType* FuseDrawingPrimitives_bundle_typeof();}
 namespace g{uClassType* FuseEffects_bundle_typeof();}
 namespace g{uClassType* FuseElements_bundle_typeof();}
 namespace g{uClassType* FuseReactive_bundle_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template1_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template2_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* CookingPage_typeof();}
 namespace g{uClassType* GlobalPot_bundle_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsImage_File_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsImage_Url_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsTextControl_Value_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseEffectsDropShadow_Distance_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseEffectsDropShadow_Size_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseElementsElement_Opacity_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FusePhysicsPointAttractor_Radius_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FusePhysicsPointAttractor_Strength_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseReactiveEach_Items_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseRotation_Degrees_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseTriggersWhileBool_Value_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_UnoUXStringConcatOperator_Left_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_UnoUXStringConcatOperator_Right_Property_typeof();}
 namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* LoginPage_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template1_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template2_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template3_typeof();}
 namespace g{namespace Fuse{struct AppBase_type;} ::g::Fuse::AppBase_type* MainView_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* OverviewPage__Template__Template1_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* OverviewPage__Template__Template2_typeof();}
@@ -841,6 +854,7 @@ namespace g{namespace Fuse{namespace Triggers{struct Trigger_type; ::g::Fuse::Tr
 namespace g{namespace Fuse{namespace Triggers{uType* TransitionGroup_typeof();}}}
 namespace g{namespace Fuse{namespace Triggers{struct Trigger_type; Trigger_type* Trigger_typeof();}}}
 namespace g{namespace Fuse{namespace Triggers{struct WhileBool_type; WhileBool_type* WhileBool_typeof();}}}
+namespace g{namespace Fuse{namespace Triggers{struct WhileBusy_type; WhileBusy_type* WhileBusy_typeof();}}}
 namespace g{namespace Fuse{namespace Triggers{struct Trigger_type; ::g::Fuse::Triggers::Trigger_type* WhileCompleted_typeof();}}}
 namespace g{namespace Fuse{namespace Triggers{struct WhileBool_type; ::g::Fuse::Triggers::WhileBool_type* WhileFalse_typeof();}}}
 namespace g{namespace Fuse{namespace Triggers{struct Trigger_type; ::g::Fuse::Triggers::Trigger_type* WhileKeyboardVisible_typeof();}}}
@@ -1044,7 +1058,10 @@ namespace g{namespace Fuse{namespace Triggers{struct Trigger_type;}} namespace F
 namespace g{namespace Fuse{namespace Gestures{struct SwipeGesture_type; SwipeGesture_type* SwipeGesture_typeof();}}}
 namespace g{namespace Fuse{namespace Gestures{uType* SwipeGestureHelper_typeof();}}}
 namespace g{namespace Fuse{namespace Gestures{struct SwipingAnimation_type; SwipingAnimation_type* SwipingAnimation_typeof();}}}
+namespace g{namespace Fuse{namespace Triggers{struct Trigger_type;}} namespace Fuse{namespace Gestures{::g::Fuse::Triggers::Trigger_type* Tapped_typeof();}}}
+namespace g{namespace Fuse{struct VisualEventArgs_type; namespace Gestures{::g::Fuse::VisualEventArgs_type* TappedArgs_typeof();}}}
 namespace g{namespace Fuse{namespace Triggers{namespace Actions{struct TriggerAction_type;}}} namespace Fuse{namespace Gestures{::g::Fuse::Triggers::Actions::TriggerAction_type* ToggleSwipeActive_typeof();}}}
+namespace g{namespace Fuse{namespace Triggers{struct Trigger_type;}} namespace Fuse{namespace Gestures{::g::Fuse::Triggers::Trigger_type* WhilePressed_typeof();}}}
 namespace g{namespace Fuse{namespace Gestures{namespace Internal{uType* SwipeRegion__DoSwiped_typeof();}}}}
 namespace g{namespace Fuse{namespace Gestures{namespace Internal{uType* EdgeSwiper_typeof();}}}}
 namespace g{namespace Fuse{namespace Gestures{namespace Internal{uType* Swiper_typeof();}}}}
@@ -1128,6 +1145,18 @@ namespace g{namespace Fuse{namespace FileSystem{uType* FileSystemOperations_type
 namespace g{namespace Fuse{namespace FileSystem{uType* Nothing_typeof();}}}
 namespace g{namespace Fuse{namespace FileSystem{uClassType* PathTools_typeof();}}}
 namespace g{namespace Fuse{namespace FileSystem{uClassType* UnifiedPaths_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{uType* Body_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct Draggable_type; Draggable_type* Draggable_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct ForceFieldTrigger_type; ::g::Fuse::Physics::ForceFieldTrigger_type* EnteredForceField_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct ForceFieldTrigger_type; ::g::Fuse::Physics::ForceFieldTrigger_type* ExitedForceField_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct ForceField_type; ForceField_type* ForceField_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{uType* ForceFieldEventArgs_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct ForceFieldTrigger_type; ::g::Fuse::Physics::ForceFieldTrigger_type* ForceFieldEventTrigger_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct ForceFieldTrigger_type; ForceFieldTrigger_type* ForceFieldTrigger_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct ForceFieldTrigger_type; ::g::Fuse::Physics::ForceFieldTrigger_type* InForceFieldAnimation_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{struct ForceField_type; ::g::Fuse::Physics::ForceField_type* PointAttractor_typeof();}}}
+namespace g{namespace Fuse{namespace Triggers{struct Trigger_type;}} namespace Fuse{namespace Physics{::g::Fuse::Triggers::Trigger_type* WhileDragging_typeof();}}}
+namespace g{namespace Fuse{namespace Physics{uType* World_typeof();}}}
 namespace g{namespace Fuse{struct Node_type; namespace Selection{::g::Fuse::Node_type* Selectable_typeof();}}}
 namespace g{namespace Fuse{namespace Selection{struct Selection_type; Selection_type* Selection_typeof();}}}
 namespace g{namespace Fuse{namespace Triggers{namespace Actions{struct TriggerAction_type;}}} namespace Fuse{namespace Selection{::g::Fuse::Triggers::Actions::TriggerAction_type* ToggleSelection_typeof();}}}
@@ -1200,16 +1229,29 @@ void uInitRtti()
         (uType*(*)())&::g::FuseEffects_bundle_typeof,
         (uType*(*)())&::g::FuseElements_bundle_typeof,
         (uType*(*)())&::g::FuseReactive_bundle_typeof,
+        (uType*(*)())&::g::CookingPage__Template__Template1_typeof,
+        (uType*(*)())&::g::CookingPage__Template__Template2_typeof,
+        (uType*(*)())&::g::CookingPage__Template_typeof,
+        (uType*(*)())&::g::CookingPage_typeof,
         (uType*(*)())&::g::GlobalPot_bundle_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseControlsImage_File_Property_typeof,
         (uType*(*)())&::g::GlobalPot_FuseControlsImage_Url_Property_typeof,
         (uType*(*)())&::g::GlobalPot_FuseControlsTextControl_Value_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseEffectsDropShadow_Distance_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseEffectsDropShadow_Size_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseElementsElement_Opacity_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FusePhysicsPointAttractor_Radius_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FusePhysicsPointAttractor_Strength_Property_typeof,
         (uType*(*)())&::g::GlobalPot_FuseReactiveEach_Items_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseRotation_Degrees_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseTriggersWhileBool_Value_Property_typeof,
         (uType*(*)())&::g::GlobalPot_UnoUXStringConcatOperator_Left_Property_typeof,
         (uType*(*)())&::g::GlobalPot_UnoUXStringConcatOperator_Right_Property_typeof,
         (uType*(*)())&::g::LoginPage_typeof,
         (uType*(*)())&::g::MainView__Template_typeof,
         (uType*(*)())&::g::MainView__Template1_typeof,
         (uType*(*)())&::g::MainView__Template2_typeof,
+        (uType*(*)())&::g::MainView__Template3_typeof,
         (uType*(*)())&::g::MainView_typeof,
         (uType*(*)())&::g::OverviewPage__Template__Template1_typeof,
         (uType*(*)())&::g::OverviewPage__Template__Template2_typeof,
@@ -1997,6 +2039,7 @@ void uInitRtti()
         (uType*(*)())&::g::Fuse::Triggers::TransitionGroup_typeof,
         (uType*(*)())&::g::Fuse::Triggers::Trigger_typeof,
         (uType*(*)())&::g::Fuse::Triggers::WhileBool_typeof,
+        (uType*(*)())&::g::Fuse::Triggers::WhileBusy_typeof,
         (uType*(*)())&::g::Fuse::Triggers::WhileCompleted_typeof,
         (uType*(*)())&::g::Fuse::Triggers::WhileFalse_typeof,
         (uType*(*)())&::g::Fuse::Triggers::WhileKeyboardVisible_typeof,
@@ -2200,7 +2243,10 @@ void uInitRtti()
         (uType*(*)())&::g::Fuse::Gestures::SwipeGesture_typeof,
         (uType*(*)())&::g::Fuse::Gestures::SwipeGestureHelper_typeof,
         (uType*(*)())&::g::Fuse::Gestures::SwipingAnimation_typeof,
+        (uType*(*)())&::g::Fuse::Gestures::Tapped_typeof,
+        (uType*(*)())&::g::Fuse::Gestures::TappedArgs_typeof,
         (uType*(*)())&::g::Fuse::Gestures::ToggleSwipeActive_typeof,
+        (uType*(*)())&::g::Fuse::Gestures::WhilePressed_typeof,
         (uType*(*)())&::g::Fuse::Gestures::Internal::SwipeRegion__DoSwiped_typeof,
         (uType*(*)())&::g::Fuse::Gestures::Internal::EdgeSwiper_typeof,
         (uType*(*)())&::g::Fuse::Gestures::Internal::Swiper_typeof,
@@ -2284,6 +2330,18 @@ void uInitRtti()
         (uType*(*)())&::g::Fuse::FileSystem::Nothing_typeof,
         (uType*(*)())&::g::Fuse::FileSystem::PathTools_typeof,
         (uType*(*)())&::g::Fuse::FileSystem::UnifiedPaths_typeof,
+        (uType*(*)())&::g::Fuse::Physics::Body_typeof,
+        (uType*(*)())&::g::Fuse::Physics::Draggable_typeof,
+        (uType*(*)())&::g::Fuse::Physics::EnteredForceField_typeof,
+        (uType*(*)())&::g::Fuse::Physics::ExitedForceField_typeof,
+        (uType*(*)())&::g::Fuse::Physics::ForceField_typeof,
+        (uType*(*)())&::g::Fuse::Physics::ForceFieldEventArgs_typeof,
+        (uType*(*)())&::g::Fuse::Physics::ForceFieldEventTrigger_typeof,
+        (uType*(*)())&::g::Fuse::Physics::ForceFieldTrigger_typeof,
+        (uType*(*)())&::g::Fuse::Physics::InForceFieldAnimation_typeof,
+        (uType*(*)())&::g::Fuse::Physics::PointAttractor_typeof,
+        (uType*(*)())&::g::Fuse::Physics::WhileDragging_typeof,
+        (uType*(*)())&::g::Fuse::Physics::World_typeof,
         (uType*(*)())&::g::Fuse::Selection::Selectable_typeof,
         (uType*(*)())&::g::Fuse::Selection::Selection_typeof,
         (uType*(*)())&::g::Fuse::Selection::ToggleSelection_typeof,

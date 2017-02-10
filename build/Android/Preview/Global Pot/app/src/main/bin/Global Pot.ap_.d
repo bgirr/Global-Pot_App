@@ -29,8 +29,11 @@ F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\observabl
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\patuaone-regular-29b8ccf8.ttf \
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\recipes_api-5dc99a15.js \
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\recipe_api-fcdd8df8.js \
+F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\refresh-f841717b.png \
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\robotocondensed-reg-7877303f.ttf \
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\settimeout-d1321edb.js \
+F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\visited-809e353a.png \
+F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\visitedoverlay-cc6295f1.png \
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\websocketapi-9e6adbc9.js \
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\window-4e47903c.js \
 F:\Global Pot_App\build\Android\Preview\Global Pot\app\src\main\assets\windowbase64-461def11.js \

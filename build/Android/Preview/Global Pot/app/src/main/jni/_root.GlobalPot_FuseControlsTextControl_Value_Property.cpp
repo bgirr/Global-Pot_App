@@ -10,7 +10,7 @@
 
 namespace g{
 
-// internal sealed class GlobalPot_FuseControlsTextControl_Value_Property :10
+// internal sealed class GlobalPot_FuseControlsTextControl_Value_Property :28
 // {
 static void GlobalPot_FuseControlsTextControl_Value_Property_build(uType* type)
 {
@@ -38,52 +38,52 @@ static void GlobalPot_FuseControlsTextControl_Value_Property_build(uType* type)
     return type;
 }
 
-// public GlobalPot_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :13
+// public GlobalPot_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :31
 void GlobalPot_FuseControlsTextControl_Value_Property__ctor_2_fn(GlobalPot_FuseControlsTextControl_Value_Property* __this, ::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector* name)
 {
     __this->ctor_2(obj, *name);
 }
 
-// public override sealed string Get() :15
+// public override sealed string Get() :33
 void GlobalPot_FuseControlsTextControl_Value_Property__Get_fn(GlobalPot_FuseControlsTextControl_Value_Property* __this, uString** __retval)
 {
     uStackFrame __("GlobalPot_FuseControlsTextControl_Value_Property", "Get()");
     return *__retval = uPtr(__this->_obj)->Value(), void();
 }
 
-// public GlobalPot_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :13
+// public GlobalPot_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :31
 void GlobalPot_FuseControlsTextControl_Value_Property__New1_fn(::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector* name, GlobalPot_FuseControlsTextControl_Value_Property** __retval)
 {
     *__retval = GlobalPot_FuseControlsTextControl_Value_Property::New1(obj, *name);
 }
 
-// public override sealed Uno.UX.PropertyObject get_Object() :14
+// public override sealed Uno.UX.PropertyObject get_Object() :32
 void GlobalPot_FuseControlsTextControl_Value_Property__get_Object_fn(GlobalPot_FuseControlsTextControl_Value_Property* __this, ::g::Uno::UX::PropertyObject** __retval)
 {
     return *__retval = __this->_obj, void();
 }
 
-// public override sealed void Set(string v, Uno.UX.IPropertyListener origin) :16
+// public override sealed void Set(string v, Uno.UX.IPropertyListener origin) :34
 void GlobalPot_FuseControlsTextControl_Value_Property__Set_fn(GlobalPot_FuseControlsTextControl_Value_Property* __this, uString* v, uObject* origin)
 {
     uStackFrame __("GlobalPot_FuseControlsTextControl_Value_Property", "Set(string,Uno.UX.IPropertyListener)");
     uPtr(__this->_obj)->SetValue(v, origin);
 }
 
-// public override sealed bool get_SupportsOriginSetter() :17
+// public override sealed bool get_SupportsOriginSetter() :35
 void GlobalPot_FuseControlsTextControl_Value_Property__get_SupportsOriginSetter_fn(GlobalPot_FuseControlsTextControl_Value_Property* __this, bool* __retval)
 {
     return *__retval = true, void();
 }
 
-// public GlobalPot_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [instance] :13
+// public GlobalPot_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [instance] :31
 void GlobalPot_FuseControlsTextControl_Value_Property::ctor_2(::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector name)
 {
     ctor_1(name);
     _obj = obj;
 }
 
-// public GlobalPot_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [static] :13
+// public GlobalPot_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [static] :31
 GlobalPot_FuseControlsTextControl_Value_Property* GlobalPot_FuseControlsTextControl_Value_Property::New1(::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector name)
 {
     GlobalPot_FuseControlsTextControl_Value_Property* obj1 = (GlobalPot_FuseControlsTextControl_Value_Property*)uNew(GlobalPot_FuseControlsTextControl_Value_Property_typeof());

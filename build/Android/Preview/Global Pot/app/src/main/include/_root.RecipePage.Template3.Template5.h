@@ -20,8 +20,8 @@ void RecipePage__Template3__Template5__New2_fn(::g::RecipePage__Template3* paren
 
 struct RecipePage__Template3__Template5 : ::g::Uno::UX::Template
 {
-    uStrong< ::g::Uno::UX::Property1*> __gen11_Url_inst1;
-    uStrong< ::g::Uno::UX::Property1*> __gen12_Right_inst1;
+    uStrong< ::g::Uno::UX::Property1*> __gen17_Url_inst1;
+    uStrong< ::g::Uno::UX::Property1*> __gen18_Right_inst1;
     uWeak< ::g::RecipePage__Template3*> __parent1;
     uWeak< ::g::Fuse::Controls::Rectangle*> __parentInstance1;
     static ::g::Uno::UX::Selector __selector0_;

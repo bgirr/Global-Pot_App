@@ -20,7 +20,7 @@ void OverviewPage__Template__Template2__New2_fn(::g::OverviewPage__Template* par
 
 struct OverviewPage__Template__Template2 : ::g::Uno::UX::Template
 {
-    uStrong< ::g::Uno::UX::Property1*> __gen1_Right_inst1;
+    uStrong< ::g::Uno::UX::Property1*> __gen7_Right_inst1;
     uWeak< ::g::OverviewPage__Template*> __parent1;
     uWeak< ::g::Fuse::Controls::StackPanel*> __parentInstance1;
     static ::g::Uno::UX::Selector __selector0_;

@@ -26,8 +26,14 @@ struct GlobalPot_bundle : uObject
     static uSStrong< ::g::Uno::IO::BundleFile*>& Recipe_API1e1be570() { return GlobalPot_bundle_typeof()->Init(), Recipe_API1e1be570_; }
     static uSStrong< ::g::Uno::IO::BundleFile*> Recipes_APIeb7d723d_;
     static uSStrong< ::g::Uno::IO::BundleFile*>& Recipes_APIeb7d723d() { return GlobalPot_bundle_typeof()->Init(), Recipes_APIeb7d723d_; }
+    static uSStrong< ::g::Uno::IO::BundleFile*> Refreshee13cb15_;
+    static uSStrong< ::g::Uno::IO::BundleFile*>& Refreshee13cb15() { return GlobalPot_bundle_typeof()->Init(), Refreshee13cb15_; }
     static uSStrong< ::g::Uno::IO::BundleFile*> RobotoCondensedRegular9a86a136_;
     static uSStrong< ::g::Uno::IO::BundleFile*>& RobotoCondensedRegular9a86a136() { return GlobalPot_bundle_typeof()->Init(), RobotoCondensedRegular9a86a136_; }
+    static uSStrong< ::g::Uno::IO::BundleFile*> visiteda8deaa24_;
+    static uSStrong< ::g::Uno::IO::BundleFile*>& visiteda8deaa24() { return GlobalPot_bundle_typeof()->Init(), visiteda8deaa24_; }
+    static uSStrong< ::g::Uno::IO::BundleFile*> VisitedOverlay92b9745e_;
+    static uSStrong< ::g::Uno::IO::BundleFile*>& VisitedOverlay92b9745e() { return GlobalPot_bundle_typeof()->Init(), VisitedOverlay92b9745e_; }
 };
 // }
 

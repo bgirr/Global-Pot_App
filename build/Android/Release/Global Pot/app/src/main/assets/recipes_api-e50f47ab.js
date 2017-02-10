@@ -1,7 +1,6 @@
 var Observable = require("FuseJS/Observable");
 var recipes = Observable();
 
-
 fetch("http://cookingtest-cookingtest.rhcloud.com/recipes/api/recipes/")
 	.then(function(result) {
 		if (result.status !== 200) {
@@ -13,7 +12,6 @@ fetch("http://cookingtest-cookingtest.rhcloud.com/recipes/api/recipes/")
 	for (var i=0; i<laenge; i++) {
 	var item = data[i];
 	recipes.add(item);
-
 		}
 	});
 });
@@ -24,9 +22,10 @@ function overview_clicked(){
 			}
 
 function recipe_clicked(a){
-		var recipe = a.data;
-		router.push("RecipePage", { recipe: recipe });
+		var recipe = a.data.id;
+		router.push("CookingPage", { recipe: recipe });
 		}
+
 
 		module.exports = {
 		recipes: recipes,

@@ -49,7 +49,7 @@ namespace g{
 
 // public partial sealed class OverviewPage :2
 // {
-// static OverviewPage() :122
+// static OverviewPage() :133
 static void OverviewPage__cctor_4_fn(uType* __type)
 {
     OverviewPage::__g_static_nametable1_ = uArray::Init<uString*>(::TYPES[0/*string[]*/], 1, ::STRINGS[0/*"router"*/]);
@@ -141,19 +141,19 @@ static void OverviewPage_build(uType* type)
     return type;
 }
 
-// public OverviewPage(Fuse.Navigation.Router router) :126
+// public OverviewPage(Fuse.Navigation.Router router) :137
 void OverviewPage__ctor_8_fn(OverviewPage* __this, ::g::Fuse::Navigation::Router* router1)
 {
     __this->ctor_8(router1);
 }
 
-// private void InitializeUX() :132
+// private void InitializeUX() :143
 void OverviewPage__InitializeUX_fn(OverviewPage* __this)
 {
     __this->InitializeUX();
 }
 
-// public OverviewPage New(Fuse.Navigation.Router router) :126
+// public OverviewPage New(Fuse.Navigation.Router router) :137
 void OverviewPage__New5_fn(::g::Fuse::Navigation::Router* router1, OverviewPage** __retval)
 {
     *__retval = OverviewPage::New5(router1);
@@ -162,7 +162,7 @@ void OverviewPage__New5_fn(::g::Fuse::Navigation::Router* router1, OverviewPage*
 uSStrong<uArray*> OverviewPage::__g_static_nametable1_;
 ::g::Uno::UX::Selector OverviewPage::__selector0_;
 
-// public OverviewPage(Fuse.Navigation.Router router) [instance] :126
+// public OverviewPage(Fuse.Navigation.Router router) [instance] :137
 void OverviewPage::ctor_8(::g::Fuse::Navigation::Router* router1)
 {
     uStackFrame __("OverviewPage", ".ctor(Fuse.Navigation.Router)");
@@ -171,7 +171,7 @@ void OverviewPage::ctor_8(::g::Fuse::Navigation::Router* router1)
     InitializeUX();
 }
 
-// private void InitializeUX() [instance] :132
+// private void InitializeUX() [instance] :143
 void OverviewPage::InitializeUX()
 {
     uStackFrame __("OverviewPage", "InitializeUX()");
@@ -243,7 +243,7 @@ void OverviewPage::InitializeUX()
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
 }
 
-// public OverviewPage New(Fuse.Navigation.Router router) [static] :126
+// public OverviewPage New(Fuse.Navigation.Router router) [static] :137
 OverviewPage* OverviewPage::New5(::g::Fuse::Navigation::Router* router1)
 {
     OverviewPage* obj1 = (OverviewPage*)uNew(OverviewPage_typeof());

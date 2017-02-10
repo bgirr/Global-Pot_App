@@ -11,7 +11,7 @@ namespace g{struct GlobalPot_FuseControlsImage_Url_Property;}
 
 namespace g{
 
-// internal sealed class GlobalPot_FuseControlsImage_Url_Property :37
+// internal sealed class GlobalPot_FuseControlsImage_Url_Property :64
 // {
 ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsImage_Url_Property_typeof();
 void GlobalPot_FuseControlsImage_Url_Property__ctor_2_fn(GlobalPot_FuseControlsImage_Url_Property* __this, ::g::Fuse::Controls::Image* obj, ::g::Uno::UX::Selector* name);

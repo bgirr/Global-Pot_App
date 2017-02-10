@@ -3,8 +3,10 @@
 
 #include <Fuse.iOS.StatusBarConfig.h>
 #include <Fuse.Node.h>
+#include <Fuse.Platform.StatusBarStyle.h>
 #include <Uno.Bool.h>
 #include <Uno.Collections.List-1.h>
+#include <Uno.Int.h>
 static uType* TYPES[1];
 
 namespace g{
@@ -32,7 +34,9 @@ static void StatusBarConfig_build(uType* type)
         ::g::Uno::Collections::IEnumerable_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL), offsetof(::g::Fuse::Node_type, interface3));
     type->SetFields(13,
         ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _hasIsVisible), 0,
+        ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _hasStyle), 0,
         ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _isVisible), 0,
+        ::g::Fuse::Platform::StatusBarStyle_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _style), 0,
         ::TYPES[0/*Uno.Collections.List<Fuse.iOS.StatusBarConfig>*/], (uintptr_t)&::g::Fuse::iOS::StatusBarConfig::_stack_, uFieldFlagsStatic);
 }
 
@@ -43,7 +47,7 @@ static void StatusBarConfig_build(uType* type)
 
     uTypeOptions options;
     options.BaseDefinition = ::g::Fuse::Behavior_typeof();
-    options.FieldCount = 16;
+    options.FieldCount = 18;
     options.InterfaceCount = 4;
     options.ObjectSize = sizeof(StatusBarConfig);
     options.TypeSize = sizeof(::g::Fuse::Node_type);
@@ -115,6 +119,18 @@ void StatusBarConfig__OnUnrooted_fn(StatusBarConfig* __this)
     ::g::Fuse::Node__OnUnrooted_fn(__this);
 }
 
+// public Fuse.Platform.StatusBarStyle get_Style() :461
+void StatusBarConfig__get_Style_fn(StatusBarConfig* __this, int* __retval)
+{
+    *__retval = __this->Style();
+}
+
+// public void set_Style(Fuse.Platform.StatusBarStyle value) :462
+void StatusBarConfig__set_Style_fn(StatusBarConfig* __this, int* value)
+{
+    __this->Style(*value);
+}
+
 uSStrong< ::g::Uno::Collections::List*> StatusBarConfig::_stack_;
 
 // public generated StatusBarConfig() [instance] :432
@@ -136,6 +152,23 @@ void StatusBarConfig::IsVisible(bool value)
     {
         _isVisible = value;
         _hasIsVisible = true;
+        StatusBarConfig::Apply();
+    }
+}
+
+// public Fuse.Platform.StatusBarStyle get_Style() [instance] :461
+int StatusBarConfig::Style()
+{
+    return _style;
+}
+
+// public void set_Style(Fuse.Platform.StatusBarStyle value) [instance] :462
+void StatusBarConfig::Style(int value)
+{
+    if (!_hasStyle || (_style != value))
+    {
+        _style = value;
+        _hasStyle = true;
         StatusBarConfig::Apply();
     }
 }

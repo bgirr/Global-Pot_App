@@ -1521,6 +1521,7 @@ Element_type* Element_typeof()
     type->fp_InvalidateLocalTransform = (void(*)(::g::Fuse::Visual*))Element__InvalidateLocalTransform_fn;
     type->fp_get_IsLocalVisible = (void(*)(::g::Fuse::Visual*, bool*))Element__get_IsLocalVisible_fn;
     type->fp_IsMarginBoxDependent = (void(*)(::g::Fuse::Visual*, ::g::Fuse::Visual*, int*))Element__IsMarginBoxDependent_fn;
+    type->fp_get_LocalBounds = (void(*)(::g::Fuse::Visual*, ::g::Uno::Geometry::Box*))Element__get_LocalBounds_fn;
     type->fp_get_LocalRenderBounds = (void(*)(::g::Fuse::Visual*, ::g::Fuse::VisualBounds**))Element__get_LocalRenderBounds_fn;
     type->fp_OnAdjustMarginBoxPosition = (void(*)(::g::Fuse::Visual*, ::g::Uno::Float2*))Element__OnAdjustMarginBoxPosition_fn;
     type->fp_OnArrangeMarginBox = (void(*)(::g::Fuse::Visual*, ::g::Uno::Float2*, ::g::Fuse::LayoutParams*, ::g::Uno::Float2*))Element__OnArrangeMarginBox_fn;
@@ -2074,6 +2075,12 @@ void Element__get_LimitWidth_fn(Element* __this, ::g::Uno::UX::Size* __retval)
 void Element__set_LimitWidth_fn(Element* __this, ::g::Uno::UX::Size* value)
 {
     __this->LimitWidth(*value);
+}
+
+// public override sealed Uno.Geometry.Box get_LocalBounds() :2389
+void Element__get_LocalBounds_fn(Element* __this, ::g::Uno::Geometry::Box* __retval)
+{
+    return *__retval = ::g::Uno::Geometry::Box__New1(::g::Uno::Float3__New1(0.0f), ::g::Uno::Float3__New4(__this->ActualSize(), 0.0f)), void();
 }
 
 // public override Fuse.VisualBounds get_LocalRenderBounds() :772

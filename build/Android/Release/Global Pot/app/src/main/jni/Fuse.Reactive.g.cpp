@@ -3080,6 +3080,18 @@ void JavaScript__ctor_3_fn(JavaScript* __this, ::g::Uno::UX::NameTable* nameTabl
     __this->ctor_3(nameTable);
 }
 
+// public string get_Code() :1681
+void JavaScript__get_Code_fn(JavaScript* __this, uString** __retval)
+{
+    *__retval = __this->Code();
+}
+
+// public void set_Code(string value) :1682
+void JavaScript__set_Code_fn(JavaScript* __this, uString* value)
+{
+    __this->Code(value);
+}
+
 // private void DispatchEvaluate() :1584
 void JavaScript__DispatchEvaluate_fn(JavaScript* __this)
 {
@@ -3215,6 +3227,19 @@ void JavaScript::ctor_3(::g::Uno::UX::NameTable* nameTable)
         JavaScript::_worker() = ::g::Fuse::Reactive::ThreadWorker::New1();
 
     _scriptModule = ::g::Fuse::Reactive::RootableScriptModule::New2(JavaScript::_worker(), nameTable);
+}
+
+// public string get_Code() [instance] :1681
+uString* JavaScript::Code()
+{
+    return uPtr(_scriptModule)->Code();
+}
+
+// public void set_Code(string value) [instance] :1682
+void JavaScript::Code(uString* value)
+{
+    if (::g::Uno::String::op_Inequality(uPtr(_scriptModule)->Code(), value))
+        uPtr(_scriptModule)->Code(value);
 }
 
 // private void DispatchEvaluate() [instance] :1584

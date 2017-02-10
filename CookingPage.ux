@@ -10,6 +10,13 @@
 			var Observable = require("FuseJS/Observable");
 
 			var resetting = Observable(false);
+			var degrees = Observable();
+
+
+            for (i=0; i<50; i++) {
+                var degree[i].value = -4 + (8 * Math.random());
+                degrees.add(item);
+            };
 
 			
 			function reset(x) {
@@ -23,7 +30,9 @@
 
 			module.exports = {
 			    reset: reset,
-				resetting: resetting
+				resetting: resetting,
+				degrees: degrees
+				
 			};
 
 			reset();
@@ -31,26 +40,17 @@
 
 		<Panel>
 			<Fuse.iOS.StatusBarConfig Style="Dark" />
-			<Each Items="{recipe.steps}">
-				<Panel Margin="0" Height="40%" Width="90%" Alignment="BottomCenter">
+			<Each Items="{Rezept.steps}">
+				<Panel Margin="0" Height="70%" Width="90%" Alignment="BottomCenter">
 					<Rotation Degrees="{degrees}" />
-					<StackPanel Margin="0" Height="100%" Width="100%">
+					<StackPanel Margin="0" Height="100%" Width="100%" >
 						<Panel>
 							<Text Value="Schritt {localId}" Font="Patua" FontSize="30" Alignment="Center" Margin="0,0,20,0"/>
 							<Image ux:Name="visited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0" Height="40" Alignment="TopLeft" />
 						</Panel>
 							<StackPanel Alignment="VerticalCenter" MinWidth="100%" MinHeight="100%">
+										
 										<Each Items="{usedIngs}">
-											<DockPanel Background="#003b59" Margin="0,0,0,0" MinWidth="100%" Alignment="Top" MinHeight="100%">
-												<Panel Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
-													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30"/>
-												</Panel>
-												<Panel MinHeight="30 " MinWidth="40" Margin="40,15,0,0">
-													<Text Value="{ingredient.nameDe}" Margin="0,0,0,10" Color="#FFFFFF" Font="Roboto"/>
-												</Panel>
-											</DockPanel>
-										</Each>
-										<Each Items="{usedResults}">
 											<DockPanel Background="#003b59">
 												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
 													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30">
@@ -62,10 +62,23 @@
 							                    	</Image>
 												</Panel>
 												<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
-													<Text Value="{usedStepLocalId}" Margin="0,0,0,0" Color="#FFFFFF" Font="Roboto"/>
+													<Text Value="{ingredient.nameDe}" Margin="0,0,0,0" Color="#FFFFFF" Font="Roboto"/>
 												</Panel>
 											</DockPanel>
 										</Each>
+
+										<Each Items="{usedResults}">
+											<Each Items="{ingredients}">
+											<DockPanel Background="#003b59">
+												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
+													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30" />
+												</Panel>
+												<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
+													<Text Value="{nameDe}" Margin="0,0,0,0" Color="#FFFFFF" Font="Roboto"/>
+												</Panel>
+											</DockPanel>
+												</Each>
+											</Each>
 											<Panel Column="3" MinWidth="100%" Margin="0,0,0,0" Background="#A1D1E9">
 												<Text Value="{procedure.nameDe}" Margin="95,0,0,0"  Font="Roboto"/>
 											</Panel>
@@ -127,6 +140,14 @@
 			<Text Value="Guten Appetit!" Font="Patua" FontSize="30" Alignment="Center" Color="White" Margin="0,140,0,0"/>
 			<Image File="images/logo_v02.png" Height="100"/>
 		</DockPanel>
-
+		<Panel Clicked="{recipe_id}" Alignment="VerticalCenter" Margin="50,20,50,0" Dock="Top" >
+							<Text Font="Patua" Value="Let's cook!" Color="White" Alignment="Center"/>		
+						<Rectangle  Width="200" Height="40" Margin="0,0,0,0" CornerRadius="5">
+					<Stroke Offset="4" Width="3" Color="White" />
+					<Tapped>
+						 <Scale Factor="0.8" Duration="0.3" Easing="QuadraticInOut"/>	
+					</Tapped>
+				</Rectangle>
+			</Panel>
 	</DockPanel>
 </Page>

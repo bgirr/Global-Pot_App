@@ -59,10 +59,22 @@ namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Pr
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* OutracksSimulatorClientUno_OutracksSimulatorErrorToast_StrokeColor_Property_typeof();}
 namespace g{uClassType* UnoCore_bundle_typeof();}
 namespace g{uType* WeakDictionary_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template1_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template2_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* CookingPage_typeof();}
 namespace g{uClassType* GlobalPot_bundle_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsImage_File_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsImage_Url_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsTextControl_Value_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseEffectsDropShadow_Distance_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseEffectsDropShadow_Size_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseElementsElement_Opacity_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FusePhysicsPointAttractor_Radius_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FusePhysicsPointAttractor_Strength_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseReactiveEach_Items_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseRotation_Degrees_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseTriggersWhileBool_Value_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_UnoUXStringConcatOperator_Left_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_UnoUXStringConcatOperator_Right_Property_typeof();}
 namespace g{namespace Fuse{namespace Controls{struct Image_type;}} ::g::Fuse::Controls::Image_type* Icon_typeof();}
@@ -70,6 +82,7 @@ namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template1_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template2_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template3_typeof();}
 namespace g{namespace Fuse{struct AppBase_type;} ::g::Fuse::AppBase_type* MainView_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* OverviewPage__Template__Template1_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* OverviewPage__Template__Template2_typeof();}
@@ -1980,10 +1993,22 @@ void uInitRtti()
         (uType*(*)())&::g::OutracksSimulatorClientUno_OutracksSimulatorErrorToast_StrokeColor_Property_typeof,
         (uType*(*)())&::g::UnoCore_bundle_typeof,
         (uType*(*)())&::g::WeakDictionary_typeof,
+        (uType*(*)())&::g::CookingPage__Template__Template1_typeof,
+        (uType*(*)())&::g::CookingPage__Template__Template2_typeof,
+        (uType*(*)())&::g::CookingPage__Template_typeof,
+        (uType*(*)())&::g::CookingPage_typeof,
         (uType*(*)())&::g::GlobalPot_bundle_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseControlsImage_File_Property_typeof,
         (uType*(*)())&::g::GlobalPot_FuseControlsImage_Url_Property_typeof,
         (uType*(*)())&::g::GlobalPot_FuseControlsTextControl_Value_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseEffectsDropShadow_Distance_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseEffectsDropShadow_Size_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseElementsElement_Opacity_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FusePhysicsPointAttractor_Radius_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FusePhysicsPointAttractor_Strength_Property_typeof,
         (uType*(*)())&::g::GlobalPot_FuseReactiveEach_Items_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseRotation_Degrees_Property_typeof,
+        (uType*(*)())&::g::GlobalPot_FuseTriggersWhileBool_Value_Property_typeof,
         (uType*(*)())&::g::GlobalPot_UnoUXStringConcatOperator_Left_Property_typeof,
         (uType*(*)())&::g::GlobalPot_UnoUXStringConcatOperator_Right_Property_typeof,
         (uType*(*)())&::g::Icon_typeof,
@@ -1991,6 +2016,7 @@ void uInitRtti()
         (uType*(*)())&::g::MainView__Template_typeof,
         (uType*(*)())&::g::MainView__Template1_typeof,
         (uType*(*)())&::g::MainView__Template2_typeof,
+        (uType*(*)())&::g::MainView__Template3_typeof,
         (uType*(*)())&::g::MainView_typeof,
         (uType*(*)())&::g::OverviewPage__Template__Template1_typeof,
         (uType*(*)())&::g::OverviewPage__Template__Template2_typeof,

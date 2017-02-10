@@ -1,3 +1,4 @@
+.uno/CodeCompletion/ux11/CookingPage.g.uno
 .uno/CodeCompletion/ux11/LoginPage.g.uno
 .uno/CodeCompletion/ux11/WhiteText.g.uno
 .uno/CodeCompletion/ux11/MainView.g.uno

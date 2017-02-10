@@ -64,6 +64,27 @@ public partial class MainView: Fuse.App
         }
         static global::Uno.UX.Selector __selector0 = "RecipePage";
     }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template3: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template3(MainView parent, MainView parentInstance): base("CookingPage", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template3()
+        {
+        }
+        public override object New()
+        {
+            var self = new CookingPage(__parent.MainRouter);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "CookingPage";
+    }
     [global::Uno.UX.UXGlobalResource("Patua")] public static readonly Fuse.Font Patua;
     [global::Uno.UX.UXGlobalResource("Roboto")] public static readonly Fuse.Font Roboto;
     internal Fuse.Navigation.Router MainRouter;
@@ -200,11 +221,13 @@ public partial class MainView: Fuse.App
         var LoginPage = new Template(this, this);
         var OverviewPage = new Template1(this, this);
         var RecipePage = new Template2(this, this);
+        var CookingPage = new Template3(this, this);
         MainRouter.Name = __selector0;
         temp16.DefaultPath = "LoginPage";
         temp16.Templates.Add(LoginPage);
         temp16.Templates.Add(OverviewPage);
         temp16.Templates.Add(RecipePage);
+        temp16.Templates.Add(CookingPage);
         this.Children.Add(MainRouter);
         this.Children.Add(temp16);
     }

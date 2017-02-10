@@ -40,12 +40,16 @@ struct RecipePage : ::g::Fuse::Controls::Page
     static ::g::Uno::UX::Selector& __selector0() { return RecipePage_typeof()->Init(), __selector0_; }
     static ::g::Uno::UX::Selector __selector1_;
     static ::g::Uno::UX::Selector& __selector1() { return RecipePage_typeof()->Init(), __selector1_; }
+    static ::g::Uno::UX::Selector __selector2_;
+    static ::g::Uno::UX::Selector& __selector2() { return RecipePage_typeof()->Init(), __selector2_; }
     uStrong< ::g::Fuse::Navigation::Router*> router;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb2;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb4;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb5;
     uStrong< ::g::Uno::UX::Property1*> temp_Items_inst;
     uStrong< ::g::Uno::UX::Property1*> temp1_Items_inst;
     uStrong< ::g::Uno::UX::Property1*> temp2_Value_inst;
     uStrong< ::g::Uno::UX::Property1*> temp3_Items_inst;
+    uStrong< ::g::Uno::UX::Property1*> this_Opacity_inst;
 
     void ctor_8(::g::Fuse::Navigation::Router* router1);
     void InitializeUX();

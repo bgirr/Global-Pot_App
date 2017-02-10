@@ -10,7 +10,7 @@
 
 namespace g{
 
-// internal sealed class GlobalPot_UnoUXStringConcatOperator_Left_Property :28
+// internal sealed class GlobalPot_UnoUXStringConcatOperator_Left_Property :55
 // {
 static void GlobalPot_UnoUXStringConcatOperator_Left_Property_build(uType* type)
 {
@@ -38,52 +38,52 @@ static void GlobalPot_UnoUXStringConcatOperator_Left_Property_build(uType* type)
     return type;
 }
 
-// public GlobalPot_UnoUXStringConcatOperator_Left_Property(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) :31
+// public GlobalPot_UnoUXStringConcatOperator_Left_Property(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) :58
 void GlobalPot_UnoUXStringConcatOperator_Left_Property__ctor_2_fn(GlobalPot_UnoUXStringConcatOperator_Left_Property* __this, ::g::Uno::UX::StringConcatOperator* obj, ::g::Uno::UX::Selector* name)
 {
     __this->ctor_2(obj, *name);
 }
 
-// public override sealed string Get() :33
+// public override sealed string Get() :60
 void GlobalPot_UnoUXStringConcatOperator_Left_Property__Get_fn(GlobalPot_UnoUXStringConcatOperator_Left_Property* __this, uString** __retval)
 {
     uStackFrame __("GlobalPot_UnoUXStringConcatOperator_Left_Property", "Get()");
     return *__retval = uPtr(__this->_obj)->Left(), void();
 }
 
-// public GlobalPot_UnoUXStringConcatOperator_Left_Property New(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) :31
+// public GlobalPot_UnoUXStringConcatOperator_Left_Property New(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) :58
 void GlobalPot_UnoUXStringConcatOperator_Left_Property__New1_fn(::g::Uno::UX::StringConcatOperator* obj, ::g::Uno::UX::Selector* name, GlobalPot_UnoUXStringConcatOperator_Left_Property** __retval)
 {
     *__retval = GlobalPot_UnoUXStringConcatOperator_Left_Property::New1(obj, *name);
 }
 
-// public override sealed Uno.UX.PropertyObject get_Object() :32
+// public override sealed Uno.UX.PropertyObject get_Object() :59
 void GlobalPot_UnoUXStringConcatOperator_Left_Property__get_Object_fn(GlobalPot_UnoUXStringConcatOperator_Left_Property* __this, ::g::Uno::UX::PropertyObject** __retval)
 {
     return *__retval = __this->_obj, void();
 }
 
-// public override sealed void Set(string v, Uno.UX.IPropertyListener origin) :34
+// public override sealed void Set(string v, Uno.UX.IPropertyListener origin) :61
 void GlobalPot_UnoUXStringConcatOperator_Left_Property__Set_fn(GlobalPot_UnoUXStringConcatOperator_Left_Property* __this, uString* v, uObject* origin)
 {
     uStackFrame __("GlobalPot_UnoUXStringConcatOperator_Left_Property", "Set(string,Uno.UX.IPropertyListener)");
     uPtr(__this->_obj)->Left(v);
 }
 
-// public override sealed bool get_SupportsOriginSetter() :35
+// public override sealed bool get_SupportsOriginSetter() :62
 void GlobalPot_UnoUXStringConcatOperator_Left_Property__get_SupportsOriginSetter_fn(GlobalPot_UnoUXStringConcatOperator_Left_Property* __this, bool* __retval)
 {
     return *__retval = false, void();
 }
 
-// public GlobalPot_UnoUXStringConcatOperator_Left_Property(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) [instance] :31
+// public GlobalPot_UnoUXStringConcatOperator_Left_Property(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) [instance] :58
 void GlobalPot_UnoUXStringConcatOperator_Left_Property::ctor_2(::g::Uno::UX::StringConcatOperator* obj, ::g::Uno::UX::Selector name)
 {
     ctor_1(name);
     _obj = obj;
 }
 
-// public GlobalPot_UnoUXStringConcatOperator_Left_Property New(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) [static] :31
+// public GlobalPot_UnoUXStringConcatOperator_Left_Property New(Uno.UX.StringConcatOperator obj, Uno.UX.Selector name) [static] :58
 GlobalPot_UnoUXStringConcatOperator_Left_Property* GlobalPot_UnoUXStringConcatOperator_Left_Property::New1(::g::Uno::UX::StringConcatOperator* obj, ::g::Uno::UX::Selector name)
 {
     GlobalPot_UnoUXStringConcatOperator_Left_Property* obj1 = (GlobalPot_UnoUXStringConcatOperator_Left_Property*)uNew(GlobalPot_UnoUXStringConcatOperator_Left_Property_typeof());

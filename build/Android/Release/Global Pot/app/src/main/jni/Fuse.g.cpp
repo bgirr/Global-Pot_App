@@ -12457,6 +12457,7 @@ Visual_type* Visual_typeof()
     type->fp_get_IsLayoutRoot = Visual__get_IsLayoutRoot_fn;
     type->fp_get_IsLocalVisible = Visual__get_IsLocalVisible_fn;
     type->fp_IsMarginBoxDependent = Visual__IsMarginBoxDependent_fn;
+    type->fp_get_LocalBounds = Visual__get_LocalBounds_fn;
     type->fp_get_LocalRenderBounds = Visual__get_LocalRenderBounds_fn;
     type->fp_OnAdjustMarginBoxPosition = Visual__OnAdjustMarginBoxPosition_fn;
     type->fp_OnArrangeMarginBox = Visual__OnArrangeMarginBox_fn;
@@ -13197,6 +13198,18 @@ void Visual__get_IsContextEnabled_fn(Visual* __this, bool* __retval)
     *__retval = __this->IsContextEnabled();
 }
 
+// public void add_IsContextEnabledChanged(Uno.EventHandler value) :6284
+void Visual__add_IsContextEnabledChanged_fn(Visual* __this, uDelegate* value)
+{
+    __this->add_IsContextEnabledChanged(value);
+}
+
+// public void remove_IsContextEnabledChanged(Uno.EventHandler value) :6285
+void Visual__remove_IsContextEnabledChanged_fn(Visual* __this, uDelegate* value)
+{
+    __this->remove_IsContextEnabledChanged(value);
+}
+
 // public bool get_IsEnabled() :6300
 void Visual__get_IsEnabled_fn(Visual* __this, bool* __retval)
 {
@@ -13285,6 +13298,12 @@ void Visual__get_LayoutRole_fn(Visual* __this, int* __retval)
 void Visual__set_LayoutRole_fn(Visual* __this, int* value)
 {
     __this->LayoutRole(*value);
+}
+
+// public virtual Uno.Geometry.Box get_LocalBounds() :7442
+void Visual__get_LocalBounds_fn(Visual* __this, ::g::Uno::Geometry::Box* __retval)
+{
+    return *__retval = ::g::Uno::Geometry::Box__New1(::g::Uno::Float3__New1(0.0f), ::g::Uno::Float3__New1(0.0f)), void();
 }
 
 // public virtual Fuse.VisualBounds get_LocalRenderBounds() :7596
@@ -13996,6 +14015,12 @@ void Visual__get_VisualContext_fn(Visual* __this, int* __retval)
 void Visual__WindowToLocal_fn(Visual* __this, ::g::Uno::Float2* windowCoord, ::g::Uno::Float2* __retval)
 {
     *__retval = __this->WindowToLocal(*windowCoord);
+}
+
+// public float3 get_WorldPosition() :7437
+void Visual__get_WorldPosition_fn(Visual* __this, ::g::Uno::Float3* __retval)
+{
+    *__retval = __this->WorldPosition();
 }
 
 // public float4x4 get_WorldTransform() :7429
@@ -15192,6 +15217,18 @@ bool Visual::IsContextEnabled()
     return HasBit(2);
 }
 
+// public void add_IsContextEnabledChanged(Uno.EventHandler value) [instance] :6284
+void Visual::add_IsContextEnabledChanged(uDelegate* value)
+{
+    AddEventHandler(Visual::_isContextEnabledChangedHandle(), 4, value);
+}
+
+// public void remove_IsContextEnabledChanged(Uno.EventHandler value) [instance] :6285
+void Visual::remove_IsContextEnabledChanged(uDelegate* value)
+{
+    RemoveEventHandler(Visual::_isContextEnabledChangedHandle(), 4, value);
+}
+
 // public bool get_IsEnabled() [instance] :6300
 bool Visual::IsEnabled()
 {
@@ -15952,6 +15989,13 @@ uObject* Visual::Viewport()
         ::g::Uno::Geometry::Ray local = ::g::Fuse::IViewport::WorldToLocalRay(uInterface(uPtr(Viewport()), ::TYPES[12/*Fuse.IViewport*/]), Viewport(), world, this);
         return ::g::Fuse::ViewportHelpers::LocalPlaneIntersection(local);
     }
+}
+
+// public float3 get_WorldPosition() [instance] :7437
+::g::Uno::Float3 Visual::WorldPosition()
+{
+    ::g::Uno::Float4x4 ind7 = uPtr(WorldTransformInternal())->Matrix();
+    return ::g::Uno::Float3__New2(ind7.M41, ind7.M42, ind7.M43);
 }
 
 // public float4x4 get_WorldTransform() [instance] :7429

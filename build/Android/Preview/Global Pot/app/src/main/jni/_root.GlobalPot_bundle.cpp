@@ -5,7 +5,7 @@
 #include <Uno.IO.Bundle.h>
 #include <Uno.IO.BundleFile.h>
 #include <Uno.String.h>
-static uString* STRINGS[8];
+static uString* STRINGS[11];
 
 namespace g{
 
@@ -20,7 +20,10 @@ static void GlobalPot_bundle__cctor__fn(uType* __type)
     GlobalPot_bundle::PatuaOneRegular35e3fccf_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[4/*"patuaone-re...*/]);
     GlobalPot_bundle::Recipe_API1e1be570_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[5/*"recipe_api-...*/]);
     GlobalPot_bundle::Recipes_APIeb7d723d_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[6/*"recipes_api...*/]);
-    GlobalPot_bundle::RobotoCondensedRegular9a86a136_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[7/*"robotoconde...*/]);
+    GlobalPot_bundle::Refreshee13cb15_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[7/*"refresh-f84...*/]);
+    GlobalPot_bundle::RobotoCondensedRegular9a86a136_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[8/*"robotoconde...*/]);
+    GlobalPot_bundle::visiteda8deaa24_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[9/*"visited-809...*/]);
+    GlobalPot_bundle::VisitedOverlay92b9745e_ = uPtr(::g::Uno::IO::Bundle::Get(::STRINGS[0/*"Global Pot"*/]))->GetFile(::STRINGS[10/*"visitedover...*/]);
 }
 
 static void GlobalPot_bundle_build(uType* type)
@@ -32,7 +35,10 @@ static void GlobalPot_bundle_build(uType* type)
     ::STRINGS[4] = uString::Const("patuaone-regular-29b8ccf8.ttf");
     ::STRINGS[5] = uString::Const("recipe_api-fcdd8df8.js");
     ::STRINGS[6] = uString::Const("recipes_api-5dc99a15.js");
-    ::STRINGS[7] = uString::Const("robotocondensed-reg-7877303f.ttf");
+    ::STRINGS[7] = uString::Const("refresh-f841717b.png");
+    ::STRINGS[8] = uString::Const("robotocondensed-reg-7877303f.ttf");
+    ::STRINGS[9] = uString::Const("visited-809e353a.png");
+    ::STRINGS[10] = uString::Const("visitedoverlay-cc6295f1.png");
     type->SetFields(0,
         ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::leftarrowcb43f68b_, uFieldFlagsStatic,
         ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::Login6d08c768_, uFieldFlagsStatic,
@@ -40,15 +46,21 @@ static void GlobalPot_bundle_build(uType* type)
         ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::PatuaOneRegular35e3fccf_, uFieldFlagsStatic,
         ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::Recipe_API1e1be570_, uFieldFlagsStatic,
         ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::Recipes_APIeb7d723d_, uFieldFlagsStatic,
-        ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::RobotoCondensedRegular9a86a136_, uFieldFlagsStatic);
-    type->Reflection.SetFields(7,
+        ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::Refreshee13cb15_, uFieldFlagsStatic,
+        ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::RobotoCondensedRegular9a86a136_, uFieldFlagsStatic,
+        ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::visiteda8deaa24_, uFieldFlagsStatic,
+        ::g::Uno::IO::BundleFile_typeof(), (uintptr_t)&::g::GlobalPot_bundle::VisitedOverlay92b9745e_, uFieldFlagsStatic);
+    type->Reflection.SetFields(10,
         new uField("leftarrowcb43f68b", 0),
         new uField("Login6d08c768", 1),
         new uField("logo_v026ae4f6da", 2),
         new uField("PatuaOneRegular35e3fccf", 3),
         new uField("Recipe_API1e1be570", 4),
         new uField("Recipes_APIeb7d723d", 5),
-        new uField("RobotoCondensedRegular9a86a136", 6));
+        new uField("Refreshee13cb15", 6),
+        new uField("RobotoCondensedRegular9a86a136", 7),
+        new uField("visiteda8deaa24", 8),
+        new uField("VisitedOverlay92b9745e", 9));
 }
 
 uClassType* GlobalPot_bundle_typeof()
@@ -57,7 +69,7 @@ uClassType* GlobalPot_bundle_typeof()
     if (type != NULL) return type;
 
     uTypeOptions options;
-    options.FieldCount = 7;
+    options.FieldCount = 10;
     options.TypeSize = sizeof(uClassType);
     type = uClassType::New("GlobalPot_bundle", options);
     type->fp_build_ = GlobalPot_bundle_build;
@@ -71,7 +83,10 @@ uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::logo_v026ae4f6da_;
 uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::PatuaOneRegular35e3fccf_;
 uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::Recipe_API1e1be570_;
 uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::Recipes_APIeb7d723d_;
+uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::Refreshee13cb15_;
 uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::RobotoCondensedRegular9a86a136_;
+uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::visiteda8deaa24_;
+uSStrong< ::g::Uno::IO::BundleFile*> GlobalPot_bundle::VisitedOverlay92b9745e_;
 // }
 
 } // ::g

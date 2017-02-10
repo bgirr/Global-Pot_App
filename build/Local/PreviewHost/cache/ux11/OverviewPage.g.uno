@@ -64,8 +64,8 @@ public partial class OverviewPage: Fuse.Controls.Page
                 __parentInstance = parentInstance;
             }
             global::Uno.UX.Property<string> self_Url_inst;
-            global::Uno.UX.Property<string> __gen3_Right_inst;
-            internal Uno.UX.StringConcatOperator __gen3;
+            global::Uno.UX.Property<string> __gen7_Right_inst;
+            internal Uno.UX.StringConcatOperator __gen7;
             static Template2()
             {
             }
@@ -73,12 +73,12 @@ public partial class OverviewPage: Fuse.Controls.Page
             {
                 var self = new Fuse.Controls.Image();
                 self_Url_inst = new GlobalPot_FuseControlsImage_Url_Property(self, __selector0);
-                var __gen3 = new Uno.UX.StringConcatOperator();
-                __gen3_Right_inst = new GlobalPot_UnoUXStringConcatOperator_Right_Property(__gen3, __selector1);
+                var __gen7 = new Uno.UX.StringConcatOperator();
+                __gen7_Right_inst = new GlobalPot_UnoUXStringConcatOperator_Right_Property(__gen7, __selector1);
                 var temp = new Fuse.Triggers.WhileBusy();
                 var temp1 = new Fuse.Controls.Rectangle();
                 var temp2 = new Fuse.Drawing.Stroke();
-                var temp3 = new Fuse.Reactive.DataBinding<string>(__gen3_Right_inst, "imageUrl");
+                var temp3 = new Fuse.Reactive.DataBinding<string>(__gen7_Right_inst, "imageUrl");
                 self.Margin = float4(0f, 0f, 0f, 5f);
                 self.Name = __selector2;
                 global::Fuse.Controls.DockPanel.SetDock(self, Fuse.Layouts.Dock.Left);
@@ -89,18 +89,18 @@ public partial class OverviewPage: Fuse.Controls.Page
                 temp1.Strokes.Add(temp2);
                 temp2.Color = float4(0.8f, 0.8f, 0.8f, 1f);
                 temp2.Width = 1f;
-                __gen3.Left = "http://cookingtest-cookingtest.rhcloud.com/static/resource/img/recipeImages/";
-                __gen3.Target = self_Url_inst;
+                __gen7.Left = "http://cookingtest-cookingtest.rhcloud.com/static/resource/img/recipeImages/";
+                __gen7.Target = self_Url_inst;
                 self.Children.Add(temp);
                 self.Bindings.Add(temp3);
                 return self;
             }
             static global::Uno.UX.Selector __selector0 = "Url";
             static global::Uno.UX.Selector __selector1 = "Right";
-            static global::Uno.UX.Selector __selector2 = "__gen2";
+            static global::Uno.UX.Selector __selector2 = "__gen6";
         }
         global::Uno.UX.Property<object> temp_Items_inst;
-        internal Fuse.Reactive.EventBinding temp_eb8;
+        internal Fuse.Reactive.EventBinding temp_eb4;
         static Template()
         {
         }
@@ -111,14 +111,14 @@ public partial class OverviewPage: Fuse.Controls.Page
             temp_Items_inst = new GlobalPot_FuseReactiveEach_Items_Property(temp, __selector0);
             var temp1 = new Fuse.Controls.Panel();
             var temp2 = new Template1(this, self);
-            var __gen2 = new Template2(this, self);
+            var __gen6 = new Template2(this, self);
             var temp3 = new Fuse.Reactive.DataBinding<object>(temp_Items_inst, "images");
-            var temp_eb8 = new Fuse.Reactive.EventBinding("recipe_clicked");
-            global::Fuse.Gestures.Clicked.AddHandler(temp1, temp_eb8.OnEvent);
+            var temp_eb4 = new Fuse.Reactive.EventBinding("recipe_clicked");
+            global::Fuse.Gestures.Clicked.AddHandler(temp1, temp_eb4.OnEvent);
             temp1.Children.Add(temp);
-            temp1.Bindings.Add(temp_eb8);
+            temp1.Bindings.Add(temp_eb4);
             temp.Templates.Add(temp2);
-            temp.Templates.Add(__gen2);
+            temp.Templates.Add(__gen6);
             temp.Bindings.Add(temp3);
             self.Children.Add(temp1);
             return self;

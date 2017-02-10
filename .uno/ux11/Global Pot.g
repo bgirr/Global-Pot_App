@@ -1,3 +1,4 @@
+.uno/ux11/CookingPage.g.uno
 .uno/ux11/LoginPage.g.uno
 .uno/ux11/WhiteText.g.uno
 .uno/ux11/MainView.g.uno

@@ -25,17 +25,23 @@ void StatusBarConfig__set_IsVisible_fn(StatusBarConfig* __this, bool* value);
 void StatusBarConfig__New2_fn(StatusBarConfig** __retval);
 void StatusBarConfig__OnRooted_fn(StatusBarConfig* __this);
 void StatusBarConfig__OnUnrooted_fn(StatusBarConfig* __this);
+void StatusBarConfig__get_Style_fn(StatusBarConfig* __this, int* __retval);
+void StatusBarConfig__set_Style_fn(StatusBarConfig* __this, int* value);
 
 struct StatusBarConfig : ::g::Fuse::Behavior
 {
     bool _hasIsVisible;
+    bool _hasStyle;
     bool _isVisible;
     static uSStrong< ::g::Uno::Collections::List*> _stack_;
     static uSStrong< ::g::Uno::Collections::List*>& _stack() { return StatusBarConfig_typeof()->Init(), _stack_; }
+    int _style;
 
     void ctor_3();
     bool IsVisible();
     void IsVisible(bool value);
+    int Style();
+    void Style(int value);
     static void Apply();
     static StatusBarConfig* New2();
 };

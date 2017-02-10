@@ -45,7 +45,7 @@ namespace g{
 
 // public partial sealed class RecipePage.Template3 :224
 // {
-// static Template3() :366
+// static Template3() :375
 static void RecipePage__Template3__cctor__fn(uType* __type)
 {
     RecipePage__Template3::__selector0_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[0/*"Items"*/]);
@@ -99,7 +99,7 @@ void RecipePage__Template3__ctor_1_fn(RecipePage__Template3* __this, ::g::Recipe
     __this->ctor_1(parent, parentInstance);
 }
 
-// public override sealed object New() :369
+// public override sealed object New() :378
 void RecipePage__Template3__New1_fn(RecipePage__Template3* __this, uObject** __retval)
 {
     uStackFrame __("RecipePage.Template3", "New()");

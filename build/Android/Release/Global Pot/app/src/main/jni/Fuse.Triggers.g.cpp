@@ -108,6 +108,7 @@
 #include <Fuse.Triggers.TriggerBypassMode.h>
 #include <Fuse.Triggers.TriggerPlayState.h>
 #include <Fuse.Triggers.WhileBool.h>
+#include <Fuse.Triggers.WhileBusy.h>
 #include <Fuse.Triggers.WhileCompleted.h>
 #include <Fuse.Triggers.WhileFalse.h>
 #include <Fuse.Triggers.WhileKeyboardVisible.h>
@@ -5996,6 +5997,206 @@ void WhileBool::Value1(bool value)
 // C:\Users\EliteBook-User\AppData\Local\Fusetools\Packages\Fuse.Triggers\0.44.1\$.uno
 // -----------------------------------------------------------------------------------
 
+// public sealed class WhileBusy :3459
+// {
+static void WhileBusy_build(uType* type)
+{
+    ::TYPES[10] = ::g::Uno::Action_typeof();
+    type->SetInterfaces(
+        ::g::Uno::Collections::IList_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL), offsetof(WhileBusy_type, interface0),
+        ::g::Fuse::Scripting::IScriptObject_typeof(), offsetof(WhileBusy_type, interface1),
+        ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL), offsetof(WhileBusy_type, interface2),
+        ::g::Uno::Collections::IEnumerable_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL), offsetof(WhileBusy_type, interface3),
+        ::g::Fuse::Animations::IUnwrappedPlayerFeedback_typeof(), offsetof(WhileBusy_type, interface4),
+        ::g::Fuse::Animations::IBasePlayerFeedback_typeof(), offsetof(WhileBusy_type, interface5),
+        ::g::Fuse::Triggers::IBusyHandler_typeof(), offsetof(WhileBusy_type, interface6));
+    type->SetFields(30,
+        ::g::Fuse::Triggers::BusyTaskActivity_typeof(), offsetof(::g::Fuse::Triggers::WhileBusy, _activity), 0,
+        ::g::Fuse::Triggers::BusyTaskMatch_typeof(), offsetof(::g::Fuse::Triggers::WhileBusy, _match), 0,
+        ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::Triggers::WhileBusy, _IsHandled), 0);
+}
+
+WhileBusy_type* WhileBusy_typeof()
+{
+    static uSStrong<WhileBusy_type*> type;
+    if (type != NULL) return type;
+
+    uTypeOptions options;
+    options.BaseDefinition = ::g::Fuse::Triggers::WhileTrigger_typeof();
+    options.FieldCount = 33;
+    options.InterfaceCount = 7;
+    options.ObjectSize = sizeof(WhileBusy);
+    options.TypeSize = sizeof(WhileBusy_type);
+    type = (WhileBusy_type*)uClassType::New("Fuse.Triggers.WhileBusy", options);
+    type->fp_build_ = WhileBusy_build;
+    type->fp_ctor_ = (void*)WhileBusy__New2_fn;
+    type->fp_OnRooted = (void(*)(::g::Fuse::Node*))WhileBusy__OnRooted_fn;
+    type->fp_OnUnrooted = (void(*)(::g::Fuse::Node*))WhileBusy__OnUnrooted_fn;
+    type->interface6.fp_get_BusyActivityHandled = (void(*)(uObject*, int*))WhileBusy__FuseTriggersIBusyHandlerget_BusyActivityHandled_fn;
+    type->interface5.fp_OnPlaybackDone = (void(*)(uObject*, uObject*))::g::Fuse::Triggers::Trigger__FuseAnimationsIBasePlayerFeedbackOnPlaybackDone_fn;
+    type->interface5.fp_OnStable = (void(*)(uObject*, uObject*))::g::Fuse::Triggers::Trigger__FuseAnimationsIBasePlayerFeedbackOnStable_fn;
+    type->interface4.fp_OnProgressUpdated = (void(*)(uObject*, uObject*, double*, double*, int*))::g::Fuse::Triggers::Trigger__FuseAnimationsIUnwrappedPlayerFeedbackOnProgressUpdated_fn;
+    type->interface2.fp_Clear = (void(*)(uObject*))::g::Fuse::Node__UnoCollectionsICollectionFuseBindingClear_fn;
+    type->interface2.fp_Contains = (void(*)(uObject*, void*, bool*))::g::Fuse::Node__UnoCollectionsICollectionFuseBindingContains_fn;
+    type->interface0.fp_RemoveAt = (void(*)(uObject*, int*))::g::Fuse::Node__UnoCollectionsIListFuseBindingRemoveAt_fn;
+    type->interface3.fp_GetEnumerator = (void(*)(uObject*, uObject**))::g::Fuse::Node__UnoCollectionsIEnumerableFuseBindingGetEnumerator_fn;
+    type->interface1.fp_SetScriptObject = (void(*)(uObject*, uObject*, ::g::Fuse::Scripting::Context*))::g::Fuse::Node__FuseScriptingIScriptObjectSetScriptObject_fn;
+    type->interface2.fp_get_Count = (void(*)(uObject*, int*))::g::Fuse::Node__UnoCollectionsICollectionFuseBindingget_Count_fn;
+    type->interface0.fp_get_Item = (void(*)(uObject*, int*, uTRef))::g::Fuse::Node__UnoCollectionsIListFuseBindingget_Item_fn;
+    type->interface1.fp_get_ScriptObject = (void(*)(uObject*, uObject**))::g::Fuse::Node__FuseScriptingIScriptObjectget_ScriptObject_fn;
+    type->interface1.fp_get_ScriptContext = (void(*)(uObject*, ::g::Fuse::Scripting::Context**))::g::Fuse::Node__FuseScriptingIScriptObjectget_ScriptContext_fn;
+    type->interface0.fp_Insert = (void(*)(uObject*, int*, void*))::g::Fuse::Node__Insert_fn;
+    type->interface2.fp_Add = (void(*)(uObject*, void*))::g::Fuse::Node__Add_fn;
+    type->interface2.fp_Remove = (void(*)(uObject*, void*, bool*))::g::Fuse::Node__Remove_fn;
+    return type;
+}
+
+// public generated WhileBusy() :3459
+void WhileBusy__ctor_6_fn(WhileBusy* __this)
+{
+    __this->ctor_6();
+}
+
+// public Fuse.Triggers.BusyTaskActivity get_Activity() :3494
+void WhileBusy__get_Activity_fn(WhileBusy* __this, int* __retval)
+{
+    *__retval = __this->Activity();
+}
+
+// public void set_Activity(Fuse.Triggers.BusyTaskActivity value) :3495
+void WhileBusy__set_Activity_fn(WhileBusy* __this, int* value)
+{
+    __this->Activity(*value);
+}
+
+// private Fuse.Triggers.BusyTaskActivity Fuse.Triggers.IBusyHandler.get_BusyActivityHandled() :3527
+void WhileBusy__FuseTriggersIBusyHandlerget_BusyActivityHandled_fn(WhileBusy* __this, int* __retval)
+{
+    return *__retval = __this->IsHandled() ? __this->Activity() : 0, void();
+}
+
+// public generated bool get_IsHandled() :3484
+void WhileBusy__get_IsHandled_fn(WhileBusy* __this, bool* __retval)
+{
+    *__retval = __this->IsHandled();
+}
+
+// public generated void set_IsHandled(bool value) :3484
+void WhileBusy__set_IsHandled_fn(WhileBusy* __this, bool* value)
+{
+    __this->IsHandled(*value);
+}
+
+// public Fuse.Triggers.BusyTaskMatch get_Match() :3506
+void WhileBusy__get_Match_fn(WhileBusy* __this, int* __retval)
+{
+    *__retval = __this->Match();
+}
+
+// public void set_Match(Fuse.Triggers.BusyTaskMatch value) :3507
+void WhileBusy__set_Match_fn(WhileBusy* __this, int* value)
+{
+    __this->Match(*value);
+}
+
+// public generated WhileBusy New() :3459
+void WhileBusy__New2_fn(WhileBusy** __retval)
+{
+    *__retval = WhileBusy::New2();
+}
+
+// protected override sealed void OnRooted() :3461
+void WhileBusy__OnRooted_fn(WhileBusy* __this)
+{
+    ::g::Fuse::Triggers::Trigger__OnRooted_fn(__this);
+    ::g::Fuse::Triggers::BusyTask::AddListener(__this->Parent(), uDelegate::New(::TYPES[10/*Uno.Action*/], (void*)WhileBusy__Update_fn, __this));
+    __this->Update();
+}
+
+// protected override sealed void OnUnrooted() :3468
+void WhileBusy__OnUnrooted_fn(WhileBusy* __this)
+{
+    ::g::Fuse::Triggers::BusyTask::RemoveListener(__this->Parent(), uDelegate::New(::TYPES[10/*Uno.Action*/], (void*)WhileBusy__Update_fn, __this));
+    ::g::Fuse::Triggers::Trigger__OnUnrooted_fn(__this);
+}
+
+// private void Update() :3515
+void WhileBusy__Update_fn(WhileBusy* __this)
+{
+    __this->Update();
+}
+
+// public generated WhileBusy() [instance] :3459
+void WhileBusy::ctor_6()
+{
+    _activity = 15;
+    ctor_5();
+}
+
+// public Fuse.Triggers.BusyTaskActivity get_Activity() [instance] :3494
+int WhileBusy::Activity()
+{
+    return _activity;
+}
+
+// public void set_Activity(Fuse.Triggers.BusyTaskActivity value) [instance] :3495
+void WhileBusy::Activity(int value)
+{
+    _activity = value;
+
+    if (IsRootingCompleted())
+        Update();
+}
+
+// public generated bool get_IsHandled() [instance] :3484
+bool WhileBusy::IsHandled()
+{
+    return _IsHandled;
+}
+
+// public generated void set_IsHandled(bool value) [instance] :3484
+void WhileBusy::IsHandled(bool value)
+{
+    _IsHandled = value;
+}
+
+// public Fuse.Triggers.BusyTaskMatch get_Match() [instance] :3506
+int WhileBusy::Match()
+{
+    return _match;
+}
+
+// public void set_Match(Fuse.Triggers.BusyTaskMatch value) [instance] :3507
+void WhileBusy::Match(int value)
+{
+    _match = value;
+
+    if (IsRootingCompleted())
+        Update();
+}
+
+// private void Update() [instance] :3515
+void WhileBusy::Update()
+{
+    if (Activity() == 0)
+        return;
+
+    int act = ::g::Fuse::Triggers::BusyTask::GetBusyActivity(Parent(), Match());
+    SetActive((act & Activity()) != 0);
+}
+
+// public generated WhileBusy New() [static] :3459
+WhileBusy* WhileBusy::New2()
+{
+    WhileBusy* obj1 = (WhileBusy*)uNew(WhileBusy_typeof());
+    obj1->ctor_6();
+    return obj1;
+}
+// }
+
+// C:\Users\EliteBook-User\AppData\Local\Fusetools\Packages\Fuse.Triggers\0.44.1\$.uno
+// -----------------------------------------------------------------------------------
+
 // public sealed class WhileCompleted :3916
 // {
 // static WhileCompleted() :3916
@@ -6667,6 +6868,7 @@ static void WhileTrue_build(uType* type)
     options.TypeSize = sizeof(::g::Fuse::Triggers::WhileBool_type);
     type = (::g::Fuse::Triggers::WhileBool_type*)uClassType::New("Fuse.Triggers.WhileTrue", options);
     type->fp_build_ = WhileTrue_build;
+    type->fp_ctor_ = (void*)WhileTrue__New2_fn;
     type->fp_get_IsOn = (void(*)(::g::Fuse::Triggers::WhileValue*, bool*))WhileTrue__get_IsOn_fn;
     type->interface7.fp_Toggle = (void(*)(uObject*))::g::Fuse::Triggers::WhileBool__Toggle_fn;
     type->interface6.fp_Pulse = (void(*)(uObject*))::g::Fuse::Triggers::WhileValue__Pulse1_fn;
@@ -6700,10 +6902,24 @@ void WhileTrue__get_IsOn_fn(WhileTrue* __this, bool* __retval)
     return *__retval = __this->Value1(), void();
 }
 
+// public generated WhileTrue New() :3397
+void WhileTrue__New2_fn(WhileTrue** __retval)
+{
+    *__retval = WhileTrue::New2();
+}
+
 // public generated WhileTrue() [instance] :3397
 void WhileTrue::ctor_8()
 {
     ctor_7();
+}
+
+// public generated WhileTrue New() [static] :3397
+WhileTrue* WhileTrue::New2()
+{
+    WhileTrue* obj1 = (WhileTrue*)uNew(WhileTrue_typeof());
+    obj1->ctor_8();
+    return obj1;
 }
 // }
 

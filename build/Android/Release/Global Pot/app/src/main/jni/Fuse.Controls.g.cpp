@@ -4506,6 +4506,18 @@ void Image__remove_SourceChanged_fn(Image* __this, uDelegate* value)
     __this->remove_SourceChanged(value);
 }
 
+// public Fuse.Elements.StretchMode get_StretchMode() :476
+void Image__get_StretchMode_fn(Image* __this, int* __retval)
+{
+    *__retval = __this->StretchMode();
+}
+
+// public void set_StretchMode(Fuse.Elements.StretchMode value) :477
+void Image__set_StretchMode_fn(Image* __this, int* value)
+{
+    __this->StretchMode(*value);
+}
+
 // private void UpdateNativeImageSource() :547
 void Image__UpdateNativeImageSource_fn(Image* __this)
 {
@@ -4719,6 +4731,18 @@ void Image::add_SourceChanged(uDelegate* value)
 void Image::remove_SourceChanged(uDelegate* value)
 {
     SourceChanged1 = uCast<uDelegate*>(::g::Uno::Delegate::Remove(SourceChanged1, value), ::TYPES[26/*Uno.EventHandler*/]);
+}
+
+// public Fuse.Elements.StretchMode get_StretchMode() [instance] :476
+int Image::StretchMode()
+{
+    return uPtr(_container)->StretchMode();
+}
+
+// public void set_StretchMode(Fuse.Elements.StretchMode value) [instance] :477
+void Image::StretchMode(int value)
+{
+    uPtr(_container)->StretchMode(value);
 }
 
 // private void UpdateNativeImageSource() [instance] :547

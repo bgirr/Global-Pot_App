@@ -2210,6 +2210,12 @@ uClassType* Pointer_typeof()
     return type;
 }
 
+// public static void AddHandlers(Fuse.Visual node, [Fuse.Input.PointerPressedHandler pressed], [Fuse.Input.PointerMovedHandler moved], [Fuse.Input.PointerReleasedHandler released], [Fuse.Input.PointerEnteredHandler entered], [Fuse.Input.PointerLeftHandler left], [Fuse.Input.PointerWheelMovedHandler wheelMoved]) :983
+void Pointer__AddHandlers_fn(::g::Fuse::Visual* node, uDelegate* pressed, uDelegate* moved, uDelegate* released, uDelegate* entered, uDelegate* left, uDelegate* wheelMoved)
+{
+    Pointer::AddHandlers(node, pressed, moved, released, entered, left, wheelMoved);
+}
+
 // private static void CheckFocus(Fuse.Input.PointerPressedArgs args, Uno.Collections.IList<Fuse.Visual> nodes) :1395
 void Pointer__CheckFocus_fn(::g::Fuse::Input::PointerPressedArgs* args, uObject* nodes)
 {
@@ -2280,6 +2286,12 @@ void Pointer__IsHardCaptured_fn(int* pointIndex, bool* __retval)
 void Pointer__IsHardCaptured1_fn(int* pointIndex, uObject* behavior, bool* __retval)
 {
     *__retval = Pointer::IsHardCaptured1(*pointIndex, behavior);
+}
+
+// public static bool IsPressed() :1040
+void Pointer__IsPressed_fn(bool* __retval)
+{
+    *__retval = Pointer::IsPressed();
 }
 
 // public static bool IsPressed(int pointIndex) :1045
@@ -2366,6 +2378,12 @@ void Pointer__ReleaseSoftCapture_fn(int* pointIndex, uObject* identity)
     Pointer::ReleaseSoftCapture(*pointIndex, identity);
 }
 
+// public static void RemoveHandlers(Fuse.Visual node, [Fuse.Input.PointerPressedHandler pressed], [Fuse.Input.PointerMovedHandler moved], [Fuse.Input.PointerReleasedHandler released], [Fuse.Input.PointerEnteredHandler entered], [Fuse.Input.PointerLeftHandler left], [Fuse.Input.PointerWheelMovedHandler wheelMoved]) :999
+void Pointer__RemoveHandlers_fn(::g::Fuse::Visual* node, uDelegate* pressed, uDelegate* moved, uDelegate* released, uDelegate* entered, uDelegate* left, uDelegate* wheelMoved)
+{
+    Pointer::RemoveHandlers(node, pressed, moved, released, entered, left, wheelMoved);
+}
+
 // private static Fuse.Visual RoutePointerEvent(Fuse.Input.PointerEventData plainEvent, Fuse.Visual root) :1265
 void Pointer__RoutePointerEvent_fn(::g::Fuse::Input::PointerEventData* plainEvent, ::g::Fuse::Visual* root, ::g::Fuse::Visual** __retval)
 {
@@ -2396,6 +2414,12 @@ void Pointer__SoftCapture_fn(int* pointIndex, ::g::Fuse::Visual* softCapturer, u
     *__retval = Pointer::SoftCapture(*pointIndex, softCapturer, identity, lostCallback);
 }
 
+// public static Fuse.VisualEvent<Fuse.Input.PointerWheelMovedHandler, Fuse.Input.PointerWheelMovedArgs> get_WheelMoved() :981
+void Pointer__get_WheelMoved_fn(::g::Fuse::VisualEvent** __retval)
+{
+    *__retval = Pointer::WheelMoved();
+}
+
 uSStrong< ::g::Fuse::Input::PointerEntered*> Pointer::_entered_;
 uSStrong< ::g::Uno::Collections::Dictionary*> Pointer::_hardCapturers_;
 uSStrong< ::g::Uno::Collections::Dictionary*> Pointer::_lastHitVisuals_;
@@ -2408,6 +2432,30 @@ uSStrong< ::g::Uno::Collections::Dictionary*> Pointer::_softCapturers_;
 uSStrong< ::g::Fuse::Input::PointerWheelMoved*> Pointer::_wheelMoved_;
 ::g::Uno::Float2 Pointer::_Coord_;
 uSStrong<uObject*> Pointer::_EventResponder_;
+
+// public static void AddHandlers(Fuse.Visual node, [Fuse.Input.PointerPressedHandler pressed], [Fuse.Input.PointerMovedHandler moved], [Fuse.Input.PointerReleasedHandler released], [Fuse.Input.PointerEnteredHandler entered], [Fuse.Input.PointerLeftHandler left], [Fuse.Input.PointerWheelMovedHandler wheelMoved]) [static] :983
+void Pointer::AddHandlers(::g::Fuse::Visual* node, uDelegate* pressed, uDelegate* moved, uDelegate* released, uDelegate* entered, uDelegate* left, uDelegate* wheelMoved)
+{
+    Pointer_typeof()->Init();
+
+    if (::g::Uno::Delegate::op_Inequality(pressed, NULL))
+        ::g::Fuse::VisualEvent__AddHandler_fn(uPtr(Pointer::Pressed()), node, pressed);
+
+    if (::g::Uno::Delegate::op_Inequality(moved, NULL))
+        ::g::Fuse::VisualEvent__AddHandler_fn(uPtr(Pointer::Moved()), node, moved);
+
+    if (::g::Uno::Delegate::op_Inequality(released, NULL))
+        ::g::Fuse::VisualEvent__AddHandler_fn(uPtr(Pointer::Released()), node, released);
+
+    if (::g::Uno::Delegate::op_Inequality(entered, NULL))
+        ::g::Fuse::VisualEvent__AddHandler_fn(uPtr(Pointer::Entered()), node, entered);
+
+    if (::g::Uno::Delegate::op_Inequality(left, NULL))
+        ::g::Fuse::VisualEvent__AddHandler_fn(uPtr(Pointer::Left()), node, left);
+
+    if (::g::Uno::Delegate::op_Inequality(wheelMoved, NULL))
+        ::g::Fuse::VisualEvent__AddHandler_fn(uPtr(Pointer::WheelMoved()), node, wheelMoved);
+}
 
 // private static void CheckFocus(Fuse.Input.PointerPressedArgs args, Uno.Collections.IList<Fuse.Visual> nodes) [static] :1395
 void Pointer::CheckFocus(::g::Fuse::Input::PointerPressedArgs* args, uObject* nodes)
@@ -2552,6 +2600,13 @@ bool Pointer::IsHardCaptured1(int pointIndex, uObject* behavior)
     Pointer_typeof()->Init();
     ::g::Fuse::Input::Capturer* hc = Pointer::GetHardCapturer(pointIndex);
     return (hc != NULL) && (uPtr(hc)->Identity() == behavior);
+}
+
+// public static bool IsPressed() [static] :1040
+bool Pointer::IsPressed()
+{
+    Pointer_typeof()->Init();
+    return uPtr(Pointer::_pointersDown())->Count() > 0;
 }
 
 // public static bool IsPressed(int pointIndex) [static] :1045
@@ -2754,6 +2809,30 @@ void Pointer::ReleaseSoftCapture(int pointIndex, uObject* identity)
     }
 }
 
+// public static void RemoveHandlers(Fuse.Visual node, [Fuse.Input.PointerPressedHandler pressed], [Fuse.Input.PointerMovedHandler moved], [Fuse.Input.PointerReleasedHandler released], [Fuse.Input.PointerEnteredHandler entered], [Fuse.Input.PointerLeftHandler left], [Fuse.Input.PointerWheelMovedHandler wheelMoved]) [static] :999
+void Pointer::RemoveHandlers(::g::Fuse::Visual* node, uDelegate* pressed, uDelegate* moved, uDelegate* released, uDelegate* entered, uDelegate* left, uDelegate* wheelMoved)
+{
+    Pointer_typeof()->Init();
+
+    if (::g::Uno::Delegate::op_Inequality(pressed, NULL))
+        ::g::Fuse::VisualEvent__RemoveHandler_fn(uPtr(Pointer::Pressed()), node, pressed);
+
+    if (::g::Uno::Delegate::op_Inequality(moved, NULL))
+        ::g::Fuse::VisualEvent__RemoveHandler_fn(uPtr(Pointer::Moved()), node, moved);
+
+    if (::g::Uno::Delegate::op_Inequality(released, NULL))
+        ::g::Fuse::VisualEvent__RemoveHandler_fn(uPtr(Pointer::Released()), node, released);
+
+    if (::g::Uno::Delegate::op_Inequality(entered, NULL))
+        ::g::Fuse::VisualEvent__RemoveHandler_fn(uPtr(Pointer::Entered()), node, entered);
+
+    if (::g::Uno::Delegate::op_Inequality(left, NULL))
+        ::g::Fuse::VisualEvent__RemoveHandler_fn(uPtr(Pointer::Left()), node, left);
+
+    if (::g::Uno::Delegate::op_Inequality(wheelMoved, NULL))
+        ::g::Fuse::VisualEvent__RemoveHandler_fn(uPtr(Pointer::WheelMoved()), node, wheelMoved);
+}
+
 // private static Fuse.Visual RoutePointerEvent(Fuse.Input.PointerEventData plainEvent, Fuse.Visual root) [static] :1265
 ::g::Fuse::Visual* Pointer::RoutePointerEvent(::g::Fuse::Input::PointerEventData* plainEvent, ::g::Fuse::Visual* root)
 {
@@ -2907,6 +2986,13 @@ void Pointer::EventResponder(uObject* value)
 {
     Pointer_typeof()->Init();
     return Pointer::_released();
+}
+
+// public static Fuse.VisualEvent<Fuse.Input.PointerWheelMovedHandler, Fuse.Input.PointerWheelMovedArgs> get_WheelMoved() [static] :981
+::g::Fuse::VisualEvent* Pointer::WheelMoved()
+{
+    Pointer_typeof()->Init();
+    return Pointer::_wheelMoved();
 }
 // }
 
@@ -3110,6 +3196,12 @@ void PointerEventArgs__IsSoftCapturedTo_fn(PointerEventArgs* __this, uObject* be
     *__retval = __this->IsSoftCapturedTo(behavior);
 }
 
+// public Uno.Platform.PointerType get_PointerType() :724
+void PointerEventArgs__get_PointerType_fn(PointerEventArgs* __this, int* __retval)
+{
+    *__retval = __this->PointerType();
+}
+
 // public int get_PointIndex() :723
 void PointerEventArgs__get_PointIndex_fn(PointerEventArgs* __this, int* __retval)
 {
@@ -3192,6 +3284,12 @@ bool PointerEventArgs::IsHardCapturedTo(uObject* behavior)
 bool PointerEventArgs::IsSoftCapturedTo(uObject* behavior)
 {
     return ::g::Fuse::Input::Pointer::IsSoftCaptured1(PointIndex(), behavior);
+}
+
+// public Uno.Platform.PointerType get_PointerType() [instance] :724
+int PointerEventArgs::PointerType()
+{
+    return uPtr(_data)->PointerType;
 }
 
 // public int get_PointIndex() [instance] :723
