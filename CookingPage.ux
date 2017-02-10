@@ -1,4 +1,4 @@
-<Page ux:Class="CookingPage" Background="#003b59">
+<Page ux:Class="CookingPage" Background="#ECF0F5">
 	<iOS.StatusBarConfig IsVisible="false" />
 	<Router ux:Dependency="router" />
 	<DockPanel>
@@ -33,34 +33,33 @@
 			<Fuse.iOS.StatusBarConfig Style="Dark" />
 			<Each Items="{Rezept.steps}">
 				<Panel Margin="0" Height="70%" Width="90%" Alignment="BottomCenter">
+					<Rectangle>
+					
 					<Rotation Degrees="{degrees}" />
-					<StackPanel Margin="0" Height="100%" Width="100%" >
+					<StackPanel Height="100%" Width="100%" >
 						<Panel>
-							<Text Value="Schritt {localId}" Font="Patua" FontSize="30" Alignment="Center" Margin="0,0,20,0"/>
-							<Image ux:Name="visited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0" Height="40" Alignment="TopLeft" />
+							<Rectangle> 
+								<Text Value="Schritt {localId}" Font="Patua" FontSize="30" Alignment="Center" Margin="0,0,20,0"/>
+								<Image ux:Name="visited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0" Height="40" Alignment="TopLeft" />
+							<Stroke Width="3" Color="#003b59" />
+							</Rectangle>
 						</Panel>
-							<StackPanel Alignment="VerticalCenter" MinWidth="100%" MinHeight="100%">
-										
+							<StackPanel Alignment="VerticalCenter" MinWidth="100%" MinHeight="100%" Color="#ECF0F5" Margin="0,0,0,10">
 										<Each Items="{usedIngs}">
-											<DockPanel Background="#003b59">
-												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
+											<DockPanel Background="#003b59" MaxWidth="99%">
+												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,5,0,0">
 													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30">
-														<WhileBusy>
-								                            <Rectangle Color="#EEE">
-								                                <Stroke Width="1" Color="#CCC" />
-								                            </Rectangle>
-								                        </WhileBusy>
 							                    	</Image>
 												</Panel>
 												<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
-													<Text Value="{ingredient.nameDe}" Margin="0,0,0,0" Color="#FFFFFF" Font="Roboto"/>
+													<Text Value="{ingredient.nameDe}" Margin="0,5,0,0" Color="#FFFFFF" Font="Roboto" Alignment="CenterLeft"/>
 												</Panel>
 											</DockPanel>
 										</Each>
 
 										<Each Items="{usedResults}">
 											<Each Items="{ingredients}">
-											<DockPanel Background="#003b59">
+											<DockPanel Background="#003b59" MaxWidth="99%">
 												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
 													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30" />
 												</Panel>
@@ -73,16 +72,16 @@
 											<Panel Column="3" MinWidth="100%" Margin="0,0,0,0" Background="#A1D1E9">
 												<Text Value="{procedure.nameDe}" Margin="95,0,0,0"  Font="Roboto"/>
 											</Panel>
+									<DropShadow Distance="0" Size="2" ux:Name="shadow" />
+								
 							</StackPanel>
-							<Image ux:Name="notVisited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0"  Height="40" Alignment="VerticalCenter" />
-
-
+						<Image ux:Name="notVisited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0"  Height="40" Alignment="VerticalCenter" />
 						<Image ux:Name="visitedOverlay" StretchMode="UniformToFill" File="Assets/Emblems/VisitedOverlay.png" Opacity="0" Dock="Fill" />
 						<Image ux:Name="notVisitedOverlay" StretchMode="UniformToFill" File="Assets/Emblems/VisitedOverlay.png" Opacity="0" Dock="Fill" />
 						<Image File="{imageKey}" Margin="0" StretchMode="UniformToFill" Dock="Fill" />
 					</StackPanel>
-					<Panel Background="White" Margin="0" Height="100%" Width="100%">
-						<DropShadow Distance="0" Size="2" ux:Name="shadow" />
+					<Panel Background="#ECF0F5" Margin="0" Height="100%" Width="100%">
+					
 					</Panel>
 
 					<InForceFieldAnimation ForceField="visitedAttractor" From="0.1" To="0.3">
@@ -111,7 +110,7 @@
 						<Change shadow.Distance="20" Duration="0.5" Easing="BackOut" />
 						<Change shadow.Size="20" Duration="0.5" Easing="BackOut" />
 					</WhileDragging>
-
+				</Rectangle>
 				</Panel>
 			</Each>
 

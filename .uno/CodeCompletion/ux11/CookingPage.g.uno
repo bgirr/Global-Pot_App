@@ -96,69 +96,86 @@ public partial class CookingPage: Fuse.Controls.Page
                 __parent = parent;
                 __parentInstance = parentInstance;
             }
-            global::Uno.UX.Property<string> __gen4_Url_inst;
-            global::Uno.UX.Property<string> __gen5_Right_inst;
-            global::Uno.UX.Property<string> temp_Value_inst;
-            internal Fuse.Controls.Image __gen4;
-            internal Uno.UX.StringConcatOperator __gen5;
+            [Uno.Compiler.UxGenerated]
+            public partial class Template3: Uno.UX.Template
+            {
+                [Uno.WeakReference] internal readonly Template2 __parent;
+                [Uno.WeakReference] internal readonly Fuse.Reactive.Each __parentInstance;
+                public Template3(Template2 parent, Fuse.Reactive.Each parentInstance): base(null, false)
+                {
+                    __parent = parent;
+                    __parentInstance = parentInstance;
+                }
+                global::Uno.UX.Property<string> __gen4_Url_inst;
+                global::Uno.UX.Property<string> __gen5_Right_inst;
+                global::Uno.UX.Property<string> temp_Value_inst;
+                internal Fuse.Controls.Image __gen4;
+                internal Uno.UX.StringConcatOperator __gen5;
+                static Template3()
+                {
+                }
+                public override object New()
+                {
+                    var self = new Fuse.Controls.DockPanel();
+                    var __gen4 = new Fuse.Controls.Image();
+                    __gen4_Url_inst = new GlobalPot_FuseControlsImage_Url_Property(__gen4, __selector0);
+                    var __gen5 = new Uno.UX.StringConcatOperator();
+                    __gen5_Right_inst = new GlobalPot_UnoUXStringConcatOperator_Right_Property(__gen5, __selector1);
+                    var temp = new Fuse.Controls.Text();
+                    temp_Value_inst = new GlobalPot_FuseControlsTextControl_Value_Property(temp, __selector2);
+                    var temp1 = new Fuse.Controls.Panel();
+                    var temp2 = new Fuse.Reactive.DataBinding<string>(__gen5_Right_inst, "iconUrl");
+                    var temp3 = new Fuse.Controls.Panel();
+                    var temp4 = new Fuse.Reactive.DataBinding<string>(temp_Value_inst, "nameDe");
+                    var temp5 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
+                    temp1.MinWidth = new Uno.UX.Size(40f, Uno.UX.Unit.Unspecified);
+                    temp1.MinHeight = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
+                    temp1.Margin = float4(10f, 0f, 0f, 0f);
+                    global::Fuse.Controls.DockPanel.SetDock(temp1, Fuse.Layouts.Dock.Left);
+                    global::Fuse.Controls.Grid.SetColumn(temp1, 2);
+                    temp1.Children.Add(__gen4);
+                    __gen4.MaxWidth = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
+                    __gen4.MaxHeight = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
+                    __gen4.Margin = float4(5f, 0f, 0f, 0f);
+                    __gen4.Name = __selector3;
+                    global::Fuse.Controls.DockPanel.SetDock(__gen4, Fuse.Layouts.Dock.Left);
+                    __gen4.Bindings.Add(temp2);
+                    __gen5.Left = "https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/";
+                    __gen5.Target = __gen4_Url_inst;
+                    temp3.MinWidth = new Uno.UX.Size(40f, Uno.UX.Unit.Unspecified);
+                    temp3.MinHeight = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
+                    temp3.Margin = float4(40f, 0f, 0f, 0f);
+                    global::Fuse.Controls.Grid.SetColumn(temp3, 1);
+                    temp3.Children.Add(temp);
+                    temp.Color = float4(1f, 1f, 1f, 1f);
+                    temp.Margin = float4(0f, 0f, 0f, 0f);
+                    temp.Font = global::MainView.Roboto;
+                    temp.Bindings.Add(temp4);
+                    self.Background = temp5;
+                    self.Children.Add(temp1);
+                    self.Children.Add(temp3);
+                    return self;
+                }
+                static global::Uno.UX.Selector __selector0 = "Url";
+                static global::Uno.UX.Selector __selector1 = "Right";
+                static global::Uno.UX.Selector __selector2 = "Value";
+                static global::Uno.UX.Selector __selector3 = "__gen4";
+            }
+            global::Uno.UX.Property<object> self_Items_inst;
             static Template2()
             {
             }
             public override object New()
             {
-                var self = new Fuse.Controls.DockPanel();
-                var __gen4 = new Fuse.Controls.Image();
-                __gen4_Url_inst = new GlobalPot_FuseControlsImage_Url_Property(__gen4, __selector0);
-                var __gen5 = new Uno.UX.StringConcatOperator();
-                __gen5_Right_inst = new GlobalPot_UnoUXStringConcatOperator_Right_Property(__gen5, __selector1);
-                var temp = new Fuse.Controls.Text();
-                temp_Value_inst = new GlobalPot_FuseControlsTextControl_Value_Property(temp, __selector2);
-                var temp1 = new Fuse.Controls.Panel();
-                var temp2 = new Fuse.Triggers.WhileBusy();
-                var temp3 = new Fuse.Controls.Rectangle();
-                var temp4 = new Fuse.Drawing.Stroke();
-                var temp5 = new Fuse.Reactive.DataBinding<string>(__gen5_Right_inst, "ingredients.iconUrl");
-                var temp6 = new Fuse.Controls.Panel();
-                var temp7 = new Fuse.Reactive.DataBinding<string>(temp_Value_inst, "ingredients.nameDe");
-                var temp8 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
-                temp1.MinWidth = new Uno.UX.Size(40f, Uno.UX.Unit.Unspecified);
-                temp1.MinHeight = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
-                temp1.Margin = float4(10f, 0f, 0f, 0f);
-                global::Fuse.Controls.DockPanel.SetDock(temp1, Fuse.Layouts.Dock.Left);
-                global::Fuse.Controls.Grid.SetColumn(temp1, 2);
-                temp1.Children.Add(__gen4);
-                __gen4.MaxWidth = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
-                __gen4.MaxHeight = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
-                __gen4.Margin = float4(5f, 0f, 0f, 0f);
-                __gen4.Name = __selector3;
-                global::Fuse.Controls.DockPanel.SetDock(__gen4, Fuse.Layouts.Dock.Left);
-                __gen4.Children.Add(temp2);
-                __gen4.Bindings.Add(temp5);
-                temp2.Nodes.Add(temp3);
-                temp3.Color = float4(0.9333333f, 0.9333333f, 0.9333333f, 1f);
-                temp3.Strokes.Add(temp4);
-                temp4.Color = float4(0.8f, 0.8f, 0.8f, 1f);
-                temp4.Width = 1f;
-                __gen5.Left = "https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/";
-                __gen5.Target = __gen4_Url_inst;
-                temp6.MinWidth = new Uno.UX.Size(40f, Uno.UX.Unit.Unspecified);
-                temp6.MinHeight = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
-                temp6.Margin = float4(40f, 0f, 0f, 0f);
-                global::Fuse.Controls.Grid.SetColumn(temp6, 1);
-                temp6.Children.Add(temp);
-                temp.Color = float4(1f, 1f, 1f, 1f);
-                temp.Margin = float4(0f, 0f, 0f, 0f);
-                temp.Font = global::MainView.Roboto;
-                temp.Bindings.Add(temp7);
-                self.Background = temp8;
-                self.Children.Add(temp1);
-                self.Children.Add(temp6);
+                var self = new Fuse.Reactive.Each();
+                self_Items_inst = new GlobalPot_FuseReactiveEach_Items_Property(self, __selector0);
+                var temp = new Template3(this, self);
+                var temp1 = new Fuse.Reactive.DataBinding<object>(self_Items_inst, "ingredients");
+                self.Templates.Add(temp);
+                self.Bindings.Add(temp1);
                 return self;
             }
-            static global::Uno.UX.Selector __selector0 = "Url";
-            static global::Uno.UX.Selector __selector1 = "Right";
-            static global::Uno.UX.Selector __selector2 = "Value";
-            static global::Uno.UX.Selector __selector3 = "__gen4";
+            static global::Uno.UX.Selector __selector0 = "Items";
         }
         global::Uno.UX.Property<float> temp_Degrees_inst;
         global::Uno.UX.Property<string> __gen0_Value_inst;
@@ -499,7 +516,7 @@ public partial class CookingPage: Fuse.Controls.Page
         temp17.LineNumber = 8;
         temp17.FileName = "CookingPage.ux";
         temp17.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../Recipe_API.js"));
-        temp18.Code = "var Observable = require(\"FuseJS/Observable\");\n\n\t\t\tvar resetting = Observable(false);\n\n\t\t\t\n\t\t\tfunction reset(x) {\n\t\t\t\tresetting.value = true;\n\t\t\t\tsetTimeout(backToNormal, 300);\n\t\t\t}\n\n\t\t\tfunction backToNormal() {\n\t\t\t\tresetting.value = false;\n\t\t\t}\n\n\t\t\tmodule.exports = {\n\t\t\t    reset: reset,\n\t\t\t\tresetting: resetting\n\t\t\t};\n\n\t\t\treset();";
+        temp18.Code = "var Observable = require(\"FuseJS/Observable\");\n\n\t\t\tvar resetting = Observable(false);\n\t\t\t            \t\t\n\t\t\tfunction reset(x) {\n\t\t\t\tresetting.value = true;\n\t\t\t\tsetTimeout(backToNormal, 300);\n\t\t\t}\n\n\t\t\tfunction backToNormal() {\n\t\t\t\tresetting.value = false;\n\t\t\t}\n\n\t\t\tmodule.exports = {\n\t\t\t    reset: reset,\n\t\t\t\tresetting: resetting\n\t\t\t\t\n\t\t\t};\n\n\t\t\treset();";
         temp18.LineNumber = 9;
         temp18.FileName = "CookingPage.ux";
         temp19.Children.Add(temp20);

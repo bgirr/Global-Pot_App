@@ -32,7 +32,7 @@ public partial class LoginPage: Fuse.Controls.Page
         var temp9 = new Fuse.Controls.Text();
         var temp10 = new Fuse.Controls.Rectangle();
         var temp11 = new Fuse.Drawing.Stroke();
-        var temp12 = new Fuse.Gestures.Tapped();
+        var temp12 = new Fuse.Gestures.Clicked();
         var temp13 = new Fuse.Animations.Scale();
         temp_eb3 = new Fuse.Reactive.EventBinding("login_clicked");
         var temp14 = new Fuse.Controls.StatusBarBackground();
