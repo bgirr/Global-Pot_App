@@ -39,6 +39,8 @@ void GridLayout__set_ChildOrder_fn(GridLayout* __this, int* value);
 void GridLayout__get_ColumnCount_fn(GridLayout* __this, int* __retval);
 void GridLayout__set_ColumnCount_fn(GridLayout* __this, int* value);
 void GridLayout__get_ColumnList_fn(GridLayout* __this, uObject** __retval);
+void GridLayout__get_Columns_fn(GridLayout* __this, uString** __retval);
+void GridLayout__set_Columns_fn(GridLayout* __this, uString* value);
 void GridLayout__get_ContentAlignment_fn(GridLayout* __this, int* __retval);
 void GridLayout__set_ContentAlignment_fn(GridLayout* __this, int* value);
 void GridLayout__DefinitionAdded_fn(GridLayout* __this, ::g::Fuse::Layouts::DefinitionBase* r);
@@ -114,6 +116,8 @@ struct GridLayout : ::g::Fuse::Layouts::Layout
     int ColumnCount();
     void ColumnCount(int value);
     uObject* ColumnList();
+    uString* Columns();
+    void Columns(uString* value);
     int ContentAlignment();
     void ContentAlignment(int value);
     void DefinitionAdded(::g::Fuse::Layouts::DefinitionBase* r);

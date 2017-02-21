@@ -100,7 +100,7 @@ public partial class OverviewPage: Fuse.Controls.Page
             static global::Uno.UX.Selector __selector2 = "__gen6";
         }
         global::Uno.UX.Property<object> temp_Items_inst;
-        internal Fuse.Reactive.EventBinding temp_eb4;
+        internal Fuse.Reactive.EventBinding temp_eb3;
         static Template()
         {
         }
@@ -113,10 +113,10 @@ public partial class OverviewPage: Fuse.Controls.Page
             var temp2 = new Template1(this, self);
             var __gen6 = new Template2(this, self);
             var temp3 = new Fuse.Reactive.DataBinding<object>(temp_Items_inst, "images");
-            var temp_eb4 = new Fuse.Reactive.EventBinding("recipe_clicked");
-            global::Fuse.Gestures.Clicked.AddHandler(temp1, temp_eb4.OnEvent);
+            var temp_eb3 = new Fuse.Reactive.EventBinding("recipe_clicked");
+            global::Fuse.Gestures.Clicked.AddHandler(temp1, temp_eb3.OnEvent);
             temp1.Children.Add(temp);
-            temp1.Bindings.Add(temp_eb4);
+            temp1.Bindings.Add(temp_eb3);
             temp.Templates.Add(temp2);
             temp.Templates.Add(__gen6);
             temp.Bindings.Add(temp3);
@@ -178,6 +178,7 @@ public partial class OverviewPage: Fuse.Controls.Page
         temp5.FileName = "TopBar_Blank.ux";
         temp5.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../Recipes_API.js"));
         temp6.Height = new Uno.UX.Size(45f, Uno.UX.Unit.Unspecified);
+        temp6.Margin = float4(0f, 10f, 0f, 0f);
         global::Fuse.Controls.DockPanel.SetDock(temp6, Fuse.Layouts.Dock.Top);
         temp6.Background = temp10;
         temp6.Children.Add(temp7);

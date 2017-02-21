@@ -2,7 +2,7 @@
 public partial class LoginPage: Fuse.Controls.Page
 {
     readonly Fuse.Navigation.Router router;
-    internal Fuse.Reactive.EventBinding temp_eb3;
+    internal Fuse.Reactive.EventBinding temp_eb0;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
         "router"
@@ -32,9 +32,9 @@ public partial class LoginPage: Fuse.Controls.Page
         var temp9 = new Fuse.Controls.Text();
         var temp10 = new Fuse.Controls.Rectangle();
         var temp11 = new Fuse.Drawing.Stroke();
-        var temp12 = new Fuse.Gestures.Tapped();
+        var temp12 = new Fuse.Gestures.Clicked();
         var temp13 = new Fuse.Animations.Scale();
-        temp_eb3 = new Fuse.Reactive.EventBinding("login_clicked");
+        temp_eb0 = new Fuse.Reactive.EventBinding("login_clicked");
         var temp14 = new Fuse.Controls.StatusBarBackground();
         var temp15 = new Fuse.Controls.BottomBarBackground();
         temp.IsVisible = false;
@@ -62,10 +62,10 @@ public partial class LoginPage: Fuse.Controls.Page
         temp8.Alignment = Fuse.Elements.Alignment.VerticalCenter;
         temp8.Margin = float4(50f, 0f, 50f, 0f);
         global::Fuse.Controls.DockPanel.SetDock(temp8, Fuse.Layouts.Dock.Bottom);
-        global::Fuse.Gestures.Clicked.AddHandler(temp8, temp_eb3.OnEvent);
+        global::Fuse.Gestures.Clicked.AddHandler(temp8, temp_eb0.OnEvent);
         temp8.Children.Add(temp9);
         temp8.Children.Add(temp10);
-        temp8.Bindings.Add(temp_eb3);
+        temp8.Bindings.Add(temp_eb0);
         temp9.Value = "Let's cook!";
         temp9.Color = float4(0f, 0.2313726f, 0.3490196f, 1f);
         temp9.Alignment = Fuse.Elements.Alignment.Center;
@@ -80,7 +80,7 @@ public partial class LoginPage: Fuse.Controls.Page
         temp11.Width = 3f;
         temp11.Offset = 4f;
         temp12.Animators.Add(temp13);
-        temp13.Factor = 0.8f;
+        temp13.Factor = 1.8f;
         temp13.Duration = 0.3;
         temp13.Easing = Fuse.Animations.Easing.QuadraticInOut;
         global::Fuse.Controls.DockPanel.SetDock(temp14, Fuse.Layouts.Dock.Top);

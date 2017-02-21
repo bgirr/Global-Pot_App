@@ -23,6 +23,7 @@ namespace g{namespace Fuse{struct LayoutParams;}}
 namespace g{namespace Fuse{struct VisualBounds;}}
 namespace g{namespace Uno{namespace Graphics{struct Framebuffer;}}}
 namespace g{namespace Uno{namespace UX{struct Selector;}}}
+namespace g{namespace Uno{struct Float4;}}
 
 namespace g{
 namespace Fuse{
@@ -35,6 +36,8 @@ void Panel__ctor_6_fn(Panel* __this);
 void Panel__ArrangePaddingBox_fn(Panel* __this, ::g::Fuse::LayoutParams* lp);
 void Panel__CleanupBuffer_fn(Panel* __this);
 void Panel__CleanupListener_fn(Panel* __this, bool* nextFrame);
+void Panel__get_Color_fn(Panel* __this, ::g::Uno::Float4* __retval);
+void Panel__set_Color_fn(Panel* __this, ::g::Uno::Float4* value);
 void Panel__get_DeferFreeze_fn(Panel* __this, int* __retval);
 void Panel__set_DeferFreeze_fn(Panel* __this, int* value);
 void Panel__Draw_fn(Panel* __this, ::g::Fuse::DrawContext* dc);
@@ -47,10 +50,12 @@ void Panel__set_IsFrozen_fn(Panel* __this, bool* value);
 void Panel__get_IsLayoutRoot_fn(Panel* __this, bool* __retval);
 void Panel__get_LocalRenderBounds_fn(Panel* __this, ::g::Fuse::VisualBounds** __retval);
 void Panel__New3_fn(Panel** __retval);
+void Panel__OnColorChanged_fn(Panel* __this, ::g::Uno::Float4* value, uObject* origin);
 void Panel__OnPrepared_fn(Panel* __this, ::g::Fuse::DrawContext* dc);
 void Panel__OnRooted_fn(Panel* __this);
 void Panel__OnUnrooted_fn(Panel* __this);
 void Panel__get_Scale_fn(Panel* __this, ::g::Uno::Float2* __retval);
+void Panel__SetColor_fn(Panel* __this, ::g::Uno::Float4* value, uObject* origin);
 void Panel__SetupListener_fn(Panel* __this);
 
 struct Panel : ::g::Fuse::Controls::LayoutControl
@@ -68,14 +73,18 @@ struct Panel : ::g::Fuse::Controls::LayoutControl
     void ctor_6();
     void CleanupBuffer();
     void CleanupListener(bool nextFrame);
+    ::g::Uno::Float4 Color();
+    void Color(::g::Uno::Float4 value);
     int DeferFreeze();
     void DeferFreeze(int value);
     void EndBusy();
     bool HasFreezePrepared();
     bool IsFrozen();
     void IsFrozen(bool value);
+    void OnColorChanged(::g::Uno::Float4 value, uObject* origin);
     void OnPrepared(::g::Fuse::DrawContext* dc);
     ::g::Uno::Float2 Scale();
+    void SetColor(::g::Uno::Float4 value, uObject* origin);
     void SetupListener();
     static Panel* New3();
 };

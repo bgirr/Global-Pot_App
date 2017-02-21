@@ -1,9 +1,9 @@
-<Page ux:Class="CookingPage" Background="#ECF0F5">
+<Page  Background="#ECF0F5" >
 	<iOS.StatusBarConfig IsVisible="false" />
-	<Router ux:Dependency="router" />
+	
 	<DockPanel>
 		<Panel Dock="Top">
-			<ux:Include File="TopBar.ux"/>
+
 		</Panel>
 		<JavaScript File="Recipe_API.js" />
 		<JavaScript>
@@ -45,35 +45,35 @@
 							</Rectangle>
 						</Panel>
 							<StackPanel Alignment="VerticalCenter" MinWidth="100%" MinHeight="100%" Color="#ECF0F5" Margin="0,0,0,10">
-										<Each Items="{usedIngs}">
-											<DockPanel Background="#003b59" MaxWidth="99%">
-												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,5,0,0">
-													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30">
-							                    	</Image>
-												</Panel>
-												<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
-													<Text Value="{ingredient.nameDe}" Margin="0,5,0,0" Color="#FFFFFF" Font="Roboto" Alignment="CenterLeft"/>
-												</Panel>
-											</DockPanel>
-										</Each>
-
-										<Each Items="{usedResults}">
-											<Each Items="{ingredients}">
-											<DockPanel Background="#003b59" MaxWidth="99%">
-												<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
-													<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30" />
-												</Panel>
-												<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
-													<Text Value="{nameDe}" Margin="0,0,0,0" Color="#FFFFFF" Font="Roboto"/>
-												</Panel>
-											</DockPanel>
-												</Each>
-											</Each>
-											<Panel Column="3" MinWidth="100%" Margin="0,0,0,0" Background="#A1D1E9">
-												<Text Value="{procedure.nameDe}" Margin="95,0,0,0"  Font="Roboto"/>
+								<Each Items="{usedResults}">
+									<Each Items="{ingredients}">
+										<DockPanel Background="#BDBDBD" MaxWidth="99%">
+											<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
+												<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30" />
 											</Panel>
+											<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
+												<Text Value="{nameDe}" Margin="0,0,0,0" Color="#FFFFFF" Font="Roboto"/>
+											</Panel>
+										</DockPanel>
+									</Each>
+								</Each>
+
+								<Each Items="{usedIngs}">
+									<DockPanel Background="#003b59" MaxWidth="99%">
+										<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,5,5,5">
+											<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30">
+							                </Image>
+										</Panel>
+										<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,0,0,0">
+											<Text Value="{ingredient.nameDe}" Margin="0,5,0,0" Color="#FFFFFF" Font="Roboto" Alignment="CenterLeft"/>
+										</Panel>
+									</DockPanel>
+								</Each>
+
+								<Panel Column="3" MinWidth="100%" Margin="0,0,0,0" Background="#A1D1E9">
+									<Text Value="{procedure.nameDe}" Margin="95,0,0,0"  Font="Roboto"/>
+								</Panel>
 									<DropShadow Distance="0" Size="2" ux:Name="shadow" />
-								
 							</StackPanel>
 						<Image ux:Name="notVisited" File="Assets/Emblems/visited.png" Margin="10,0,10,0" Opacity="0"  Height="40" Alignment="VerticalCenter" />
 						<Image ux:Name="visitedOverlay" StretchMode="UniformToFill" File="Assets/Emblems/VisitedOverlay.png" Opacity="0" Dock="Fill" />
@@ -130,14 +130,5 @@
 			<Text Value="Guten Appetit!" Font="Patua" FontSize="30" Alignment="Center" Color="White" Margin="0,140,0,0"/>
 			<Image File="images/logo_v02.png" Height="100"/>
 		</DockPanel>
-		<Panel Clicked="{recipe_id}" Alignment="VerticalCenter" Margin="50,20,50,0" Dock="Top" >
-							<Text Font="Patua" Value="Let's cook!" Color="White" Alignment="Center"/>		
-						<Rectangle  Width="200" Height="40" Margin="0,0,0,0" CornerRadius="5">
-					<Stroke Offset="4" Width="3" Color="White" />
-					<Tapped>
-						 <Scale Factor="0.8" Duration="0.3" Easing="QuadraticInOut"/>	
-					</Tapped>
-				</Rectangle>
-			</Panel>
 	</DockPanel>
 </Page>

@@ -11,7 +11,7 @@ namespace g{struct GlobalPot_UnoUXStringConcatOperator_Left_Property;}
 
 namespace g{
 
-// internal sealed class GlobalPot_UnoUXStringConcatOperator_Left_Property :55
+// internal sealed class GlobalPot_UnoUXStringConcatOperator_Left_Property :28
 // {
 ::g::Uno::UX::Property1_type* GlobalPot_UnoUXStringConcatOperator_Left_Property_typeof();
 void GlobalPot_UnoUXStringConcatOperator_Left_Property__ctor_2_fn(GlobalPot_UnoUXStringConcatOperator_Left_Property* __this, ::g::Uno::UX::StringConcatOperator* obj, ::g::Uno::UX::Selector* name);

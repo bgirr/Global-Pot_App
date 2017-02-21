@@ -59,7 +59,7 @@
 #include <Uno.String.h>
 #include <Uno.Vector.h>
 static uString* STRINGS[10];
-static uType* TYPES[42];
+static uType* TYPES[44];
 
 namespace g{
 namespace Fuse{
@@ -1471,8 +1471,10 @@ static void GridLayout_build(uType* type)
     ::TYPES[35] = type->MakeMethod(6/*RemoveListeners<Fuse.Layouts.Column>*/, ::g::Fuse::Layouts::Column_typeof(), NULL);
     ::TYPES[36] = ::TYPES[8/*Uno.Collections.ICollection`1*/]->MakeType(::g::Fuse::Layouts::Column_typeof(), NULL);
     ::TYPES[37] = type->MakeMethod(5/*ModifyCount<Fuse.Layouts.Column>*/, ::g::Fuse::Layouts::Column_typeof(), NULL);
-    ::TYPES[38] = ::TYPES[30/*Fuse.Layouts.DefinitionBase*/]->MakeMethod(3/*Serialize<Fuse.Layouts.Row>*/, ::g::Fuse::Layouts::Row_typeof(), NULL);
-    ::TYPES[39] = ::TYPES[30/*Fuse.Layouts.DefinitionBase*/]->MakeMethod(2/*Parse<Fuse.Layouts.Row>*/, ::g::Fuse::Layouts::Row_typeof(), NULL);
+    ::TYPES[38] = ::TYPES[30/*Fuse.Layouts.DefinitionBase*/]->MakeMethod(3/*Serialize<Fuse.Layouts.Column>*/, ::g::Fuse::Layouts::Column_typeof(), NULL);
+    ::TYPES[39] = ::TYPES[30/*Fuse.Layouts.DefinitionBase*/]->MakeMethod(2/*Parse<Fuse.Layouts.Column>*/, ::g::Fuse::Layouts::Column_typeof(), NULL);
+    ::TYPES[40] = ::TYPES[30/*Fuse.Layouts.DefinitionBase*/]->MakeMethod(3/*Serialize<Fuse.Layouts.Row>*/, ::g::Fuse::Layouts::Row_typeof(), NULL);
+    ::TYPES[41] = ::TYPES[30/*Fuse.Layouts.DefinitionBase*/]->MakeMethod(2/*Parse<Fuse.Layouts.Row>*/, ::g::Fuse::Layouts::Row_typeof(), NULL);
     type->MethodTypes[0]->SetPrecalc(
         ::TYPES[8/*Uno.Collections.ICollection`1*/]->MakeType(type->MethodTypes[0]->U(0), NULL),
         ::TYPES[11/*Uno.Collections.IList`1*/]->MakeType(type->MethodTypes[0]->U(0), NULL));
@@ -1747,6 +1749,18 @@ void GridLayout__set_ColumnCount_fn(GridLayout* __this, int* value)
 void GridLayout__get_ColumnList_fn(GridLayout* __this, uObject** __retval)
 {
     *__retval = __this->ColumnList();
+}
+
+// public string get_Columns() :1147
+void GridLayout__get_Columns_fn(GridLayout* __this, uString** __retval)
+{
+    *__retval = __this->Columns();
+}
+
+// public void set_Columns(string value) :1148
+void GridLayout__set_Columns_fn(GridLayout* __this, uString* value)
+{
+    __this->Columns(value);
 }
 
 // public Fuse.Elements.Alignment get_ContentAlignment() :1204
@@ -2300,6 +2314,19 @@ uObject* GridLayout::ColumnList()
     return (uObject*)_columns;
 }
 
+// public string get_Columns() [instance] :1147
+uString* GridLayout::Columns()
+{
+    return ::g::Fuse::Layouts::DefinitionBase::Serialize1(::TYPES[38/*Fuse.Layouts.DefinitionBase.Serialize<Fuse.Layouts.Column>*/], ColumnList());
+}
+
+// public void set_Columns(string value) [instance] :1148
+void GridLayout::Columns(uString* value)
+{
+    ::g::Fuse::Layouts::DefinitionBase::Parse1(::TYPES[39/*Fuse.Layouts.DefinitionBase.Parse<Fuse.Layouts.Column>*/], value, ColumnList());
+    Changed();
+}
+
 // public Fuse.Elements.Alignment get_ContentAlignment() [instance] :1204
 int GridLayout::ContentAlignment()
 {
@@ -2603,13 +2630,13 @@ uObject* GridLayout::RowList()
 // public string get_Rows() [instance] :1045
 uString* GridLayout::Rows()
 {
-    return ::g::Fuse::Layouts::DefinitionBase::Serialize1(::TYPES[38/*Fuse.Layouts.DefinitionBase.Serialize<Fuse.Layouts.Row>*/], RowList());
+    return ::g::Fuse::Layouts::DefinitionBase::Serialize1(::TYPES[40/*Fuse.Layouts.DefinitionBase.Serialize<Fuse.Layouts.Row>*/], RowList());
 }
 
 // public void set_Rows(string value) [instance] :1046
 void GridLayout::Rows(uString* value)
 {
-    ::g::Fuse::Layouts::DefinitionBase::Parse1(::TYPES[39/*Fuse.Layouts.DefinitionBase.Parse<Fuse.Layouts.Row>*/], value, RowList());
+    ::g::Fuse::Layouts::DefinitionBase::Parse1(::TYPES[41/*Fuse.Layouts.DefinitionBase.Parse<Fuse.Layouts.Row>*/], value, RowList());
     Changed();
 }
 
@@ -2737,7 +2764,7 @@ static void Layout_build(uType* type)
     ::STRINGS[8] = uString::Const("Only a single container is supported for Layout");
     ::STRINGS[9] = uString::Const("Removing an invalid container from Layout");
     ::TYPES[1] = ::g::Fuse::Visual_typeof();
-    ::TYPES[40] = ::g::Fuse::Elements::Element_typeof();
+    ::TYPES[42] = ::g::Fuse::Elements::Element_typeof();
     type->SetFields(1,
         ::g::Fuse::Controls::LayoutControl_typeof(), offsetof(::g::Fuse::Layouts::Layout, Container), 0,
         ::g::Fuse::PropertyHandle_typeof(), (uintptr_t)&::g::Fuse::Layouts::Layout::_fillPaddingProperty_, uFieldFlagsStatic);
@@ -2901,7 +2928,7 @@ bool Layout::ArrangeMarginBoxSpecial(::g::Fuse::Node* n, ::g::Uno::Float4 paddin
 
     if (lr == 3)
     {
-        ::g::Fuse::Elements::Element* elm = uAs< ::g::Fuse::Elements::Element*>(e, ::TYPES[40/*Fuse.Elements.Element*/]);
+        ::g::Fuse::Elements::Element* elm = uAs< ::g::Fuse::Elements::Element*>(e, ::TYPES[42/*Fuse.Elements.Element*/]);
 
         if (e != NULL)
             uPtr(elm)->RequestLayout();
@@ -3553,7 +3580,7 @@ uEnumType* StackLayoutMode_typeof()
 // {
 static void WrapLayout_build(uType* type)
 {
-    ::TYPES[41] = ::g::Uno::Float4_typeof()->Array();
+    ::TYPES[43] = ::g::Uno::Float4_typeof()->Array();
     ::TYPES[0] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Node_typeof(), NULL);
     ::TYPES[6] = ::g::Uno::Float_typeof()->Array();
     ::TYPES[1] = ::g::Fuse::Visual_typeof();
@@ -3602,7 +3629,7 @@ void WrapLayout__ArrangePaddingBox_fn(WrapLayout* __this, uObject* elements, ::g
     bool firstChild = true;
     int lastWrap = 0;
     bool lastWasWrap = false;
-    uArray* placements = uArray::New(::TYPES[41/*float4[]*/], ::g::Uno::Collections::ICollection::Count(uInterface(uPtr(elements), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/])));
+    uArray* placements = uArray::New(::TYPES[43/*float4[]*/], ::g::Uno::Collections::ICollection::Count(uInterface(uPtr(elements), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/])));
     uArray* largest = uArray::New(::TYPES[6/*float[]*/], ::g::Uno::Collections::ICollection::Count(uInterface(elements, ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/])));
     ::g::Fuse::LayoutParams nlp = lp_.CloneAndDerive();
     nlp.RetainXY(false, false);

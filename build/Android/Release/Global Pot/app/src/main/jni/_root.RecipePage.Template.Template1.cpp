@@ -36,20 +36,20 @@ static void RecipePage__Template__Template1__cctor__fn(uType* __type)
 {
     RecipePage__Template__Template1::__selector0_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[0/*"Url"*/]);
     RecipePage__Template__Template1::__selector1_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[1/*"Right"*/]);
-    RecipePage__Template__Template1::__selector2_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[2/*"__gen8"*/]);
+    RecipePage__Template__Template1::__selector2_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[2/*"__gen2"*/]);
 }
 
 static void RecipePage__Template__Template1_build(uType* type)
 {
     ::STRINGS[0] = uString::Const("Url");
     ::STRINGS[1] = uString::Const("Right");
-    ::STRINGS[2] = uString::Const("__gen8");
+    ::STRINGS[2] = uString::Const("__gen2");
     ::STRINGS[3] = uString::Const("imageUrl");
     ::STRINGS[4] = uString::Const("http://cookingtest-cookingtest.rhcloud.com/static/resource/img/recipeImages/");
     ::TYPES[0] = ::g::Fuse::Reactive::DataBinding_typeof()->MakeType(::g::Uno::String_typeof(), NULL);
     ::TYPES[1] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL);
     type->SetFields(2,
-        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template__Template1, __gen9_Right_inst1), 0,
+        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template__Template1, __gen3_Right_inst1), 0,
         ::g::RecipePage__Template_typeof(), offsetof(::g::RecipePage__Template__Template1, __parent1), uFieldFlagsWeak,
         ::g::Fuse::Controls::Panel_typeof(), offsetof(::g::RecipePage__Template__Template1, __parentInstance1), uFieldFlagsWeak,
         ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template__Template1, self_Url_inst), 0,
@@ -86,14 +86,14 @@ void RecipePage__Template__Template1__New1_fn(RecipePage__Template__Template1* _
 {
     ::g::Fuse::Controls::Image* self = ::g::Fuse::Controls::Image::New3();
     __this->self_Url_inst = ::g::GlobalPot_FuseControlsImage_Url_Property::New1(self, RecipePage__Template__Template1::__selector0());
-    ::g::Uno::UX::StringConcatOperator* __gen91 = ::g::Uno::UX::StringConcatOperator::New2();
-    __this->__gen9_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen91, RecipePage__Template__Template1::__selector1());
-    ::g::Fuse::Reactive::DataBinding* temp = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen9_Right_inst1, ::STRINGS[3/*"imageUrl"*/]);
+    ::g::Uno::UX::StringConcatOperator* __gen31 = ::g::Uno::UX::StringConcatOperator::New2();
+    __this->__gen3_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen31, RecipePage__Template__Template1::__selector1());
+    ::g::Fuse::Reactive::DataBinding* temp = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen3_Right_inst1, ::STRINGS[3/*"imageUrl"*/]);
     self->Margin(::g::Uno::Float4__New2(0.0f, 0.0f, 0.0f, 0.0f));
     self->Name(RecipePage__Template__Template1::__selector2());
     ::g::Fuse::Controls::DockPanel::SetDock(self, 0);
-    __gen91->Left(::STRINGS[4/*"http://cook...*/]);
-    __gen91->Target(__this->self_Url_inst);
+    __gen31->Left(::STRINGS[4/*"http://cook...*/]);
+    __gen31->Target(__this->self_Url_inst);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(self->Bindings()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp);
     return *__retval = self, void();
 }

@@ -10,7 +10,7 @@
 
 namespace g{
 
-// internal sealed class GlobalPot_FuseControlsImage_File_Property :37
+// internal sealed class GlobalPot_FuseControlsImage_File_Property :46
 // {
 static void GlobalPot_FuseControlsImage_File_Property_build(uType* type)
 {
@@ -38,50 +38,50 @@ static void GlobalPot_FuseControlsImage_File_Property_build(uType* type)
     return type;
 }
 
-// public GlobalPot_FuseControlsImage_File_Property(Fuse.Controls.Image obj, Uno.UX.Selector name) :40
+// public GlobalPot_FuseControlsImage_File_Property(Fuse.Controls.Image obj, Uno.UX.Selector name) :49
 void GlobalPot_FuseControlsImage_File_Property__ctor_2_fn(GlobalPot_FuseControlsImage_File_Property* __this, ::g::Fuse::Controls::Image* obj, ::g::Uno::UX::Selector* name)
 {
     __this->ctor_2(obj, *name);
 }
 
-// public override sealed Uno.UX.FileSource Get() :42
+// public override sealed Uno.UX.FileSource Get() :51
 void GlobalPot_FuseControlsImage_File_Property__Get_fn(GlobalPot_FuseControlsImage_File_Property* __this, ::g::Uno::UX::FileSource** __retval)
 {
     return *__retval = uPtr(__this->_obj)->File(), void();
 }
 
-// public GlobalPot_FuseControlsImage_File_Property New(Fuse.Controls.Image obj, Uno.UX.Selector name) :40
+// public GlobalPot_FuseControlsImage_File_Property New(Fuse.Controls.Image obj, Uno.UX.Selector name) :49
 void GlobalPot_FuseControlsImage_File_Property__New1_fn(::g::Fuse::Controls::Image* obj, ::g::Uno::UX::Selector* name, GlobalPot_FuseControlsImage_File_Property** __retval)
 {
     *__retval = GlobalPot_FuseControlsImage_File_Property::New1(obj, *name);
 }
 
-// public override sealed Uno.UX.PropertyObject get_Object() :41
+// public override sealed Uno.UX.PropertyObject get_Object() :50
 void GlobalPot_FuseControlsImage_File_Property__get_Object_fn(GlobalPot_FuseControlsImage_File_Property* __this, ::g::Uno::UX::PropertyObject** __retval)
 {
     return *__retval = __this->_obj, void();
 }
 
-// public override sealed void Set(Uno.UX.FileSource v, Uno.UX.IPropertyListener origin) :43
+// public override sealed void Set(Uno.UX.FileSource v, Uno.UX.IPropertyListener origin) :52
 void GlobalPot_FuseControlsImage_File_Property__Set_fn(GlobalPot_FuseControlsImage_File_Property* __this, ::g::Uno::UX::FileSource* v, uObject* origin)
 {
     uPtr(__this->_obj)->File(v);
 }
 
-// public override sealed bool get_SupportsOriginSetter() :44
+// public override sealed bool get_SupportsOriginSetter() :53
 void GlobalPot_FuseControlsImage_File_Property__get_SupportsOriginSetter_fn(GlobalPot_FuseControlsImage_File_Property* __this, bool* __retval)
 {
     return *__retval = false, void();
 }
 
-// public GlobalPot_FuseControlsImage_File_Property(Fuse.Controls.Image obj, Uno.UX.Selector name) [instance] :40
+// public GlobalPot_FuseControlsImage_File_Property(Fuse.Controls.Image obj, Uno.UX.Selector name) [instance] :49
 void GlobalPot_FuseControlsImage_File_Property::ctor_2(::g::Fuse::Controls::Image* obj, ::g::Uno::UX::Selector name)
 {
     ctor_1(name);
     _obj = obj;
 }
 
-// public GlobalPot_FuseControlsImage_File_Property New(Fuse.Controls.Image obj, Uno.UX.Selector name) [static] :40
+// public GlobalPot_FuseControlsImage_File_Property New(Fuse.Controls.Image obj, Uno.UX.Selector name) [static] :49
 GlobalPot_FuseControlsImage_File_Property* GlobalPot_FuseControlsImage_File_Property::New1(::g::Fuse::Controls::Image* obj, ::g::Uno::UX::Selector name)
 {
     GlobalPot_FuseControlsImage_File_Property* obj1 = (GlobalPot_FuseControlsImage_File_Property*)uNew(GlobalPot_FuseControlsImage_File_Property_typeof());

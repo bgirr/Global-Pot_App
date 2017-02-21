@@ -12,11 +12,13 @@ namespace Android{
 // internal static extern class StatusBarHelper :41
 // {
 uClassType* StatusBarHelper_typeof();
+void StatusBarHelper__GetStatusBarColor_fn(int* __retval);
 void StatusBarHelper__InstallGlobalListener_fn();
 void StatusBarHelper__SetStatusBarColor_fn(int* color);
 
 struct StatusBarHelper : uObject
 {
+    static int GetStatusBarColor();
     static void InstallGlobalListener();
     static void SetStatusBarColor(int color);
 };

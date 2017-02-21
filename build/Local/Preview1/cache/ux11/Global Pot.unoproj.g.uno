@@ -43,3 +43,12 @@ sealed class GlobalPot_FuseControlsImage_Url_Property: Uno.UX.Property<string>
     public override void Set(string v, global::Uno.UX.IPropertyListener origin) { _obj.Url = v; }
     public override bool SupportsOriginSetter { get { return false; } }
 }
+sealed class GlobalPot_FuseElementsElement_Opacity_Property: Uno.UX.Property<float>
+{
+    [Uno.WeakReference] readonly Fuse.Elements.Element _obj;
+    public GlobalPot_FuseElementsElement_Opacity_Property(Fuse.Elements.Element obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
+    public override float Get() { return _obj.Opacity; }
+    public override void Set(float v, global::Uno.UX.IPropertyListener origin) { _obj.SetOpacity(v, origin); }
+    public override bool SupportsOriginSetter { get { return true; } }
+}

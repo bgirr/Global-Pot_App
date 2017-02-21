@@ -11,7 +11,7 @@ namespace g{struct GlobalPot_FuseRotation_Degrees_Property;}
 
 namespace g{
 
-// internal sealed class GlobalPot_FuseRotation_Degrees_Property :10
+// internal sealed class GlobalPot_FuseRotation_Degrees_Property :37
 // {
 ::g::Uno::UX::Property1_type* GlobalPot_FuseRotation_Degrees_Property_typeof();
 void GlobalPot_FuseRotation_Degrees_Property__ctor_2_fn(GlobalPot_FuseRotation_Degrees_Property* __this, ::g::Fuse::Rotation* obj, ::g::Uno::UX::Selector* name);

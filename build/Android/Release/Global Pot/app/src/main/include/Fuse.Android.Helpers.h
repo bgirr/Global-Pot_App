@@ -13,10 +13,12 @@ namespace Android{
 // internal static class Helpers :6
 // {
 uClassType* Helpers_typeof();
+void Helpers__DecodeColor_fn(int* color, ::g::Uno::Float4* __retval);
 void Helpers__EncodeColor_fn(::g::Uno::Float4* c, int* __retval);
 
 struct Helpers : uObject
 {
+    static ::g::Uno::Float4 DecodeColor(int color);
     static int EncodeColor(::g::Uno::Float4 c);
 };
 // }

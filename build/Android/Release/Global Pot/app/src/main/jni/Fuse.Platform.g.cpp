@@ -6,6 +6,7 @@
 #include <Fuse.Platform.AppEvents.h>
 #include <Fuse.Platform.ApplicationState.h>
 #include <Fuse.Platform.Lifecycle.h>
+#include <Fuse.Platform.StatusBarAnimation.h>
 #include <Fuse.Platform.StatusBarStyle.h>
 #include <Fuse.Platform.SystemUI.h>
 #include <Fuse.Platform.SystemUIID.h>
@@ -451,6 +452,23 @@ void Lifecycle::remove_Terminating(uDelegate* value)
     Lifecycle::Terminating1() = uCast<uDelegate*>(::g::Uno::Delegate::Remove(Lifecycle::Terminating1(), value), ::TYPES[3/*Uno.Action<Fuse.Platform.ApplicationState>*/]);
 }
 // }
+
+// C:\Users\EliteBook-User\AppData\Local\Fusetools\Packages\Fuse.Platform\0.44.1\ios\$.uno
+// ---------------------------------------------------------------------------------------
+
+// public enum StatusBarAnimation :16
+uEnumType* StatusBarAnimation_typeof()
+{
+    static uSStrong<uEnumType*> type;
+    if (type != NULL) return type;
+
+    type = uEnumType::New("Fuse.Platform.StatusBarAnimation", ::g::Uno::Int_typeof(), 3);
+    type->SetLiterals(
+        "None", 0LL,
+        "Fade", 1LL,
+        "Slide", 2LL);
+    return type;
+}
 
 // C:\Users\EliteBook-User\AppData\Local\Fusetools\Packages\Fuse.Platform\0.44.1\ios\$.uno
 // ---------------------------------------------------------------------------------------

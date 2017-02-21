@@ -3,6 +3,7 @@
 
 #include <Fuse.iOS.StatusBarConfig.h>
 #include <Fuse.Node.h>
+#include <Fuse.Platform.StatusBarAnimation.h>
 #include <Fuse.Platform.StatusBarStyle.h>
 #include <Uno.Bool.h>
 #include <Uno.Collections.List-1.h>
@@ -33,6 +34,8 @@ static void StatusBarConfig_build(uType* type)
         ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL), offsetof(::g::Fuse::Node_type, interface2),
         ::g::Uno::Collections::IEnumerable_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL), offsetof(::g::Fuse::Node_type, interface3));
     type->SetFields(13,
+        ::g::Fuse::Platform::StatusBarAnimation_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _animation), 0,
+        ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _hasAnimation), 0,
         ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _hasIsVisible), 0,
         ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _hasStyle), 0,
         ::g::Uno::Bool_typeof(), offsetof(::g::Fuse::iOS::StatusBarConfig, _isVisible), 0,
@@ -47,7 +50,7 @@ static void StatusBarConfig_build(uType* type)
 
     uTypeOptions options;
     options.BaseDefinition = ::g::Fuse::Behavior_typeof();
-    options.FieldCount = 18;
+    options.FieldCount = 20;
     options.InterfaceCount = 4;
     options.ObjectSize = sizeof(StatusBarConfig);
     options.TypeSize = sizeof(::g::Fuse::Node_type);
@@ -76,6 +79,18 @@ static void StatusBarConfig_build(uType* type)
 void StatusBarConfig__ctor_3_fn(StatusBarConfig* __this)
 {
     __this->ctor_3();
+}
+
+// public Fuse.Platform.StatusBarAnimation get_Animation() :481
+void StatusBarConfig__get_Animation_fn(StatusBarConfig* __this, int* __retval)
+{
+    *__retval = __this->Animation();
+}
+
+// public void set_Animation(Fuse.Platform.StatusBarAnimation value) :482
+void StatusBarConfig__set_Animation_fn(StatusBarConfig* __this, int* value)
+{
+    __this->Animation(*value);
 }
 
 // private static void Apply() :540
@@ -137,6 +152,23 @@ uSStrong< ::g::Uno::Collections::List*> StatusBarConfig::_stack_;
 void StatusBarConfig::ctor_3()
 {
     ctor_2();
+}
+
+// public Fuse.Platform.StatusBarAnimation get_Animation() [instance] :481
+int StatusBarConfig::Animation()
+{
+    return _animation;
+}
+
+// public void set_Animation(Fuse.Platform.StatusBarAnimation value) [instance] :482
+void StatusBarConfig::Animation(int value)
+{
+    if (!_hasAnimation || (_animation != value))
+    {
+        _animation = value;
+        _hasAnimation = true;
+        StatusBarConfig::Apply();
+    }
 }
 
 // public bool get_IsVisible() [instance] :442

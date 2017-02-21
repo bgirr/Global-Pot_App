@@ -58,7 +58,6 @@ struct CookingPage : ::g::Fuse::Controls::Page
     uStrong< ::g::Fuse::Navigation::Router*> router;
     uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb0;
     uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb1;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb2;
     uStrong< ::g::Uno::UX::Property1*> temp_Items_inst;
     uStrong< ::g::Uno::UX::Property1*> temp1_Value_inst;
     uStrong< ::g::Fuse::Physics::PointAttractor*> visitedAttractor;

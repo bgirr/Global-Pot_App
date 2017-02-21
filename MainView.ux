@@ -1,4 +1,6 @@
 <App>
+	<Android.StatusBarConfig Color="#0003" IsVisible="True" />
+	<iOS.StatusBarConfig Style="Light" Animation="Slide" IsVisible="True" />
 	<Image ux:Class="Icon" Margin="10" />
 	<Font File="fonts/PatuaOne-Regular.ttf" ux:Global="Patua" />
 	<Font File="fonts/RobotoCondensed-Regular.ttf" ux:Global="Roboto" />
@@ -7,6 +9,5 @@
 		<LoginPage ux:Template="LoginPage" router="MainRouter"/>
 		<OverviewPage ux:Template="OverviewPage" router="MainRouter"/>
 		<RecipePage ux:Template="RecipePage" router="MainRouter"/>
-		<CookingPage ux:Template="CookingPage" router="MainRouter" />
 	</Navigator>
 </App>

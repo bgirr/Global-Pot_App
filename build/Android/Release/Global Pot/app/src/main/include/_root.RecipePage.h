@@ -16,6 +16,7 @@
 #include <Uno.Collections.IList-1.h>
 #include <Uno.UX.IPropertyListener.h>
 namespace g{namespace Fuse{namespace Navigation{struct Router;}}}
+namespace g{namespace Fuse{namespace Physics{struct PointAttractor;}}}
 namespace g{namespace Fuse{namespace Reactive{struct EventBinding;}}}
 namespace g{namespace Uno{namespace UX{struct NameTable;}}}
 namespace g{namespace Uno{namespace UX{struct Property1;}}}
@@ -42,15 +43,31 @@ struct RecipePage : ::g::Fuse::Controls::Page
     static ::g::Uno::UX::Selector& __selector1() { return RecipePage_typeof()->Init(), __selector1_; }
     static ::g::Uno::UX::Selector __selector2_;
     static ::g::Uno::UX::Selector& __selector2() { return RecipePage_typeof()->Init(), __selector2_; }
+    static ::g::Uno::UX::Selector __selector3_;
+    static ::g::Uno::UX::Selector& __selector3() { return RecipePage_typeof()->Init(), __selector3_; }
+    static ::g::Uno::UX::Selector __selector4_;
+    static ::g::Uno::UX::Selector& __selector4() { return RecipePage_typeof()->Init(), __selector4_; }
+    static ::g::Uno::UX::Selector __selector5_;
+    static ::g::Uno::UX::Selector& __selector5() { return RecipePage_typeof()->Init(), __selector5_; }
+    static ::g::Uno::UX::Selector __selector6_;
+    static ::g::Uno::UX::Selector& __selector6() { return RecipePage_typeof()->Init(), __selector6_; }
+    static ::g::Uno::UX::Selector __selector7_;
+    static ::g::Uno::UX::Selector& __selector7() { return RecipePage_typeof()->Init(), __selector7_; }
+    uStrong< ::g::Fuse::Physics::PointAttractor*> centerAttractor;
+    uStrong< ::g::Uno::UX::Property1*> centerAttractor_Radius_inst;
+    uStrong< ::g::Uno::UX::Property1*> centerAttractor_Strength_inst;
+    uStrong< ::g::Fuse::Physics::PointAttractor*> notVisitedAttractor;
     uStrong< ::g::Fuse::Navigation::Router*> router;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb5;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb6;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb2;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb3;
     uStrong< ::g::Uno::UX::Property1*> temp_Items_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp1_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp2_Items_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp3_Value_inst;
+    uStrong< ::g::Uno::UX::Property1*> temp1_Items_inst;
+    uStrong< ::g::Uno::UX::Property1*> temp2_Value_inst;
+    uStrong< ::g::Uno::UX::Property1*> temp3_Items_inst;
     uStrong< ::g::Uno::UX::Property1*> temp4_Items_inst;
+    uStrong< ::g::Uno::UX::Property1*> temp5_Value_inst;
     uStrong< ::g::Uno::UX::Property1*> this_Opacity_inst;
+    uStrong< ::g::Fuse::Physics::PointAttractor*> visitedAttractor;
 
     void ctor_8(::g::Fuse::Navigation::Router* router1);
     void InitializeUX();

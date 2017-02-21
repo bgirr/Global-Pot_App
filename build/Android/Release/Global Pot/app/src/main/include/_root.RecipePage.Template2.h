@@ -9,7 +9,7 @@ namespace g{struct RecipePage__Template2;}
 
 namespace g{
 
-// public partial sealed class RecipePage.Template2 :198
+// public partial sealed class RecipePage.Template2 :200
 // {
 ::g::Uno::UX::Template_type* RecipePage__Template2_typeof();
 void RecipePage__Template2__ctor_1_fn(RecipePage__Template2* __this, ::g::RecipePage* parent, ::g::RecipePage* parentInstance);

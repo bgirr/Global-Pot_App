@@ -29,6 +29,8 @@ namespace Controls{
 void Grid__ctor_7_fn(Grid* __this);
 void Grid__get_ColumnCount_fn(Grid* __this, int* __retval);
 void Grid__set_ColumnCount_fn(Grid* __this, int* value);
+void Grid__get_Columns_fn(Grid* __this, uString** __retval);
+void Grid__set_Columns_fn(Grid* __this, uString* value);
 void Grid__New4_fn(Grid** __retval);
 void Grid__get_Rows_fn(Grid* __this, uString** __retval);
 void Grid__set_Rows_fn(Grid* __this, uString* value);
@@ -41,6 +43,8 @@ struct Grid : ::g::Fuse::Controls::Panel
     void ctor_7();
     int ColumnCount();
     void ColumnCount(int value);
+    uString* Columns();
+    void Columns(uString* value);
     uString* Rows();
     void Rows(uString* value);
     static Grid* New4();

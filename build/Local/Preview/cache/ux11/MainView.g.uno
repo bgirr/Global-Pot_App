@@ -64,27 +64,6 @@ public partial class MainView: Fuse.App
         }
         static global::Uno.UX.Selector __selector0 = "RecipePage";
     }
-    [Uno.Compiler.UxGenerated]
-    public partial class Template3: Uno.UX.Template
-    {
-        [Uno.WeakReference] internal readonly MainView __parent;
-        [Uno.WeakReference] internal readonly MainView __parentInstance;
-        public Template3(MainView parent, MainView parentInstance): base("CookingPage", false)
-        {
-            __parent = parent;
-            __parentInstance = parentInstance;
-        }
-        static Template3()
-        {
-        }
-        public override object New()
-        {
-            var self = new CookingPage(__parent.MainRouter);
-            self.Name = __selector0;
-            return self;
-        }
-        static global::Uno.UX.Selector __selector0 = "CookingPage";
-    }
     [global::Uno.UX.UXGlobalResource("Patua")] public static readonly Fuse.Font Patua;
     [global::Uno.UX.UXGlobalResource("Roboto")] public static readonly Fuse.Font Roboto;
     internal Fuse.Navigation.Router MainRouter;
@@ -216,20 +195,27 @@ public partial class MainView: Fuse.App
         var temp13 = new FuseJS.Bundle();
         var temp14 = new FuseJS.FileReaderImpl();
         var temp15 = new FuseJS.UserEvents();
+        var temp16 = new Fuse.Android.StatusBarConfig();
+        var temp17 = new Fuse.iOS.StatusBarConfig();
         MainRouter = new Fuse.Navigation.Router();
-        var temp16 = new Fuse.Controls.Navigator();
+        var temp18 = new Fuse.Controls.Navigator();
         var LoginPage = new Template(this, this);
         var OverviewPage = new Template1(this, this);
         var RecipePage = new Template2(this, this);
-        var CookingPage = new Template3(this, this);
+        temp16.Color = float4(0f, 0f, 0f, 0.2f);
+        temp16.IsVisible = true;
+        temp17.IsVisible = true;
+        temp17.Style = Fuse.Platform.StatusBarStyle.Light;
+        temp17.Animation = Fuse.Platform.StatusBarAnimation.Slide;
         MainRouter.Name = __selector0;
-        temp16.DefaultPath = "LoginPage";
-        temp16.Templates.Add(LoginPage);
-        temp16.Templates.Add(OverviewPage);
-        temp16.Templates.Add(RecipePage);
-        temp16.Templates.Add(CookingPage);
-        this.Children.Add(MainRouter);
+        temp18.DefaultPath = "LoginPage";
+        temp18.Templates.Add(LoginPage);
+        temp18.Templates.Add(OverviewPage);
+        temp18.Templates.Add(RecipePage);
         this.Children.Add(temp16);
+        this.Children.Add(temp17);
+        this.Children.Add(MainRouter);
+        this.Children.Add(temp18);
     }
     static global::Uno.UX.Selector __selector0 = "MainRouter";
 }

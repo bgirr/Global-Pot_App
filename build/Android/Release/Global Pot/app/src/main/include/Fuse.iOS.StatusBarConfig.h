@@ -19,6 +19,8 @@ namespace iOS{
 // {
 ::g::Fuse::Node_type* StatusBarConfig_typeof();
 void StatusBarConfig__ctor_3_fn(StatusBarConfig* __this);
+void StatusBarConfig__get_Animation_fn(StatusBarConfig* __this, int* __retval);
+void StatusBarConfig__set_Animation_fn(StatusBarConfig* __this, int* value);
 void StatusBarConfig__Apply_fn();
 void StatusBarConfig__get_IsVisible_fn(StatusBarConfig* __this, bool* __retval);
 void StatusBarConfig__set_IsVisible_fn(StatusBarConfig* __this, bool* value);
@@ -30,6 +32,8 @@ void StatusBarConfig__set_Style_fn(StatusBarConfig* __this, int* value);
 
 struct StatusBarConfig : ::g::Fuse::Behavior
 {
+    int _animation;
+    bool _hasAnimation;
     bool _hasIsVisible;
     bool _hasStyle;
     bool _isVisible;
@@ -38,6 +42,8 @@ struct StatusBarConfig : ::g::Fuse::Behavior
     int _style;
 
     void ctor_3();
+    int Animation();
+    void Animation(int value);
     bool IsVisible();
     void IsVisible(bool value);
     int Style();

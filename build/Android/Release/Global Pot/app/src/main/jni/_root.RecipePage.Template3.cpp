@@ -43,9 +43,9 @@ static uType* TYPES[5];
 
 namespace g{
 
-// public partial sealed class RecipePage.Template3 :224
+// public partial sealed class RecipePage.Template3 :226
 // {
-// static Template3() :375
+// static Template3() :377
 static void RecipePage__Template3__cctor__fn(uType* __type)
 {
     RecipePage__Template3::__selector0_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[0/*"Items"*/]);
@@ -91,13 +91,13 @@ static void RecipePage__Template3_build(uType* type)
     return type;
 }
 
-// public Template3(RecipePage parent, RecipePage parentInstance) :228
+// public Template3(RecipePage parent, RecipePage parentInstance) :230
 void RecipePage__Template3__ctor_1_fn(RecipePage__Template3* __this, ::g::RecipePage* parent, ::g::RecipePage* parentInstance)
 {
     __this->ctor_1(parent, parentInstance);
 }
 
-// public override sealed object New() :378
+// public override sealed object New() :380
 void RecipePage__Template3__New1_fn(RecipePage__Template3* __this, uObject** __retval)
 {
     ::g::Fuse::Controls::Rectangle* self = ::g::Fuse::Controls::Rectangle::New3();
@@ -137,7 +137,7 @@ void RecipePage__Template3__New1_fn(RecipePage__Template3* __this, uObject** __r
     return *__retval = self, void();
 }
 
-// public Template3 New(RecipePage parent, RecipePage parentInstance) :228
+// public Template3 New(RecipePage parent, RecipePage parentInstance) :230
 void RecipePage__Template3__New2_fn(::g::RecipePage* parent, ::g::RecipePage* parentInstance, RecipePage__Template3** __retval)
 {
     *__retval = RecipePage__Template3::New2(parent, parentInstance);
@@ -146,7 +146,7 @@ void RecipePage__Template3__New2_fn(::g::RecipePage* parent, ::g::RecipePage* pa
 ::g::Uno::UX::Selector RecipePage__Template3::__selector0_;
 ::g::Uno::UX::Selector RecipePage__Template3::__selector1_;
 
-// public Template3(RecipePage parent, RecipePage parentInstance) [instance] :228
+// public Template3(RecipePage parent, RecipePage parentInstance) [instance] :230
 void RecipePage__Template3::ctor_1(::g::RecipePage* parent, ::g::RecipePage* parentInstance)
 {
     ctor_(NULL, false);
@@ -154,7 +154,7 @@ void RecipePage__Template3::ctor_1(::g::RecipePage* parent, ::g::RecipePage* par
     __parentInstance1 = parentInstance;
 }
 
-// public Template3 New(RecipePage parent, RecipePage parentInstance) [static] :228
+// public Template3 New(RecipePage parent, RecipePage parentInstance) [static] :230
 RecipePage__Template3* RecipePage__Template3::New2(::g::RecipePage* parent, ::g::RecipePage* parentInstance)
 {
     RecipePage__Template3* obj1 = (RecipePage__Template3*)uNew(RecipePage__Template3_typeof());

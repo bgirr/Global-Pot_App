@@ -11,7 +11,7 @@ namespace g{struct GlobalPot_FuseControlsTextControl_Value_Property;}
 
 namespace g{
 
-// internal sealed class GlobalPot_FuseControlsTextControl_Value_Property :28
+// internal sealed class GlobalPot_FuseControlsTextControl_Value_Property :10
 // {
 ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsTextControl_Value_Property_typeof();
 void GlobalPot_FuseControlsTextControl_Value_Property__ctor_2_fn(GlobalPot_FuseControlsTextControl_Value_Property* __this, ::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector* name);

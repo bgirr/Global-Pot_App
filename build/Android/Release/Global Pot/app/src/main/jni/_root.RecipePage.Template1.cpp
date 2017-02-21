@@ -50,8 +50,8 @@ static void RecipePage__Template1__cctor__fn(uType* __type)
     RecipePage__Template1::__selector1_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[1/*"Right"*/]);
     RecipePage__Template1::__selector2_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[2/*"Left"*/]);
     RecipePage__Template1::__selector3_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[3/*"Url"*/]);
-    RecipePage__Template1::__selector4_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[4/*"__gen10"*/]);
-    RecipePage__Template1::__selector5_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[5/*"__gen13"*/]);
+    RecipePage__Template1::__selector4_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[4/*"__gen4"*/]);
+    RecipePage__Template1::__selector5_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[5/*"__gen7"*/]);
 }
 
 static void RecipePage__Template1_build(uType* type)
@@ -60,10 +60,10 @@ static void RecipePage__Template1_build(uType* type)
     ::STRINGS[1] = uString::Const("Right");
     ::STRINGS[2] = uString::Const("Left");
     ::STRINGS[3] = uString::Const("Url");
-    ::STRINGS[4] = uString::Const("__gen10");
-    ::STRINGS[5] = uString::Const("__gen13");
+    ::STRINGS[4] = uString::Const("__gen4");
+    ::STRINGS[5] = uString::Const("__gen7");
     ::STRINGS[6] = uString::Const("totalAmount");
-    ::STRINGS[7] = uString::Const("selectedMeasuringUnit.nameDe");
+    ::STRINGS[7] = uString::Const("selectedMeasuringUnit.nameEn");
     ::STRINGS[8] = uString::Const("ingredient.iconUrl");
     ::STRINGS[9] = uString::Const("ingredient.nameDe");
     ::STRINGS[10] = uString::Const("auto");
@@ -73,12 +73,12 @@ static void RecipePage__Template1_build(uType* type)
     ::TYPES[1] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Node_typeof(), NULL);
     ::TYPES[2] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL);
     type->SetFields(2,
-        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen10_Value_inst1), 0,
-        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen11_Left_inst1), 0,
-        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen11_Right_inst1), 0,
-        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen12_Right_inst1), 0,
-        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen13_Url_inst1), 0,
-        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen14_Right_inst1), 0,
+        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen4_Value_inst1), 0,
+        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen5_Left_inst1), 0,
+        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen5_Right_inst1), 0,
+        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen6_Right_inst1), 0,
+        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen7_Url_inst1), 0,
+        ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, __gen8_Right_inst1), 0,
         ::g::RecipePage_typeof(), offsetof(::g::RecipePage__Template1, __parent1), uFieldFlagsWeak,
         ::g::RecipePage_typeof(), offsetof(::g::RecipePage__Template1, __parentInstance1), uFieldFlagsWeak,
         ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage__Template1, temp_Value_inst), 0,
@@ -117,30 +117,31 @@ void RecipePage__Template1__ctor_1_fn(RecipePage__Template1* __this, ::g::Recipe
 void RecipePage__Template1__New1_fn(RecipePage__Template1* __this, uObject** __retval)
 {
     ::g::Fuse::Controls::Grid* self = ::g::Fuse::Controls::Grid::New4();
-    ::g::Fuse::Controls::Text* __gen101 = ::g::Fuse::Controls::Text::New3();
-    __this->__gen10_Value_inst1 = ::g::GlobalPot_FuseControlsTextControl_Value_Property::New1(__gen101, RecipePage__Template1::__selector0());
-    ::g::Uno::UX::StringConcatOperator* __gen111 = ::g::Uno::UX::StringConcatOperator::New2();
-    __this->__gen11_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen111, RecipePage__Template1::__selector1());
-    __this->__gen11_Left_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Left_Property::New1(__gen111, RecipePage__Template1::__selector2());
-    ::g::Uno::UX::StringConcatOperator* __gen121 = ::g::Uno::UX::StringConcatOperator::New2();
-    __this->__gen12_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen121, RecipePage__Template1::__selector1());
-    ::g::Fuse::Controls::Image* __gen131 = ::g::Fuse::Controls::Image::New3();
-    __this->__gen13_Url_inst1 = ::g::GlobalPot_FuseControlsImage_Url_Property::New1(__gen131, RecipePage__Template1::__selector3());
-    ::g::Uno::UX::StringConcatOperator* __gen141 = ::g::Uno::UX::StringConcatOperator::New2();
-    __this->__gen14_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen141, RecipePage__Template1::__selector1());
+    ::g::Fuse::Controls::Text* __gen41 = ::g::Fuse::Controls::Text::New3();
+    __this->__gen4_Value_inst1 = ::g::GlobalPot_FuseControlsTextControl_Value_Property::New1(__gen41, RecipePage__Template1::__selector0());
+    ::g::Uno::UX::StringConcatOperator* __gen51 = ::g::Uno::UX::StringConcatOperator::New2();
+    __this->__gen5_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen51, RecipePage__Template1::__selector1());
+    __this->__gen5_Left_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Left_Property::New1(__gen51, RecipePage__Template1::__selector2());
+    ::g::Uno::UX::StringConcatOperator* __gen61 = ::g::Uno::UX::StringConcatOperator::New2();
+    __this->__gen6_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen61, RecipePage__Template1::__selector1());
+    ::g::Fuse::Controls::Image* __gen71 = ::g::Fuse::Controls::Image::New3();
+    __this->__gen7_Url_inst1 = ::g::GlobalPot_FuseControlsImage_Url_Property::New1(__gen71, RecipePage__Template1::__selector3());
+    ::g::Uno::UX::StringConcatOperator* __gen81 = ::g::Uno::UX::StringConcatOperator::New2();
+    __this->__gen8_Right_inst1 = ::g::GlobalPot_UnoUXStringConcatOperator_Right_Property::New1(__gen81, RecipePage__Template1::__selector1());
     ::g::Fuse::Controls::Text* temp = ::g::Fuse::Controls::Text::New3();
     __this->temp_Value_inst = ::g::GlobalPot_FuseControlsTextControl_Value_Property::New1(temp, RecipePage__Template1::__selector0());
     ::g::Fuse::Controls::Rectangle* temp1 = ::g::Fuse::Controls::Rectangle::New3();
     ::g::Fuse::Controls::DockPanel* temp2 = ::g::Fuse::Controls::DockPanel::New4();
     ::g::Fuse::Controls::Panel* temp3 = ::g::Fuse::Controls::Panel::New3();
-    ::g::Fuse::Reactive::DataBinding* temp4 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen11_Left_inst1, ::STRINGS[6/*"totalAmount"*/]);
-    ::g::Fuse::Reactive::DataBinding* temp5 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen12_Right_inst1, ::STRINGS[7/*"selectedMea...*/]);
+    ::g::Fuse::Reactive::DataBinding* temp4 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen5_Left_inst1, ::STRINGS[6/*"totalAmount"*/]);
+    ::g::Fuse::Reactive::DataBinding* temp5 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen6_Right_inst1, ::STRINGS[7/*"selectedMea...*/]);
     ::g::Fuse::Controls::Panel* temp6 = ::g::Fuse::Controls::Panel::New3();
-    ::g::Fuse::Reactive::DataBinding* temp7 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen14_Right_inst1, ::STRINGS[8/*"ingredient....*/]);
+    ::g::Fuse::Reactive::DataBinding* temp7 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->__gen8_Right_inst1, ::STRINGS[8/*"ingredient....*/]);
     ::g::Fuse::Controls::Panel* temp8 = ::g::Fuse::Controls::Panel::New3();
     ::g::Fuse::Reactive::DataBinding* temp9 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->temp_Value_inst, ::STRINGS[9/*"ingredient....*/]);
     self->Rows(::STRINGS[10/*"auto"*/]);
-    self->ColumnCount(4);
+    self->Columns(::STRINGS[10/*"auto"*/]);
+    self->ColumnCount(3);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp3);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp6);
@@ -149,35 +150,36 @@ void RecipePage__Template1__New1_fn(RecipePage__Template1* __this, uObject** __r
     temp3->MinHeight(::g::Uno::UX::Size__New1(30.0f, 1));
     temp3->Margin(::g::Uno::Float4__New2(15.0f, 15.0f, 0.0f, 0.0f));
     ::g::Fuse::Controls::DockPanel::SetDock(temp3, 0);
-    ::g::Fuse::Controls::Grid::SetColumn(temp3, 3);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), __gen101);
-    __gen101->Color(::g::Uno::Float4__New2(1.0f, 1.0f, 1.0f, 1.0f));
-    __gen101->Margin(::g::Uno::Float4__New2(5.0f, 0.0f, 0.0f, 0.0f));
-    __gen101->Name(RecipePage__Template1::__selector4());
-    __gen101->Font(::g::MainView::Roboto());
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(__gen101->Bindings()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp4);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(__gen101->Bindings()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp5);
-    __gen111->Target(__this->__gen10_Value_inst1);
-    __gen121->Left(::STRINGS[11/*" "*/]);
-    __gen121->Target(__this->__gen11_Right_inst1);
+    ::g::Fuse::Controls::Grid::SetColumn(temp3, 1);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), __gen41);
+    __gen41->Color(::g::Uno::Float4__New2(1.0f, 1.0f, 1.0f, 1.0f));
+    __gen41->Margin(::g::Uno::Float4__New2(5.0f, 0.0f, 0.0f, 0.0f));
+    __gen41->Name(RecipePage__Template1::__selector4());
+    __gen41->Font(::g::MainView::Roboto());
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(__gen41->Bindings()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp4);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(__gen41->Bindings()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp5);
+    __gen51->Target(__this->__gen4_Value_inst1);
+    __gen61->Left(::STRINGS[11/*" "*/]);
+    __gen61->Target(__this->__gen5_Right_inst1);
     temp6->MinWidth(::g::Uno::UX::Size__New1(40.0f, 1));
     temp6->MinHeight(::g::Uno::UX::Size__New1(30.0f, 1));
     temp6->Margin(::g::Uno::Float4__New2(10.0f, 0.0f, 0.0f, 0.0f));
     ::g::Fuse::Controls::DockPanel::SetDock(temp6, 0);
     ::g::Fuse::Controls::Grid::SetColumn(temp6, 2);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), __gen131);
-    __gen131->MaxWidth(::g::Uno::UX::Size__New1(30.0f, 1));
-    __gen131->MaxHeight(::g::Uno::UX::Size__New1(30.0f, 1));
-    __gen131->Margin(::g::Uno::Float4__New2(5.0f, 0.0f, 0.0f, 0.0f));
-    __gen131->Name(RecipePage__Template1::__selector5());
-    ::g::Fuse::Controls::DockPanel::SetDock(__gen131, 0);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(__gen131->Bindings()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp7);
-    __gen141->Left(::STRINGS[12/*"https://coo...*/]);
-    __gen141->Target(__this->__gen13_Url_inst1);
-    temp8->MinWidth(::g::Uno::UX::Size__New1(40.0f, 1));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), __gen71);
+    __gen71->MaxWidth(::g::Uno::UX::Size__New1(30.0f, 1));
+    __gen71->MaxHeight(::g::Uno::UX::Size__New1(30.0f, 1));
+    __gen71->Margin(::g::Uno::Float4__New2(5.0f, 0.0f, 0.0f, 0.0f));
+    __gen71->Name(RecipePage__Template1::__selector5());
+    ::g::Fuse::Controls::DockPanel::SetDock(__gen71, 0);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(__gen71->Bindings()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp7);
+    __gen81->Left(::STRINGS[12/*"https://coo...*/]);
+    __gen81->Target(__this->__gen7_Url_inst1);
+    temp8->MinWidth(::g::Uno::UX::Size__New1(200.0f, 1));
     temp8->MinHeight(::g::Uno::UX::Size__New1(30.0f, 1));
+    temp8->MaxWidth(::g::Uno::UX::Size__New1(200.0f, 1));
     temp8->Margin(::g::Uno::Float4__New2(40.0f, 15.0f, 0.0f, 0.0f));
-    ::g::Fuse::Controls::Grid::SetColumn(temp8, 1);
+    ::g::Fuse::Controls::Grid::SetColumn(temp8, 3);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp);
     temp->Color(::g::Uno::Float4__New2(1.0f, 1.0f, 1.0f, 1.0f));
     temp->Margin(::g::Uno::Float4__New2(5.0f, 0.0f, 0.0f, 0.0f));
