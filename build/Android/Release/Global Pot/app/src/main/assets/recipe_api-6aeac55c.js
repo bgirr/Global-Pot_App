@@ -13,8 +13,13 @@ var recipe = this.Parameter.map(function(param) {
                         });
 });
 
+function cooking_clicked(){
+        router.push("CookingPage");
+        }
+
 
 module.exports = {
+    cooking_clicked: cooking_clicked,
 	recipe: recipe,
 	Rezept: Rezept
 		}

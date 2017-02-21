@@ -105,7 +105,7 @@ void RecipePage__Template__New1_fn(RecipePage__Template* __this, uObject** __ret
     ::g::Fuse::Controls::Panel* temp3 = ::g::Fuse::Controls::Panel::New3();
     ::g::Fuse::Reactive::DataBinding* temp4 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<string>*/], __this->temp_Value_inst, ::STRINGS[2/*"recipeName"*/]);
     ::g::Fuse::Drawing::StaticSolidColor* temp5 = ::g::Fuse::Drawing::StaticSolidColor::New2(::g::Uno::Float4__New2(0.2f, 0.2f, 0.2f, 1.0f));
-    RecipePage__Template__Template1* __gen8 = RecipePage__Template__Template1::New2(__this, self);
+    RecipePage__Template__Template1* __gen2 = RecipePage__Template__Template1::New2(__this, self);
     ::g::Fuse::Reactive::DataBinding* temp6 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[1/*Fuse.Reactive.DataBinding<object>*/], __this->temp1_Items_inst, ::STRINGS[3/*"images"*/]);
     temp2->Margin(::g::Uno::Float4__New2(0.0f, 10.0f, 0.0f, 0.0f));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp3);
@@ -123,7 +123,7 @@ void RecipePage__Template__New1_fn(RecipePage__Template* __this, uObject** __ret
     temp->Margin(::g::Uno::Float4__New2(10.0f, 10.0f, 10.0f, 10.0f));
     temp->Font(::g::MainView::Patua());
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp4);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Templates()), ::TYPES[4/*Uno.Collections.ICollection<Uno.UX.Template>*/]), __gen8);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Templates()), ::TYPES[4/*Uno.Collections.ICollection<Uno.UX.Template>*/]), __gen2);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp6);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(self->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(self->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp1);

@@ -4064,6 +4064,18 @@ void Grid__set_ColumnCount_fn(Grid* __this, int* value)
     __this->ColumnCount(*value);
 }
 
+// public string get_Columns() :750
+void Grid__get_Columns_fn(Grid* __this, uString** __retval)
+{
+    *__retval = __this->Columns();
+}
+
+// public void set_Columns(string value) :751
+void Grid__set_Columns_fn(Grid* __this, uString* value)
+{
+    __this->Columns(value);
+}
+
 // public Grid New() :813
 void Grid__New4_fn(Grid** __retval)
 {
@@ -4105,6 +4117,18 @@ int Grid::ColumnCount()
 void Grid::ColumnCount(int value)
 {
     uPtr(_gridLayout)->ColumnCount(value);
+}
+
+// public string get_Columns() [instance] :750
+uString* Grid::Columns()
+{
+    return uPtr(_gridLayout)->Columns();
+}
+
+// public void set_Columns(string value) [instance] :751
+void Grid::Columns(uString* value)
+{
+    uPtr(_gridLayout)->Columns(value);
 }
 
 // public string get_Rows() [instance] :674
@@ -7901,6 +7925,7 @@ static void Page_build(uType* type)
     options.TypeSize = sizeof(::g::Fuse::Controls::Control_type);
     type = (::g::Fuse::Controls::Control_type*)uClassType::New("Fuse.Controls.Page", options);
     type->fp_build_ = Page_build;
+    type->fp_ctor_ = (void*)Page__New4_fn;
     type->fp_OnRooted = (void(*)(::g::Fuse::Node*))Page__OnRooted_fn;
     type->fp_OnUnrooted = (void(*)(::g::Fuse::Node*))Page__OnUnrooted_fn;
     type->interface8.fp_Show = (void(*)(uObject*))::g::Fuse::Elements::Element__FuseTriggersActionsIShowShow_fn;
@@ -7957,6 +7982,12 @@ void Page__get_Freeze_fn(Page* __this, int* __retval)
 void Page__set_Freeze_fn(Page* __this, int* value)
 {
     __this->Freeze(*value);
+}
+
+// public Page New() :2001
+void Page__New4_fn(Page** __retval)
+{
+    *__retval = Page::New4();
 }
 
 // protected override sealed void OnRooted() :2045
@@ -8028,6 +8059,14 @@ void Page::SetupFreezeTrigger()
 
     if (_freezeTrigger != NULL)
         ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[5/*Uno.Collections.ICollection<Fuse.Node>*/]), _freezeTrigger);
+}
+
+// public Page New() [static] :2001
+Page* Page::New4()
+{
+    Page* obj1 = (Page*)uNew(Page_typeof());
+    obj1->ctor_7();
+    return obj1;
 }
 // }
 

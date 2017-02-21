@@ -9,7 +9,7 @@
 
 namespace g{
 
-// internal sealed class GlobalPot_FuseTriggersWhileBool_Value_Property :46
+// internal sealed class GlobalPot_FuseTriggersWhileBool_Value_Property :55
 // {
 static void GlobalPot_FuseTriggersWhileBool_Value_Property_build(uType* type)
 {
@@ -37,51 +37,51 @@ static void GlobalPot_FuseTriggersWhileBool_Value_Property_build(uType* type)
     return type;
 }
 
-// public GlobalPot_FuseTriggersWhileBool_Value_Property(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) :49
+// public GlobalPot_FuseTriggersWhileBool_Value_Property(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) :58
 void GlobalPot_FuseTriggersWhileBool_Value_Property__ctor_2_fn(GlobalPot_FuseTriggersWhileBool_Value_Property* __this, ::g::Fuse::Triggers::WhileBool* obj, ::g::Uno::UX::Selector* name)
 {
     __this->ctor_2(obj, *name);
 }
 
-// public override sealed bool Get() :51
+// public override sealed bool Get() :60
 void GlobalPot_FuseTriggersWhileBool_Value_Property__Get_fn(GlobalPot_FuseTriggersWhileBool_Value_Property* __this, bool* __retval)
 {
     return *__retval = uPtr(__this->_obj)->Value1(), void();
 }
 
-// public GlobalPot_FuseTriggersWhileBool_Value_Property New(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) :49
+// public GlobalPot_FuseTriggersWhileBool_Value_Property New(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) :58
 void GlobalPot_FuseTriggersWhileBool_Value_Property__New1_fn(::g::Fuse::Triggers::WhileBool* obj, ::g::Uno::UX::Selector* name, GlobalPot_FuseTriggersWhileBool_Value_Property** __retval)
 {
     *__retval = GlobalPot_FuseTriggersWhileBool_Value_Property::New1(obj, *name);
 }
 
-// public override sealed Uno.UX.PropertyObject get_Object() :50
+// public override sealed Uno.UX.PropertyObject get_Object() :59
 void GlobalPot_FuseTriggersWhileBool_Value_Property__get_Object_fn(GlobalPot_FuseTriggersWhileBool_Value_Property* __this, ::g::Uno::UX::PropertyObject** __retval)
 {
     return *__retval = __this->_obj, void();
 }
 
-// public override sealed void Set(bool v, Uno.UX.IPropertyListener origin) :52
+// public override sealed void Set(bool v, Uno.UX.IPropertyListener origin) :61
 void GlobalPot_FuseTriggersWhileBool_Value_Property__Set_fn(GlobalPot_FuseTriggersWhileBool_Value_Property* __this, bool* v, uObject* origin)
 {
     bool v_ = *v;
     uPtr(__this->_obj)->Value1(v_);
 }
 
-// public override sealed bool get_SupportsOriginSetter() :53
+// public override sealed bool get_SupportsOriginSetter() :62
 void GlobalPot_FuseTriggersWhileBool_Value_Property__get_SupportsOriginSetter_fn(GlobalPot_FuseTriggersWhileBool_Value_Property* __this, bool* __retval)
 {
     return *__retval = false, void();
 }
 
-// public GlobalPot_FuseTriggersWhileBool_Value_Property(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) [instance] :49
+// public GlobalPot_FuseTriggersWhileBool_Value_Property(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) [instance] :58
 void GlobalPot_FuseTriggersWhileBool_Value_Property::ctor_2(::g::Fuse::Triggers::WhileBool* obj, ::g::Uno::UX::Selector name)
 {
     ctor_1(name);
     _obj = obj;
 }
 
-// public GlobalPot_FuseTriggersWhileBool_Value_Property New(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) [static] :49
+// public GlobalPot_FuseTriggersWhileBool_Value_Property New(Fuse.Triggers.WhileBool obj, Uno.UX.Selector name) [static] :58
 GlobalPot_FuseTriggersWhileBool_Value_Property* GlobalPot_FuseTriggersWhileBool_Value_Property::New1(::g::Fuse::Triggers::WhileBool* obj, ::g::Uno::UX::Selector name)
 {
     GlobalPot_FuseTriggersWhileBool_Value_Property* obj1 = (GlobalPot_FuseTriggersWhileBool_Value_Property*)uNew(GlobalPot_FuseTriggersWhileBool_Value_Property_typeof());

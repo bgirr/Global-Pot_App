@@ -11,7 +11,7 @@ namespace g{struct GlobalPot_FuseTriggersWhileBool_Value_Property;}
 
 namespace g{
 
-// internal sealed class GlobalPot_FuseTriggersWhileBool_Value_Property :46
+// internal sealed class GlobalPot_FuseTriggersWhileBool_Value_Property :55
 // {
 ::g::Uno::UX::Property1_type* GlobalPot_FuseTriggersWhileBool_Value_Property_typeof();
 void GlobalPot_FuseTriggersWhileBool_Value_Property__ctor_2_fn(GlobalPot_FuseTriggersWhileBool_Value_Property* __this, ::g::Fuse::Triggers::WhileBool* obj, ::g::Uno::UX::Selector* name);

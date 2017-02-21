@@ -44,11 +44,6 @@ namespace g{uClassType* FuseDrawingPrimitives_bundle_typeof();}
 namespace g{uClassType* FuseEffects_bundle_typeof();}
 namespace g{uClassType* FuseElements_bundle_typeof();}
 namespace g{uClassType* FuseReactive_bundle_typeof();}
-namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template1__Template2_typeof();}
-namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template1_typeof();}
-namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template2_typeof();}
-namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template_typeof();}
-namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* CookingPage_typeof();}
 namespace g{uClassType* GlobalPot_bundle_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsImage_File_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* GlobalPot_FuseControlsImage_Url_Property_typeof();}
@@ -67,7 +62,6 @@ namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template1_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template2_typeof();}
-namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template3_typeof();}
 namespace g{namespace Fuse{struct AppBase_type;} ::g::Fuse::AppBase_type* MainView_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* OverviewPage__Template__Template1_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* OverviewPage__Template__Template2_typeof();}
@@ -81,6 +75,10 @@ namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Tem
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* RecipePage__Template3__Template5_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* RecipePage__Template3_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* RecipePage__Template4_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* RecipePage__Template5__Template6__Template7_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* RecipePage__Template5__Template6_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* RecipePage__Template5__Template7_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* RecipePage__Template5_typeof();}
 namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* RecipePage_typeof();}
 namespace g{namespace OpenGL{uClassType* GL_typeof();}}
 namespace g{namespace OpenGL{uStructType* GLBufferHandle_typeof();}}
@@ -1230,11 +1228,6 @@ void uInitRtti()
         (uType*(*)())&::g::FuseEffects_bundle_typeof,
         (uType*(*)())&::g::FuseElements_bundle_typeof,
         (uType*(*)())&::g::FuseReactive_bundle_typeof,
-        (uType*(*)())&::g::CookingPage__Template__Template1__Template2_typeof,
-        (uType*(*)())&::g::CookingPage__Template__Template1_typeof,
-        (uType*(*)())&::g::CookingPage__Template__Template2_typeof,
-        (uType*(*)())&::g::CookingPage__Template_typeof,
-        (uType*(*)())&::g::CookingPage_typeof,
         (uType*(*)())&::g::GlobalPot_bundle_typeof,
         (uType*(*)())&::g::GlobalPot_FuseControlsImage_File_Property_typeof,
         (uType*(*)())&::g::GlobalPot_FuseControlsImage_Url_Property_typeof,
@@ -1253,7 +1246,6 @@ void uInitRtti()
         (uType*(*)())&::g::MainView__Template_typeof,
         (uType*(*)())&::g::MainView__Template1_typeof,
         (uType*(*)())&::g::MainView__Template2_typeof,
-        (uType*(*)())&::g::MainView__Template3_typeof,
         (uType*(*)())&::g::MainView_typeof,
         (uType*(*)())&::g::OverviewPage__Template__Template1_typeof,
         (uType*(*)())&::g::OverviewPage__Template__Template2_typeof,
@@ -1267,6 +1259,10 @@ void uInitRtti()
         (uType*(*)())&::g::RecipePage__Template3__Template5_typeof,
         (uType*(*)())&::g::RecipePage__Template3_typeof,
         (uType*(*)())&::g::RecipePage__Template4_typeof,
+        (uType*(*)())&::g::RecipePage__Template5__Template6__Template7_typeof,
+        (uType*(*)())&::g::RecipePage__Template5__Template6_typeof,
+        (uType*(*)())&::g::RecipePage__Template5__Template7_typeof,
+        (uType*(*)())&::g::RecipePage__Template5_typeof,
         (uType*(*)())&::g::RecipePage_typeof,
         (uType*(*)())&::g::OpenGL::GL_typeof,
         (uType*(*)())&::g::OpenGL::GLBufferHandle_typeof,

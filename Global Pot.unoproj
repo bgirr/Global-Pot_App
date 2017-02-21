@@ -16,5 +16,22 @@
           "XXHDPI": "images/logo.png",
           "XXXHDPI": "images/logo.png",
       }
- }
+ },
+
+  "iOS": {
+    "Icons": {
+      "iPhone_29_2x": "images/logo.png",
+      "iPhone_29_3x": "images/logo.png",
+      "iPhone_40_2x": "images/logo.png)",
+      "iPhone_40_3x": "images/logo.png",
+      "iPhone_60_2x": "images/logo.png",
+      "iPhone_60_3x": "images/logo.png",
+      "iPad_29_1x": "images/logo.png",
+      "iPad_29_2x": "images/logo.png",
+      "iPad_40_1x": "images/logo.png",
+      "iPad_40_2x": "images/logo.png",
+      "iPad_76_1x": "images/logo.png",
+      "iPad_76_2x": "images/logo.png"
+    }
+  }
 }

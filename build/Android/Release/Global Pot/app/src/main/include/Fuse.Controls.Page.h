@@ -29,6 +29,7 @@ void Page__ctor_7_fn(Page* __this);
 void Page__CleanupFreezeTrigger_fn(Page* __this);
 void Page__get_Freeze_fn(Page* __this, int* __retval);
 void Page__set_Freeze_fn(Page* __this, int* value);
+void Page__New4_fn(Page** __retval);
 void Page__OnRooted_fn(Page* __this);
 void Page__OnUnrooted_fn(Page* __this);
 void Page__SetupFreezeTrigger_fn(Page* __this);
@@ -43,6 +44,7 @@ struct Page : ::g::Fuse::Controls::Panel
     int Freeze();
     void Freeze(int value);
     void SetupFreezeTrigger();
+    static Page* New4();
 };
 // }
 

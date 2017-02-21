@@ -1,9 +1,9 @@
-<Page ux:Class="CookingPage" Background="#ECF0F5">
+<Page  Background="#ECF0F5" >
 	<iOS.StatusBarConfig IsVisible="false" />
-	<Router ux:Dependency="router" />
+	
 	<DockPanel>
 		<Panel Dock="Top">
-			<ux:Include File="TopBar.ux"/>
+
 		</Panel>
 		<JavaScript File="Recipe_API.js" />
 		<JavaScript>

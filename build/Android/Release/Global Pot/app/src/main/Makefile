@@ -89,11 +89,6 @@ libs/$(ABI)/$(SONAME): .uno/Implementation/Cpp/posix_semaphore.cpp.o
 libs/$(ABI)/$(SONAME): .uno/Implementation/Cpp/posix_thread.cpp.o
 libs/$(ABI)/$(SONAME): .uno/BootstrapperImpl_Android.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.g.cpp.o
-libs/$(ABI)/$(SONAME): .uno/_root.CookingPage.Template.Template1.Template2.cpp.o
-libs/$(ABI)/$(SONAME): .uno/_root.CookingPage.Template.Template1.cpp.o
-libs/$(ABI)/$(SONAME): .uno/_root.CookingPage.Template.Template2.cpp.o
-libs/$(ABI)/$(SONAME): .uno/_root.CookingPage.Template.cpp.o
-libs/$(ABI)/$(SONAME): .uno/_root.CookingPage.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.GlobalPot_bundle.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.GlobalPot_FuseControlsImage_File_Property.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.GlobalPot_FuseControlsImage_Url_Property.cpp.o
@@ -112,7 +107,6 @@ libs/$(ABI)/$(SONAME): .uno/_root.LoginPage.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template1.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template2.cpp.o
-libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template3.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.MainView.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.OverviewPage.Template.Template1.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.OverviewPage.Template.Template2.cpp.o
@@ -126,6 +120,10 @@ libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template3.Template4.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template3.Template5.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template3.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template4.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template5.Template6.Template7.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template5.Template6.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template5.Template7.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.Template5.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.RecipePage.cpp.o
 libs/$(ABI)/$(SONAME): .uno/OpenGL.g.cpp.o
 libs/$(ABI)/$(SONAME): .uno/Uno.g.cpp.o
@@ -380,254 +378,6 @@ libs/$(ABI)/libV8Simple.so: C:/Users/EliteBook-User/AppData/Local/Fusetools/Pack
 	echo _root.g.cpp
 	$(CXX) $(CXX_FLAGS) -o .uno/_root.g.cpp.o -c jni/_root.g.cpp
 
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/_root.CookingPage.Template.Template1.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/_root.CookingPage.Template.Template1.Template2.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/_root.GlobalPot_FuseControlsImage_Url_Property.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/_root.GlobalPot_FuseControlsTextControl_Value_Property.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/_root.GlobalPot_UnoUXStringConcatOperator_Right_Property.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/_root.MainView.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Binding.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Controls.Control.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Controls.DockPanel.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Controls.Grid.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Controls.Image.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Controls.Panel.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Controls.Text.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Controls.TextControl.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Drawing.Brush.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Elements.Element.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Font.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Layouts.Dock.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Node.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Reactive.DataBinding-1.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Reactive.Each.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Fuse.Visual.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.Bool.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.Collections.ICollection-1.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.Collections.IList-1.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.Float.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.Float4.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.Int.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.Object.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.String.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.UX.Property.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.UX.Property-1.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.UX.Selector.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.UX.Size.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.UX.StringConcatOperator.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: include/Uno.UX.Unit.h
-.uno/_root.CookingPage.Template.Template1.Template2.cpp.o: jni/_root.CookingPage.Template.Template1.Template2.cpp flags.txt | .uno
-	echo _root.CookingPage.Template.Template1.Template2.cpp
-	$(CXX) $(CXX_FLAGS) -o .uno/_root.CookingPage.Template.Template1.Template2.cpp.o -c jni/_root.CookingPage.Template.Template1.Template2.cpp
-
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/_root.CookingPage.Template.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/_root.CookingPage.Template.Template1.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/_root.CookingPage.Template.Template1.Template2.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/_root.GlobalPot_FuseReactiveEach_Items_Property.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Fuse.Binding.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Fuse.Controls.Panel.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Fuse.Node.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Fuse.Reactive.DataBinding-1.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Fuse.Reactive.Each.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Fuse.Reactive.Instantiator.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Uno.Bool.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Uno.Collections.ICollection-1.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Uno.Collections.IList-1.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Uno.Object.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Uno.String.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Uno.UX.Property-1.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: include/Uno.UX.Selector.h
-.uno/_root.CookingPage.Template.Template1.cpp.o: jni/_root.CookingPage.Template.Template1.cpp flags.txt | .uno
-	echo _root.CookingPage.Template.Template1.cpp
-	$(CXX) $(CXX_FLAGS) -o .uno/_root.CookingPage.Template.Template1.cpp.o -c jni/_root.CookingPage.Template.Template1.cpp
-
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/_root.CookingPage.Template.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/_root.CookingPage.Template.Template2.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/_root.GlobalPot_FuseControlsImage_Url_Property.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/_root.GlobalPot_FuseControlsTextControl_Value_Property.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/_root.GlobalPot_UnoUXStringConcatOperator_Right_Property.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/_root.MainView.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Binding.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Controls.Control.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Controls.DockPanel.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Controls.Grid.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Controls.Image.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Controls.Panel.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Controls.Text.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Controls.TextControl.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Drawing.Brush.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Elements.Alignment.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Elements.Element.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Font.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Layouts.Dock.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Node.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Reactive.DataBinding-1.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Fuse.Visual.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.Bool.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.Collections.ICollection-1.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.Collections.IList-1.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.Float.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.Float4.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.Int.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.Object.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.String.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.UX.Property.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.UX.Property-1.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.UX.Selector.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.UX.Size.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.UX.StringConcatOperator.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: include/Uno.UX.Unit.h
-.uno/_root.CookingPage.Template.Template2.cpp.o: jni/_root.CookingPage.Template.Template2.cpp flags.txt | .uno
-	echo _root.CookingPage.Template.Template2.cpp
-	$(CXX) $(CXX_FLAGS) -o .uno/_root.CookingPage.Template.Template2.cpp.o -c jni/_root.CookingPage.Template.Template2.cpp
-
-.uno/_root.CookingPage.Template.cpp.o: include/_root.CookingPage.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.CookingPage.Template.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.CookingPage.Template.Template1.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.CookingPage.Template.Template2.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_bundle.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_FuseControlsImage_File_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_FuseControlsTextControl_Value_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_FuseEffectsDropShadow_Distance_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_FuseEffectsDropShadow_Size_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_FuseElementsElement_Opacity_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_FuseReactiveEach_Items_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_FuseRotation_Degrees_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.GlobalPot_UnoUXStringConcatOperator_Right_Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/_root.MainView.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Animations.Animator.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Animations.Change-1.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Animations.Easing.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Animations.Rotate.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Animations.Scale.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Animations.TrackAnimator.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Binding.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.Control.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.DockPanel.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.Grid.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.Image.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.Panel.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.Rectangle.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.Shape.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.StackPanel.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.Text.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Controls.TextControl.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Drawing.Brush.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Drawing.Stroke.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Effects.DropShadow.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Elements.Alignment.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Elements.Element.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Elements.StretchMode.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Font.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Layouts.Dock.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Node.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Physics.Draggable.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Physics.ForceField.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Physics.ForceFieldTrigger.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Physics.InForceFieldAnimation.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Physics.PointAttractor.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Physics.WhileDragging.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Reactive.DataBinding-1.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Reactive.Each.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Reactive.Instantiator.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Rotation.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Triggers.Actions.BringToFront.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Triggers.Actions.TriggerAction.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Triggers.Trigger.h
-.uno/_root.CookingPage.Template.cpp.o: include/Fuse.Visual.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Bool.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Collections.ICollection-1.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Collections.IList-1.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Double.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Float.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Float4.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Int.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.IO.BundleFile.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.Object.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.String.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.BundleFileSource.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.FileSource.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.Property.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.Property-1.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.Selector.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.Size.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.StringConcatOperator.h
-.uno/_root.CookingPage.Template.cpp.o: include/Uno.UX.Unit.h
-.uno/_root.CookingPage.Template.cpp.o: jni/_root.CookingPage.Template.cpp flags.txt | .uno
-	echo _root.CookingPage.Template.cpp
-	$(CXX) $(CXX_FLAGS) -o .uno/_root.CookingPage.Template.cpp.o -c jni/_root.CookingPage.Template.cpp
-
-.uno/_root.CookingPage.cpp.o: include/_root.CookingPage.h
-.uno/_root.CookingPage.cpp.o: include/_root.CookingPage.Template.h
-.uno/_root.CookingPage.cpp.o: include/_root.GlobalPot_bundle.h
-.uno/_root.CookingPage.cpp.o: include/_root.GlobalPot_FusePhysicsPointAttractor_Radius_Property.h
-.uno/_root.CookingPage.cpp.o: include/_root.GlobalPot_FusePhysicsPointAttractor_Strength_Property.h
-.uno/_root.CookingPage.cpp.o: include/_root.GlobalPot_FuseReactiveEach_Items_Property.h
-.uno/_root.CookingPage.cpp.o: include/_root.GlobalPot_FuseTriggersWhileBool_Value_Property.h
-.uno/_root.CookingPage.cpp.o: include/_root.MainView.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Animations.Animator.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Animations.Change-1.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Animations.Easing.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Animations.Move.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Animations.Scale.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Animations.TrackAnimator.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Animations.TransformAnimator-1.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Controls.Control.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Controls.DockPanel.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Controls.Image.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Controls.Panel.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Controls.Text.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Controls.TextControl.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Drawing.Brush.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Drawing.Colors.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Elements.Alignment.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Elements.Element.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Font.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Gestures.Clicked.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Gestures.ClickedHandler.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Gestures.Tapped.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.iOS.StatusBarConfig.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.ITranslationMode.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Layouts.Dock.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Navigation.Router.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Physics.PointAttractor.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Platform.StatusBarStyle.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Reactive.DataBinding-1.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Reactive.Each.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Reactive.EventBinding.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Reactive.Instantiator.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Reactive.JavaScript.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Translation.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.TranslationModes.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Triggers.Trigger.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Triggers.WhileBool.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Triggers.WhileTrue.h
-.uno/_root.CookingPage.cpp.o: include/Fuse.Visual.h
-.uno/_root.CookingPage.cpp.o: include/Uno.Bool.h
-.uno/_root.CookingPage.cpp.o: include/Uno.Double.h
-.uno/_root.CookingPage.cpp.o: include/Uno.Float.h
-.uno/_root.CookingPage.cpp.o: include/Uno.Float3.h
-.uno/_root.CookingPage.cpp.o: include/Uno.Float4.h
-.uno/_root.CookingPage.cpp.o: include/Uno.Int.h
-.uno/_root.CookingPage.cpp.o: include/Uno.IO.BundleFile.h
-.uno/_root.CookingPage.cpp.o: include/Uno.Object.h
-.uno/_root.CookingPage.cpp.o: include/Uno.String.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.BundleFileSource.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.FileSource.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.NameTable.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.Property-1.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.Selector.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.Size.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.Template.h
-.uno/_root.CookingPage.cpp.o: include/Uno.UX.Unit.h
-.uno/_root.CookingPage.cpp.o: jni/_root.CookingPage.cpp flags.txt | .uno
-	echo _root.CookingPage.cpp
-	$(CXX) $(CXX_FLAGS) -o .uno/_root.CookingPage.cpp.o -c jni/_root.CookingPage.cpp
-
 .uno/_root.GlobalPot_bundle.cpp.o: include/_root.GlobalPot_bundle.h
 .uno/_root.GlobalPot_bundle.cpp.o: include/Uno.IO.Bundle.h
 .uno/_root.GlobalPot_bundle.cpp.o: include/Uno.IO.BundleFile.h
@@ -854,25 +604,11 @@ libs/$(ABI)/libV8Simple.so: C:/Users/EliteBook-User/AppData/Local/Fusetools/Pack
 	echo _root.MainView.Template2.cpp
 	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainView.Template2.cpp.o -c jni/_root.MainView.Template2.cpp
 
-.uno/_root.MainView.Template3.cpp.o: include/_root.CookingPage.h
-.uno/_root.MainView.Template3.cpp.o: include/_root.MainView.h
-.uno/_root.MainView.Template3.cpp.o: include/_root.MainView.Template3.h
-.uno/_root.MainView.Template3.cpp.o: include/Fuse.Navigation.Router.h
-.uno/_root.MainView.Template3.cpp.o: include/Fuse.Node.h
-.uno/_root.MainView.Template3.cpp.o: include/Uno.Bool.h
-.uno/_root.MainView.Template3.cpp.o: include/Uno.Object.h
-.uno/_root.MainView.Template3.cpp.o: include/Uno.String.h
-.uno/_root.MainView.Template3.cpp.o: include/Uno.UX.Selector.h
-.uno/_root.MainView.Template3.cpp.o: jni/_root.MainView.Template3.cpp flags.txt | .uno
-	echo _root.MainView.Template3.cpp
-	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainView.Template3.cpp.o -c jni/_root.MainView.Template3.cpp
-
 .uno/_root.MainView.cpp.o: include/_root.GlobalPot_bundle.h
 .uno/_root.MainView.cpp.o: include/_root.MainView.h
 .uno/_root.MainView.cpp.o: include/_root.MainView.Template.h
 .uno/_root.MainView.cpp.o: include/_root.MainView.Template1.h
 .uno/_root.MainView.cpp.o: include/_root.MainView.Template2.h
-.uno/_root.MainView.cpp.o: include/_root.MainView.Template3.h
 .uno/_root.MainView.cpp.o: include/Fuse.Android.StatusBarConfig.h
 .uno/_root.MainView.cpp.o: include/Fuse.Animations.Easing.h
 .uno/_root.MainView.cpp.o: include/Fuse.Animations.IResizeMode.h
@@ -1349,10 +1085,193 @@ libs/$(ABI)/libV8Simple.so: C:/Users/EliteBook-User/AppData/Local/Fusetools/Pack
 	echo _root.RecipePage.Template4.cpp
 	$(CXX) $(CXX_FLAGS) -o .uno/_root.RecipePage.Template4.cpp.o -c jni/_root.RecipePage.Template4.cpp
 
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/_root.GlobalPot_FuseControlsImage_Url_Property.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/_root.GlobalPot_FuseControlsTextControl_Value_Property.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/_root.GlobalPot_UnoUXStringConcatOperator_Right_Property.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/_root.MainView.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/_root.RecipePage.Template5.Template6.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/_root.RecipePage.Template5.Template6.Template7.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Binding.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Controls.Grid.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Font.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Node.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Reactive.Each.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Fuse.Visual.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.Bool.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.Float.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.Float4.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.Int.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.Object.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.String.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.UX.Property.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.UX.Size.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.UX.StringConcatOperator.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.RecipePage.Template5.Template6.Template7.cpp.o: jni/_root.RecipePage.Template5.Template6.Template7.cpp flags.txt | .uno
+	echo _root.RecipePage.Template5.Template6.Template7.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.RecipePage.Template5.Template6.Template7.cpp.o -c jni/_root.RecipePage.Template5.Template6.Template7.cpp
+
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/_root.GlobalPot_FuseReactiveEach_Items_Property.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/_root.RecipePage.Template5.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/_root.RecipePage.Template5.Template6.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/_root.RecipePage.Template5.Template6.Template7.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Fuse.Binding.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Fuse.Node.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Fuse.Reactive.Each.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Fuse.Reactive.Instantiator.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Uno.Bool.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Uno.Object.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Uno.String.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.RecipePage.Template5.Template6.cpp.o: jni/_root.RecipePage.Template5.Template6.cpp flags.txt | .uno
+	echo _root.RecipePage.Template5.Template6.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.RecipePage.Template5.Template6.cpp.o -c jni/_root.RecipePage.Template5.Template6.cpp
+
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/_root.GlobalPot_FuseControlsImage_Url_Property.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/_root.GlobalPot_FuseControlsTextControl_Value_Property.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/_root.GlobalPot_UnoUXStringConcatOperator_Right_Property.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/_root.MainView.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/_root.RecipePage.Template5.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/_root.RecipePage.Template5.Template7.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Binding.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Controls.Grid.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Font.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Node.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Fuse.Visual.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.Bool.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.Float.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.Float4.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.Int.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.Object.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.String.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.UX.Property.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.UX.Size.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.UX.StringConcatOperator.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.RecipePage.Template5.Template7.cpp.o: jni/_root.RecipePage.Template5.Template7.cpp flags.txt | .uno
+	echo _root.RecipePage.Template5.Template7.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.RecipePage.Template5.Template7.cpp.o -c jni/_root.RecipePage.Template5.Template7.cpp
+
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_bundle.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_FuseControlsImage_File_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_FuseControlsTextControl_Value_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_FuseEffectsDropShadow_Distance_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_FuseEffectsDropShadow_Size_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_FuseElementsElement_Opacity_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_FuseReactiveEach_Items_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_FuseRotation_Degrees_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.GlobalPot_UnoUXStringConcatOperator_Right_Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.MainView.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.RecipePage.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.RecipePage.Template5.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.RecipePage.Template5.Template6.h
+.uno/_root.RecipePage.Template5.cpp.o: include/_root.RecipePage.Template5.Template7.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Animations.Change-1.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Animations.Easing.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Animations.Rotate.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Animations.Scale.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Binding.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.Grid.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.Rectangle.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Drawing.Stroke.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Effects.DropShadow.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Elements.StretchMode.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Font.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Node.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Physics.Draggable.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Physics.ForceField.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Physics.ForceFieldTrigger.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Physics.InForceFieldAnimation.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Physics.PointAttractor.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Physics.WhileDragging.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Reactive.Each.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Reactive.Instantiator.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Rotation.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Triggers.Actions.BringToFront.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Triggers.Actions.TriggerAction.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Fuse.Visual.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Bool.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Double.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Float.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Float4.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Int.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.Object.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.String.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.Property.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.Size.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.StringConcatOperator.h
+.uno/_root.RecipePage.Template5.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.RecipePage.Template5.cpp.o: jni/_root.RecipePage.Template5.cpp flags.txt | .uno
+	echo _root.RecipePage.Template5.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.RecipePage.Template5.cpp.o -c jni/_root.RecipePage.Template5.cpp
+
 .uno/_root.RecipePage.cpp.o: include/_root.GlobalPot_bundle.h
 .uno/_root.RecipePage.cpp.o: include/_root.GlobalPot_FuseControlsTextControl_Value_Property.h
 .uno/_root.RecipePage.cpp.o: include/_root.GlobalPot_FuseElementsElement_Opacity_Property.h
+.uno/_root.RecipePage.cpp.o: include/_root.GlobalPot_FusePhysicsPointAttractor_Radius_Property.h
+.uno/_root.RecipePage.cpp.o: include/_root.GlobalPot_FusePhysicsPointAttractor_Strength_Property.h
 .uno/_root.RecipePage.cpp.o: include/_root.GlobalPot_FuseReactiveEach_Items_Property.h
+.uno/_root.RecipePage.cpp.o: include/_root.GlobalPot_FuseTriggersWhileBool_Value_Property.h
 .uno/_root.RecipePage.cpp.o: include/_root.MainView.h
 .uno/_root.RecipePage.cpp.o: include/_root.RecipePage.h
 .uno/_root.RecipePage.cpp.o: include/_root.RecipePage.Template.h
@@ -1360,6 +1279,7 @@ libs/$(ABI)/libV8Simple.so: C:/Users/EliteBook-User/AppData/Local/Fusetools/Pack
 .uno/_root.RecipePage.cpp.o: include/_root.RecipePage.Template2.h
 .uno/_root.RecipePage.cpp.o: include/_root.RecipePage.Template3.h
 .uno/_root.RecipePage.cpp.o: include/_root.RecipePage.Template4.h
+.uno/_root.RecipePage.cpp.o: include/_root.RecipePage.Template5.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Animations.Animator.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Animations.Change-1.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Animations.Easing.h
@@ -1371,16 +1291,13 @@ libs/$(ABI)/libV8Simple.so: C:/Users/EliteBook-User/AppData/Local/Fusetools/Pack
 .uno/_root.RecipePage.cpp.o: include/Fuse.Controls.DockPanel.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Controls.Image.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Controls.Panel.h
-.uno/_root.RecipePage.cpp.o: include/Fuse.Controls.Rectangle.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Controls.ScrollView.h
-.uno/_root.RecipePage.cpp.o: include/Fuse.Controls.Shape.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Controls.StackPanel.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Controls.Text.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Controls.TextControl.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Drawing.Brush.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Drawing.Colors.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
-.uno/_root.RecipePage.cpp.o: include/Fuse.Drawing.Stroke.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Elements.Alignment.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Elements.Element.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Font.h
@@ -1392,6 +1309,8 @@ libs/$(ABI)/libV8Simple.so: C:/Users/EliteBook-User/AppData/Local/Fusetools/Pack
 .uno/_root.RecipePage.cpp.o: include/Fuse.Layouts.Dock.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Navigation.EnteringAnimation.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.RecipePage.cpp.o: include/Fuse.Physics.PointAttractor.h
+.uno/_root.RecipePage.cpp.o: include/Fuse.Platform.StatusBarStyle.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Reactive.DataBinding-1.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Reactive.Each.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Reactive.EventBinding.h
@@ -1400,10 +1319,13 @@ libs/$(ABI)/libV8Simple.so: C:/Users/EliteBook-User/AppData/Local/Fusetools/Pack
 .uno/_root.RecipePage.cpp.o: include/Fuse.Translation.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.TranslationModes.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.RecipePage.cpp.o: include/Fuse.Triggers.WhileBool.h
+.uno/_root.RecipePage.cpp.o: include/Fuse.Triggers.WhileTrue.h
 .uno/_root.RecipePage.cpp.o: include/Fuse.Visual.h
 .uno/_root.RecipePage.cpp.o: include/Uno.Bool.h
 .uno/_root.RecipePage.cpp.o: include/Uno.Double.h
 .uno/_root.RecipePage.cpp.o: include/Uno.Float.h
+.uno/_root.RecipePage.cpp.o: include/Uno.Float3.h
 .uno/_root.RecipePage.cpp.o: include/Uno.Float4.h
 .uno/_root.RecipePage.cpp.o: include/Uno.Int.h
 .uno/_root.RecipePage.cpp.o: include/Uno.IO.BundleFile.h
@@ -6033,28 +5955,6 @@ include/_root.FuseElements_bundle.h: include/Uno.h
 
 include/_root.FuseReactive_bundle.h: include/Uno.h
 
-include/_root.CookingPage.Template.Template1.Template2.h: include/Uno.UX.Template.h
-
-include/_root.CookingPage.Template.Template1.h: include/Uno.UX.Template.h
-
-include/_root.CookingPage.Template.Template2.h: include/Uno.UX.Template.h
-
-include/_root.CookingPage.Template.h: include/Uno.UX.Template.h
-
-include/_root.CookingPage.h: include/Fuse.Animations.IResize.h
-include/_root.CookingPage.h: include/Fuse.Binding.h
-include/_root.CookingPage.h: include/Fuse.Controls.Page.h
-include/_root.CookingPage.h: include/Fuse.IActualPlacement.h
-include/_root.CookingPage.h: include/Fuse.Node.h
-include/_root.CookingPage.h: include/Fuse.Scripting.IScriptObject.h
-include/_root.CookingPage.h: include/Fuse.Triggers.Actions.ICollapse.h
-include/_root.CookingPage.h: include/Fuse.Triggers.Actions.IHide.h
-include/_root.CookingPage.h: include/Fuse.Triggers.Actions.IShow.h
-include/_root.CookingPage.h: include/Uno.Collections.ICollection-1.h
-include/_root.CookingPage.h: include/Uno.Collections.IEnumerable-1.h
-include/_root.CookingPage.h: include/Uno.Collections.IList-1.h
-include/_root.CookingPage.h: include/Uno.UX.IPropertyListener.h
-
 include/_root.GlobalPot_bundle.h: include/Uno.h
 
 include/_root.GlobalPot_FuseControlsImage_File_Property.h: include/Uno.UX.FileSource.h
@@ -6116,8 +6016,6 @@ include/_root.MainView.Template1.h: include/Uno.UX.Template.h
 
 include/_root.MainView.Template2.h: include/Uno.UX.Template.h
 
-include/_root.MainView.Template3.h: include/Uno.UX.Template.h
-
 include/_root.MainView.h: include/Fuse.App.h
 
 include/_root.OverviewPage.Template.Template1.h: include/Uno.UX.Template.h
@@ -6155,6 +6053,14 @@ include/_root.RecipePage.Template3.Template5.h: include/Uno.UX.Template.h
 include/_root.RecipePage.Template3.h: include/Uno.UX.Template.h
 
 include/_root.RecipePage.Template4.h: include/Uno.UX.Template.h
+
+include/_root.RecipePage.Template5.Template6.Template7.h: include/Uno.UX.Template.h
+
+include/_root.RecipePage.Template5.Template6.h: include/Uno.UX.Template.h
+
+include/_root.RecipePage.Template5.Template7.h: include/Uno.UX.Template.h
+
+include/_root.RecipePage.Template5.h: include/Uno.UX.Template.h
 
 include/_root.RecipePage.h: include/Fuse.Animations.IResize.h
 include/_root.RecipePage.h: include/Fuse.Binding.h

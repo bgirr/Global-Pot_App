@@ -27,18 +27,18 @@
 									</Each>
 							</Panel>			
 						</Each>
-						<Text Value="{Rezept.recipeName}" Margin="5,10,0,0" Color="#FFFFFF" Font="Patua" />
+						<Text Value="Zutaten" Margin="5,10,0,0" Color="#FFFFFF" Font="Patua" />
 						<Each Items="{Rezept.selectedIngredients}">
-							<Grid Rows="auto" ColumnCount="4">
+							<Grid Rows="auto" ColumnCount="3" Columns="auto">
 								<Rectangle>
 								<DockPanel>
-									<Panel Column="3" Dock="Left" MinHeight="30" MinWidth="50" Margin="15,15,0,0">
-										<Text Value="{totalAmount} {selectedMeasuringUnit.nameDe}" Margin="5,0,0,0" Color="#FFFFFF" Font="Roboto"/>
+									<Panel Column="1" Dock="Left" MinHeight="30" MinWidth="50" Margin="15,15,0,0">
+										<Text Value="{totalAmount} {selectedMeasuringUnit.nameEn}" Margin="5,0,0,0" Color="#FFFFFF" Font="Roboto"/>
 									</Panel>
 									<Panel Column="2" Dock="Left" MinHeight="30 " MinWidth="40" Margin="10,0,0,0">
 										<Image Url="https://cookingtest-cookingtest.rhcloud.com/static/resource/img/icon/{ingredient.iconUrl}" Dock="Left" Margin="5,0,0,0" MaxWidth="30" MaxHeight="30"/>
 									</Panel>
-									<Panel Column="1" MinHeight="30 " MinWidth="40" Margin="40,15,0,0">
+									<Panel Column="3" MinHeight="30 " MinWidth="200" MaxWidth="200" Margin="40,15,0,0">
 										<Text Value="{ingredient.nameDe}" Margin="5,0,0,0" Color="#FFFFFF" Font="Roboto"/>
 									</Panel>
 
@@ -85,15 +85,9 @@
 								</Rectangle>
 							<Rectangle ux:Name="middleRectangle" Height="1" Fill="#FFFFFF" Opacity="0.2" Margin="5,0,0,10"/>
 						</Each>
-						<Panel Clicked="{recipe_id}" Alignment="VerticalCenter" Margin="50,0,50,0">
-							<Text Font="Patua" Value="Let's cook!" Color="White" Alignment="Center"/>		
-						<Rectangle  Width="200" Height="40" Margin="0,0,0,0" CornerRadius="5">
-					<Stroke Offset="4" Width="3" Color="White" />
-					<Tapped>
-						 <Scale Factor="0.8" Duration="0.3" Easing="QuadraticInOut"/>	
-					</Tapped>
-				</Rectangle>
-			</Panel>
+						<Panel>
+							<ux:Include File="CookingPage.ux"/>
+						</Panel>
 				</StackPanel>
 			</DockPanel>		
 		</ScrollView>

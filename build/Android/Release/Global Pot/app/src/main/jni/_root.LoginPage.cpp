@@ -91,7 +91,7 @@ static void LoginPage_build(uType* type)
     type->SetFields(101,
         ::g::Uno::UX::NameTable_typeof(), offsetof(::g::LoginPage, __g_nametable1), 0,
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::LoginPage, router), 0,
-        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::LoginPage, temp_eb2), 0,
+        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::LoginPage, temp_eb0), 0,
         ::TYPES[0/*string[]*/], (uintptr_t)&::g::LoginPage::__g_static_nametable1_, uFieldFlagsStatic);
 }
 
@@ -187,7 +187,7 @@ void LoginPage::InitializeUX()
     ::g::Fuse::Drawing::Stroke* temp11 = ::g::Fuse::Drawing::Stroke::New2();
     ::g::Fuse::Gestures::Clicked* temp12 = ::g::Fuse::Gestures::Clicked::New2();
     ::g::Fuse::Animations::Scale* temp13 = ::g::Fuse::Animations::Scale::New2();
-    temp_eb2 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[1/*"login_clicked"*/]);
+    temp_eb0 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[1/*"login_clicked"*/]);
     ::g::Fuse::Controls::StatusBarBackground* temp14 = ::g::Fuse::Controls::StatusBarBackground::New3();
     ::g::Fuse::Controls::BottomBarBackground* temp15 = ::g::Fuse::Controls::BottomBarBackground::New3();
     temp->IsVisible(false);
@@ -215,10 +215,10 @@ void LoginPage::InitializeUX()
     temp8->Alignment(8);
     temp8->Margin(::g::Uno::Float4__New2(50.0f, 0.0f, 50.0f, 0.0f));
     ::g::Fuse::Controls::DockPanel::SetDock(temp8, 3);
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp8, uDelegate::New(::TYPES[3/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb2)));
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp8, uDelegate::New(::TYPES[3/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb0)));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp9);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp10);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Bindings()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb2);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Bindings()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb0);
     temp9->Value(::STRINGS[4/*"Let's cook!"*/]);
     temp9->Color(::g::Uno::Float4__New2(0.0f, 0.2313726f, 0.3490196f, 1.0f));
     temp9->Alignment(10);

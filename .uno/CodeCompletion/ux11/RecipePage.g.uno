@@ -519,7 +519,7 @@ public partial class RecipePage: Fuse.Controls.Page
         var temp40 = new Fuse.Drawing.Stroke();
         var temp41 = new Fuse.Gestures.Tapped();
         var temp42 = new Fuse.Animations.Scale();
-        temp_eb5 = new Fuse.Reactive.EventBinding("recipe_id");
+        temp_eb5 = new Fuse.Reactive.EventBinding("cooking_clicked");
         var temp43 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
         var temp44 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
         temp5.IsVisible = false;
@@ -542,6 +542,7 @@ public partial class RecipePage: Fuse.Controls.Page
         temp13.FileName = "TopBar.ux";
         temp13.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../Recipes_API.js"));
         temp14.Height = new Uno.UX.Size(45f, Uno.UX.Unit.Unspecified);
+        temp14.Margin = float4(0f, 10f, 0f, 0f);
         global::Fuse.Controls.DockPanel.SetDock(temp14, Fuse.Layouts.Dock.Top);
         temp14.Background = temp22;
         temp14.Children.Add(temp15);

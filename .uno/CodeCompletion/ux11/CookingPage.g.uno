@@ -139,7 +139,7 @@ public partial class CookingPage: Fuse.Controls.Page
                 self.MaxWidth = new Uno.UX.Size(99f, Uno.UX.Unit.Percent);
                 temp1.MinWidth = new Uno.UX.Size(40f, Uno.UX.Unit.Unspecified);
                 temp1.MinHeight = new Uno.UX.Size(30f, Uno.UX.Unit.Unspecified);
-                temp1.Margin = float4(10f, 5f, 0f, 0f);
+                temp1.Margin = float4(10f, 5f, 5f, 5f);
                 global::Fuse.Controls.DockPanel.SetDock(temp1, Fuse.Layouts.Dock.Left);
                 global::Fuse.Controls.Grid.SetColumn(temp1, 2);
                 temp1.Children.Add(__gen4);
@@ -454,7 +454,7 @@ public partial class CookingPage: Fuse.Controls.Page
         var temp19 = new Fuse.Controls.Panel();
         var temp20 = new Fuse.iOS.StatusBarConfig();
         var temp21 = new Template(this, this);
-        var temp22 = new Fuse.Reactive.DataBinding<object>(temp_Items_inst, "Rezept.steps");
+        var temp22 = new Fuse.Reactive.DataBinding<object>(temp_Items_inst, "Rezept2.steps");
         notVisitedAttractor = new Fuse.Physics.PointAttractor();
         visitedAttractor = new Fuse.Physics.PointAttractor();
         var temp23 = new Fuse.Animations.Change<float>(centerAttractor_Radius_inst);
@@ -481,6 +481,7 @@ public partial class CookingPage: Fuse.Controls.Page
         temp6.FileName = "TopBar.ux";
         temp6.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../Recipes_API.js"));
         temp7.Height = new Uno.UX.Size(45f, Uno.UX.Unit.Unspecified);
+        temp7.Margin = float4(0f, 10f, 0f, 0f);
         global::Fuse.Controls.DockPanel.SetDock(temp7, Fuse.Layouts.Dock.Top);
         temp7.Background = temp15;
         temp7.Children.Add(temp8);

@@ -178,6 +178,7 @@ public partial class OverviewPage: Fuse.Controls.Page
         temp5.FileName = "TopBar_Blank.ux";
         temp5.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../Recipes_API.js"));
         temp6.Height = new Uno.UX.Size(45f, Uno.UX.Unit.Unspecified);
+        temp6.Margin = float4(0f, 10f, 0f, 0f);
         global::Fuse.Controls.DockPanel.SetDock(temp6, Fuse.Layouts.Dock.Top);
         temp6.Background = temp10;
         temp6.Children.Add(temp7);

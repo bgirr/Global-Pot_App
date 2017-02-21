@@ -11,7 +11,7 @@ namespace g{struct RecipePage__Template3__Template5;}
 
 namespace g{
 
-// public partial sealed class RecipePage.Template3.Template5 :299
+// public partial sealed class RecipePage.Template3.Template5 :301
 // {
 ::g::Uno::UX::Template_type* RecipePage__Template3__Template5_typeof();
 void RecipePage__Template3__Template5__ctor_1_fn(RecipePage__Template3__Template5* __this, ::g::RecipePage__Template3* parent, ::g::Fuse::Controls::Rectangle* parentInstance);
@@ -20,8 +20,8 @@ void RecipePage__Template3__Template5__New2_fn(::g::RecipePage__Template3* paren
 
 struct RecipePage__Template3__Template5 : ::g::Uno::UX::Template
 {
-    uStrong< ::g::Uno::UX::Property1*> __gen17_Url_inst1;
-    uStrong< ::g::Uno::UX::Property1*> __gen18_Right_inst1;
+    uStrong< ::g::Uno::UX::Property1*> __gen11_Url_inst1;
+    uStrong< ::g::Uno::UX::Property1*> __gen12_Right_inst1;
     uWeak< ::g::RecipePage__Template3*> __parent1;
     uWeak< ::g::Fuse::Controls::Rectangle*> __parentInstance1;
     static ::g::Uno::UX::Selector __selector0_;
