@@ -6,5 +6,15 @@
   ],
   "Includes": [
     "*"
-  ]
+  ],
+  "Android": {
+      "Icons": {
+          "LDPI": "images/logo.png",
+          "MDPI": "images/logo.png",
+          "HDPI": "images/logo.png",
+          "XHDPI": "images/logo.png",
+          "XXHDPI": "images/logo.png",
+          "XXXHDPI": "images/logo.png",
+      }
+ }
 }

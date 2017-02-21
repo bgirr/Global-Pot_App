@@ -43,8 +43,8 @@ struct RecipePage : ::g::Fuse::Controls::Page
     static ::g::Uno::UX::Selector __selector2_;
     static ::g::Uno::UX::Selector& __selector2() { return RecipePage_typeof()->Init(), __selector2_; }
     uStrong< ::g::Fuse::Navigation::Router*> router;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb4;
     uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb5;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb6;
     uStrong< ::g::Uno::UX::Property1*> temp_Items_inst;
     uStrong< ::g::Uno::UX::Property1*> temp1_Value_inst;
     uStrong< ::g::Uno::UX::Property1*> temp2_Items_inst;

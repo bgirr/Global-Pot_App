@@ -131,8 +131,8 @@ static void RecipePage_build(uType* type)
     type->SetFields(101,
         ::g::Uno::UX::NameTable_typeof(), offsetof(::g::RecipePage, __g_nametable1), 0,
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::RecipePage, router), 0,
+        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::RecipePage, temp_eb4), 0,
         ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::RecipePage, temp_eb5), 0,
-        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::RecipePage, temp_eb6), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(uObject_typeof(), NULL), offsetof(::g::RecipePage, temp_Items_inst), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::RecipePage, temp1_Value_inst), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(uObject_typeof(), NULL), offsetof(::g::RecipePage, temp2_Items_inst), 0,
@@ -254,7 +254,7 @@ void RecipePage::InitializeUX()
     ::g::Fuse::Gestures::Tapped* temp19 = ::g::Fuse::Gestures::Tapped::New2();
     ::g::Fuse::Animations::Scale* temp20 = ::g::Fuse::Animations::Scale::New2();
     ::g::Fuse::Animations::Move* temp21 = ::g::Fuse::Animations::Move::New2();
-    temp_eb5 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[4/*"overview_cl...*/]);
+    temp_eb4 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[4/*"overview_cl...*/]);
     ::g::Fuse::Drawing::StaticSolidColor* temp22 = ::g::Fuse::Drawing::StaticSolidColor::New2(::g::Uno::Float4__New2(1.0f, 1.0f, 1.0f, 1.0f));
     ::g::Fuse::Drawing::StaticSolidColor* temp23 = ::g::Fuse::Drawing::StaticSolidColor::New2(::g::Uno::Float4__New2(0.0f, 0.2313726f, 0.3490196f, 1.0f));
     ::g::Fuse::Reactive::JavaScript* temp24 = ::g::Fuse::Reactive::JavaScript::New2(__g_nametable1);
@@ -278,7 +278,7 @@ void RecipePage::InitializeUX()
     ::g::Fuse::Drawing::Stroke* temp40 = ::g::Fuse::Drawing::Stroke::New2();
     ::g::Fuse::Gestures::Tapped* temp41 = ::g::Fuse::Gestures::Tapped::New2();
     ::g::Fuse::Animations::Scale* temp42 = ::g::Fuse::Animations::Scale::New2();
-    temp_eb6 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[10/*"recipe_id"*/]);
+    temp_eb5 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[10/*"recipe_id"*/]);
     ::g::Fuse::Drawing::StaticSolidColor* temp43 = ::g::Fuse::Drawing::StaticSolidColor::New2(::g::Uno::Float4__New2(0.0f, 0.2313726f, 0.3490196f, 1.0f));
     ::g::Fuse::Drawing::StaticSolidColor* temp44 = ::g::Fuse::Drawing::StaticSolidColor::New2(::g::Uno::Float4__New2(0.0f, 0.2313726f, 0.3490196f, 1.0f));
     temp5->IsVisible(false);
@@ -301,6 +301,7 @@ void RecipePage::InitializeUX()
     temp13->FileName(::STRINGS[11/*"TopBar.ux"*/]);
     temp13->File(::g::Uno::UX::BundleFileSource::New1(::g::GlobalPot_bundle::Recipes_APIb58471d9()));
     temp14->Height(::g::Uno::UX::Size__New1(45.0f, 1));
+    temp14->Margin(::g::Uno::Float4__New2(0.0f, 10.0f, 0.0f, 0.0f));
     ::g::Fuse::Controls::DockPanel::SetDock(temp14, 2);
     temp14->Background(temp22);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp14->Children()), ::TYPES[5/*Uno.Collections.ICollection<Fuse.Node>*/]), temp15);
@@ -316,10 +317,10 @@ void RecipePage::InitializeUX()
     temp18->Width(::g::Uno::UX::Size__New1(50.0f, 1));
     temp18->Height(::g::Uno::UX::Size__New1(20.0f, 1));
     temp18->Margin(::g::Uno::Float4__New2(10.0f, 0.0f, 0.0f, 0.0f));
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp18, uDelegate::New(::TYPES[6/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb5)));
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp18, uDelegate::New(::TYPES[6/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb4)));
     temp18->File(::g::Uno::UX::BundleFileSource::New1(::g::GlobalPot_bundle::leftarrow1b28ddd4()));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp18->Children()), ::TYPES[5/*Uno.Collections.ICollection<Fuse.Node>*/]), temp19);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp18->Bindings()), ::TYPES[7/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb5);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp18->Bindings()), ::TYPES[7/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb4);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp19->Animators()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Animations.Animator>*/]), temp20);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp19->Animators()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Animations.Animator>*/]), temp21);
     temp20->Factor(1.0f);
@@ -366,10 +367,10 @@ void RecipePage::InitializeUX()
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Bindings()), ::TYPES[7/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp36);
     temp37->Alignment(8);
     temp37->Margin(::g::Uno::Float4__New2(50.0f, 0.0f, 50.0f, 0.0f));
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp37, uDelegate::New(::TYPES[6/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb6)));
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp37, uDelegate::New(::TYPES[6/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb5)));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp37->Children()), ::TYPES[5/*Uno.Collections.ICollection<Fuse.Node>*/]), temp38);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp37->Children()), ::TYPES[5/*Uno.Collections.ICollection<Fuse.Node>*/]), temp39);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp37->Bindings()), ::TYPES[7/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb6);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp37->Bindings()), ::TYPES[7/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb5);
     temp38->Value(::STRINGS[15/*"Let's cook!"*/]);
     temp38->Color(::g::Fuse::Drawing::Colors::White());
     temp38->Alignment(10);

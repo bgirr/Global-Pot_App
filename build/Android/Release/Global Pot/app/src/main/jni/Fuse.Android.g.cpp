@@ -981,10 +981,26 @@ uClassType* Helpers_typeof()
     return type;
 }
 
+// public static float4 DecodeColor(int color) :18
+void Helpers__DecodeColor_fn(int* color, ::g::Uno::Float4* __retval)
+{
+    *__retval = Helpers::DecodeColor(*color);
+}
+
 // public static int EncodeColor(float4 c) :8
 void Helpers__EncodeColor_fn(::g::Uno::Float4* c, int* __retval)
 {
     *__retval = Helpers::EncodeColor(*c);
+}
+
+// public static float4 DecodeColor(int color) [static] :18
+::g::Uno::Float4 Helpers::DecodeColor(int color)
+{
+    int a = color >> 24;
+    int r = (color >> 16) & 255;
+    int g = (color >> 8) & 255;
+    int b = color & 255;
+    return ::g::Uno::Float4__New2((float)r / 255.0f, (float)g / 255.0f, (float)b / 255.0f, (float)a / 255.0f);
 }
 
 // public static int EncodeColor(float4 c) [static] :8
@@ -1576,6 +1592,7 @@ static void StatusBarConfig_build(uType* type)
     options.TypeSize = sizeof(::g::Fuse::Node_type);
     type = (::g::Fuse::Node_type*)uClassType::New("Fuse.Android.StatusBarConfig", options);
     type->fp_build_ = StatusBarConfig_build;
+    type->fp_ctor_ = (void*)StatusBarConfig__New2_fn;
     type->fp_cctor_ = StatusBarConfig__cctor_1_fn;
     type->interface2.fp_Clear = (void(*)(uObject*))::g::Fuse::Node__UnoCollectionsICollectionFuseBindingClear_fn;
     type->interface2.fp_Contains = (void(*)(uObject*, void*, bool*))::g::Fuse::Node__UnoCollectionsICollectionFuseBindingContains_fn;
@@ -1592,6 +1609,42 @@ static void StatusBarConfig_build(uType* type)
     return type;
 }
 
+// public generated StatusBarConfig() :107
+void StatusBarConfig__ctor_3_fn(StatusBarConfig* __this)
+{
+    __this->ctor_3();
+}
+
+// public float4 get_Color() :118
+void StatusBarConfig__get_Color_fn(StatusBarConfig* __this, ::g::Uno::Float4* __retval)
+{
+    *__retval = __this->Color();
+}
+
+// public void set_Color(float4 value) :125
+void StatusBarConfig__set_Color_fn(StatusBarConfig* __this, ::g::Uno::Float4* value)
+{
+    __this->Color(*value);
+}
+
+// public bool get_IsVisible() :136
+void StatusBarConfig__get_IsVisible_fn(StatusBarConfig* __this, bool* __retval)
+{
+    *__retval = __this->IsVisible();
+}
+
+// public void set_IsVisible(bool value) :137
+void StatusBarConfig__set_IsVisible_fn(StatusBarConfig* __this, bool* value)
+{
+    __this->IsVisible(*value);
+}
+
+// public generated StatusBarConfig New() :107
+void StatusBarConfig__New2_fn(StatusBarConfig** __retval)
+{
+    *__retval = StatusBarConfig::New2();
+}
+
 // internal static extern void SetStatusBarColor(float4 color) :145
 void StatusBarConfig__SetStatusBarColor_fn(::g::Uno::Float4* color)
 {
@@ -1605,6 +1658,45 @@ void StatusBarConfig__UpdateStatusBar_fn()
 }
 
 bool StatusBarConfig::_isVisible_;
+
+// public generated StatusBarConfig() [instance] :107
+void StatusBarConfig::ctor_3()
+{
+    ctor_2();
+}
+
+// public float4 get_Color() [instance] :118
+::g::Uno::Float4 StatusBarConfig::Color()
+{
+    return ::g::Fuse::Android::Helpers::DecodeColor(::g::Fuse::Android::StatusBarHelper::GetStatusBarColor());
+}
+
+// public void set_Color(float4 value) [instance] :125
+void StatusBarConfig::Color(::g::Uno::Float4 value)
+{
+    StatusBarConfig::SetStatusBarColor(value);
+}
+
+// public bool get_IsVisible() [instance] :136
+bool StatusBarConfig::IsVisible()
+{
+    return StatusBarConfig::_isVisible();
+}
+
+// public void set_IsVisible(bool value) [instance] :137
+void StatusBarConfig::IsVisible(bool value)
+{
+    StatusBarConfig::_isVisible() = value;
+    StatusBarConfig::UpdateStatusBar();
+}
+
+// public generated StatusBarConfig New() [static] :107
+StatusBarConfig* StatusBarConfig::New2()
+{
+    StatusBarConfig* obj1 = (StatusBarConfig*)uNew(StatusBarConfig_typeof());
+    obj1->ctor_3();
+    return obj1;
+}
 
 // internal static extern void SetStatusBarColor(float4 color) [static] :145
 void StatusBarConfig::SetStatusBarColor(::g::Uno::Float4 color)
@@ -1642,6 +1734,12 @@ uClassType* StatusBarHelper_typeof()
     return type;
 }
 
+// public static int GetStatusBarColor() :44
+void StatusBarHelper__GetStatusBarColor_fn(int* __retval)
+{
+    *__retval = StatusBarHelper::GetStatusBarColor();
+}
+
 // public static void InstallGlobalListener() :67
 void StatusBarHelper__InstallGlobalListener_fn()
 {
@@ -1652,6 +1750,21 @@ void StatusBarHelper__InstallGlobalListener_fn()
 void StatusBarHelper__SetStatusBarColor_fn(int* color)
 {
     StatusBarHelper::SetStatusBarColor(*color);
+}
+
+// public static int GetStatusBarColor() [static] :44
+int StatusBarHelper::GetStatusBarColor()
+{
+    {
+        INIT_JNI;
+        jclass __cls = JniHelper::GetNativeExternClass();
+        WITH_STATIC_JAVA_METHOD(__mtd, __cls, "GetStatusBarColor319", "()I");
+        jint __jresult = U_JNIVAR->CallStaticIntMethod(__cls,__mtd);
+        int __result = (int)__jresult;
+        ::g::Android::Base::JNI::CheckException();
+        return __result;
+    }
+    
 }
 
 // public static void InstallGlobalListener() [static] :67

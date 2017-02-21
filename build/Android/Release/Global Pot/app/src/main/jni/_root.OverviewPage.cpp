@@ -206,6 +206,7 @@ void OverviewPage::InitializeUX()
     temp5->FileName(::STRINGS[3/*"TopBar_Blan...*/]);
     temp5->File(::g::Uno::UX::BundleFileSource::New1(::g::GlobalPot_bundle::Recipes_APIb58471d9()));
     temp6->Height(::g::Uno::UX::Size__New1(45.0f, 1));
+    temp6->Margin(::g::Uno::Float4__New2(0.0f, 10.0f, 0.0f, 0.0f));
     ::g::Fuse::Controls::DockPanel::SetDock(temp6, 2);
     temp6->Background(temp10);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp7);

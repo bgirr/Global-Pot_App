@@ -7,6 +7,7 @@
 #include <_root.MainView.Template1.h>
 #include <_root.MainView.Template2.h>
 #include <_root.MainView.Template3.h>
+#include <Fuse.Android.StatusBarConfig.h>
 #include <Fuse.Animations.Easing.h>
 #include <Fuse.Animations.IResizeMode.h>
 #include <Fuse.Controls.Navigator.h>
@@ -19,10 +20,13 @@
 #include <Fuse.Elements.TranslationModes.h>
 #include <Fuse.FileSystem.FileSystemModule.h>
 #include <Fuse.Font.h>
+#include <Fuse.iOS.StatusBarConfig.h>
 #include <Fuse.IScalingMode.h>
 #include <Fuse.ITranslationMode.h>
 #include <Fuse.Navigation.Router.h>
 #include <Fuse.Node.h>
+#include <Fuse.Platform.StatusBarAnimation.h>
+#include <Fuse.Platform.StatusBarStyle.h>
 #include <Fuse.Reactive.FuseJS.DiagnosticsImplModule.h>
 #include <Fuse.Reactive.FuseJS.Http.h>
 #include <Fuse.Reactive.FuseJS.TimerModule.h>
@@ -47,8 +51,10 @@
 #include <FuseJS.Lifecycle.h>
 #include <FuseJS.UserEvents.h>
 #include <Polyfills.Window.WindowModule.h>
+#include <Uno.Bool.h>
 #include <Uno.Collections.ICollection-1.h>
 #include <Uno.Collections.IList-1.h>
+#include <Uno.Float.h>
 #include <Uno.Float4.h>
 #include <Uno.IO.BundleFile.h>
 #include <Uno.Object.h>
@@ -329,20 +335,29 @@ void MainView::InitializeUX()
     ::g::FuseJS::Bundle* temp13 = ::g::FuseJS::Bundle::New2();
     ::g::FuseJS::FileReaderImpl* temp14 = ::g::FuseJS::FileReaderImpl::New2();
     ::g::FuseJS::UserEvents* temp15 = ::g::FuseJS::UserEvents::New2();
+    ::g::Fuse::Android::StatusBarConfig* temp16 = ::g::Fuse::Android::StatusBarConfig::New2();
+    ::g::Fuse::iOS::StatusBarConfig* temp17 = ::g::Fuse::iOS::StatusBarConfig::New2();
     MainRouter = ::g::Fuse::Navigation::Router::New2();
-    ::g::Fuse::Controls::Navigator* temp16 = ::g::Fuse::Controls::Navigator::New4();
+    ::g::Fuse::Controls::Navigator* temp18 = ::g::Fuse::Controls::Navigator::New4();
     MainView__Template* LoginPage = MainView__Template::New2(this, this);
     MainView__Template1* OverviewPage = MainView__Template1::New2(this, this);
     MainView__Template2* RecipePage = MainView__Template2::New2(this, this);
     MainView__Template3* CookingPage = MainView__Template3::New2(this, this);
+    temp16->Color(::g::Uno::Float4__New2(0.0f, 0.0f, 0.0f, 0.2f));
+    temp16->IsVisible(true);
+    temp17->IsVisible(true);
+    temp17->Style(1);
+    temp17->Animation(2);
     uPtr(MainRouter)->Name(MainView::__selector0());
-    temp16->DefaultPath(::STRINGS[79/*"LoginPage"*/]);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), LoginPage);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), OverviewPage);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), RecipePage);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), CookingPage);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), MainRouter);
+    temp18->DefaultPath(::STRINGS[79/*"LoginPage"*/]);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp18->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), LoginPage);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp18->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), OverviewPage);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp18->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), RecipePage);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp18->Templates()), ::TYPES[0/*Uno.Collections.ICollection<Uno.UX.Template>*/]), CookingPage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp16);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp17);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), MainRouter);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp18);
 }
 
 // public MainView New() [static] :197

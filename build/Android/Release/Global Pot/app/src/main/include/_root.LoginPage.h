@@ -35,7 +35,7 @@ struct LoginPage : ::g::Fuse::Controls::Page
     static uSStrong<uArray*> __g_static_nametable1_;
     static uSStrong<uArray*>& __g_static_nametable1() { return LoginPage_typeof()->Init(), __g_static_nametable1_; }
     uStrong< ::g::Fuse::Navigation::Router*> router;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb3;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb2;
 
     void ctor_8(::g::Fuse::Navigation::Router* router1);
     void InitializeUX();

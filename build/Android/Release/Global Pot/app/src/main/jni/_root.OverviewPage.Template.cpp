@@ -87,10 +87,10 @@ void OverviewPage__Template__New1_fn(OverviewPage__Template* __this, uObject** _
     OverviewPage__Template__Template1* temp2 = OverviewPage__Template__Template1::New2(__this, self);
     OverviewPage__Template__Template2* __gen6 = OverviewPage__Template__Template2::New2(__this, self);
     ::g::Fuse::Reactive::DataBinding* temp3 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[0/*Fuse.Reactive.DataBinding<object>*/], __this->temp_Items_inst, ::STRINGS[1/*"images"*/]);
-    ::g::Fuse::Reactive::EventBinding* temp_eb41 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[2/*"recipe_clic...*/]);
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp1, uDelegate::New(::TYPES[1/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, temp_eb41));
+    ::g::Fuse::Reactive::EventBinding* temp_eb31 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[2/*"recipe_clic...*/]);
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp1, uDelegate::New(::TYPES[1/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, temp_eb31));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb41);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb31);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp->Templates()), ::TYPES[4/*Uno.Collections.ICollection<Uno.UX.Template>*/]), temp2);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp->Templates()), ::TYPES[4/*Uno.Collections.ICollection<Uno.UX.Template>*/]), __gen6);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp3);

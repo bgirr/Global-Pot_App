@@ -20,14 +20,11 @@
 #include <Fuse.Controls.DockPanel.h>
 #include <Fuse.Controls.Image.h>
 #include <Fuse.Controls.Panel.h>
-#include <Fuse.Controls.Rectangle.h>
-#include <Fuse.Controls.Shape.h>
 #include <Fuse.Controls.Text.h>
 #include <Fuse.Controls.TextControl.h>
 #include <Fuse.Drawing.Brush.h>
 #include <Fuse.Drawing.Colors.h>
 #include <Fuse.Drawing.StaticSolidColor.h>
-#include <Fuse.Drawing.Stroke.h>
 #include <Fuse.Elements.Alignment.h>
 #include <Fuse.Elements.Element.h>
 #include <Fuse.Font.h>
@@ -68,14 +65,14 @@
 #include <Uno.UX.Size.h>
 #include <Uno.UX.Template.h>
 #include <Uno.UX.Unit.h>
-static uString* STRINGS[19];
-static uType* TYPES[11];
+static uString* STRINGS[17];
+static uType* TYPES[10];
 
 namespace g{
 
 // public partial sealed class CookingPage :2
 // {
-// static CookingPage() :396
+// static CookingPage() :416
 static void CookingPage__cctor_4_fn(uType* __type)
 {
     CookingPage::__g_static_nametable1_ = uArray::Init<uString*>(::TYPES[0/*string[]*/], 4, ::STRINGS[0/*"router"*/], ::STRINGS[1/*"centerAttra...*/], ::STRINGS[2/*"notVisitedA...*/], ::STRINGS[3/*"visitedAttr...*/]);
@@ -102,15 +99,13 @@ static void CookingPage_build(uType* type)
     ::STRINGS[9] = uString::Const("Rezept.steps");
     ::STRINGS[10] = uString::Const("resetting");
     ::STRINGS[11] = uString::Const("reset");
-    ::STRINGS[12] = uString::Const("recipe_id");
-    ::STRINGS[13] = uString::Const("TopBar.ux");
-    ::STRINGS[14] = uString::Const("Global Pot");
-    ::STRINGS[15] = uString::Const("CookingPage.ux");
-    ::STRINGS[16] = uString::Const("var Observable = require(\"FuseJS/Observable\");\n"
+    ::STRINGS[12] = uString::Const("TopBar.ux");
+    ::STRINGS[13] = uString::Const("Global Pot");
+    ::STRINGS[14] = uString::Const("CookingPage.ux");
+    ::STRINGS[15] = uString::Const("var Observable = require(\"FuseJS/Observable\");\n"
         "\n"
         "\t\t\tvar resetting = Observable(false);\n"
-        "\n"
-        "\t\t\t\n"
+        "\t\t\t            \t\t\n"
         "\t\t\tfunction reset(x) {\n"
         "\t\t\t\tresetting.value = true;\n"
         "\t\t\t\tsetTimeout(backToNormal, 300);\n"
@@ -123,11 +118,11 @@ static void CookingPage_build(uType* type)
         "\t\t\tmodule.exports = {\n"
         "\t\t\t    reset: reset,\n"
         "\t\t\t\tresetting: resetting\n"
+        "\t\t\t\t\n"
         "\t\t\t};\n"
         "\n"
         "\t\t\treset();");
-    ::STRINGS[17] = uString::Const("Guten Appetit!");
-    ::STRINGS[18] = uString::Const("Let's cook!");
+    ::STRINGS[16] = uString::Const("Guten Appetit!");
     ::TYPES[0] = ::g::Uno::String_typeof()->Array();
     ::TYPES[1] = ::g::Fuse::Reactive::DataBinding_typeof()->MakeType(uObject_typeof(), NULL);
     ::TYPES[2] = ::g::Fuse::Animations::Change_typeof()->MakeType(::g::Uno::Float_typeof(), NULL);
@@ -137,8 +132,7 @@ static void CookingPage_build(uType* type)
     ::TYPES[6] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL);
     ::TYPES[7] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Animations::Animator_typeof(), NULL);
     ::TYPES[8] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Uno::UX::Template_typeof(), NULL);
-    ::TYPES[9] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Drawing::Stroke_typeof(), NULL);
-    ::TYPES[10] = ::g::Uno::Collections::ICollection_typeof()->MakeType(uObject_typeof(), NULL);
+    ::TYPES[9] = ::g::Uno::Collections::ICollection_typeof()->MakeType(uObject_typeof(), NULL);
     type->SetInterfaces(
         ::g::Uno::Collections::IList_typeof()->MakeType(::g::Fuse::Binding_typeof(), NULL), offsetof(::g::Fuse::Controls::Control_type, interface0),
         ::g::Fuse::Scripting::IScriptObject_typeof(), offsetof(::g::Fuse::Controls::Control_type, interface1),
@@ -162,7 +156,6 @@ static void CookingPage_build(uType* type)
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::CookingPage, router), 0,
         ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::CookingPage, temp_eb0), 0,
         ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::CookingPage, temp_eb1), 0,
-        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::CookingPage, temp_eb2), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(uObject_typeof(), NULL), offsetof(::g::CookingPage, temp_Items_inst), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::Bool_typeof(), NULL), offsetof(::g::CookingPage, temp1_Value_inst), 0,
         ::g::Fuse::Physics::PointAttractor_typeof(), offsetof(::g::CookingPage, visitedAttractor), 0,
@@ -183,7 +176,7 @@ static void CookingPage_build(uType* type)
 
     uTypeOptions options;
     options.BaseDefinition = ::g::Fuse::Controls::Page_typeof();
-    options.FieldCount = 121;
+    options.FieldCount = 120;
     options.InterfaceCount = 13;
     options.ObjectSize = sizeof(CookingPage);
     options.TypeSize = sizeof(::g::Fuse::Controls::Control_type);
@@ -222,19 +215,19 @@ static void CookingPage_build(uType* type)
     return type;
 }
 
-// public CookingPage(Fuse.Navigation.Router router) :400
+// public CookingPage(Fuse.Navigation.Router router) :420
 void CookingPage__ctor_8_fn(CookingPage* __this, ::g::Fuse::Navigation::Router* router1)
 {
     __this->ctor_8(router1);
 }
 
-// private void InitializeUX() :406
+// private void InitializeUX() :426
 void CookingPage__InitializeUX_fn(CookingPage* __this)
 {
     __this->InitializeUX();
 }
 
-// public CookingPage New(Fuse.Navigation.Router router) :400
+// public CookingPage New(Fuse.Navigation.Router router) :420
 void CookingPage__New5_fn(::g::Fuse::Navigation::Router* router1, CookingPage** __retval)
 {
     *__retval = CookingPage::New5(router1);
@@ -249,7 +242,7 @@ uSStrong<uArray*> CookingPage::__g_static_nametable1_;
 ::g::Uno::UX::Selector CookingPage::__selector5_;
 ::g::Uno::UX::Selector CookingPage::__selector6_;
 
-// public CookingPage(Fuse.Navigation.Router router) [instance] :400
+// public CookingPage(Fuse.Navigation.Router router) [instance] :420
 void CookingPage::ctor_8(::g::Fuse::Navigation::Router* router1)
 {
     ctor_7();
@@ -257,7 +250,7 @@ void CookingPage::ctor_8(::g::Fuse::Navigation::Router* router1)
     InitializeUX();
 }
 
-// private void InitializeUX() [instance] :406
+// private void InitializeUX() [instance] :426
 void CookingPage::InitializeUX()
 {
     __g_nametable1 = ::g::Uno::UX::NameTable::New1(NULL, CookingPage::__g_static_nametable1());
@@ -300,37 +293,30 @@ void CookingPage::InitializeUX()
     temp_eb1 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[11/*"reset"*/]);
     ::g::Fuse::Controls::Text* temp28 = ::g::Fuse::Controls::Text::New3();
     ::g::Fuse::Controls::Image* temp29 = ::g::Fuse::Controls::Image::New3();
-    ::g::Fuse::Controls::Panel* temp30 = ::g::Fuse::Controls::Panel::New3();
-    ::g::Fuse::Controls::Text* temp31 = ::g::Fuse::Controls::Text::New3();
-    ::g::Fuse::Controls::Rectangle* temp32 = ::g::Fuse::Controls::Rectangle::New3();
-    ::g::Fuse::Drawing::Stroke* temp33 = ::g::Fuse::Drawing::Stroke::New2();
-    ::g::Fuse::Gestures::Tapped* temp34 = ::g::Fuse::Gestures::Tapped::New2();
-    ::g::Fuse::Animations::Scale* temp35 = ::g::Fuse::Animations::Scale::New2();
-    temp_eb2 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[12/*"recipe_id"*/]);
-    ::g::Fuse::Drawing::StaticSolidColor* temp36 = ::g::Fuse::Drawing::StaticSolidColor::New2(::g::Uno::Float4__New2(0.0f, 0.2313726f, 0.3490196f, 1.0f));
+    ::g::Fuse::Drawing::StaticSolidColor* temp30 = ::g::Fuse::Drawing::StaticSolidColor::New2(::g::Uno::Float4__New2(0.9254902f, 0.9411765f, 0.9607843f, 1.0f));
     temp2->IsVisible(false);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp4);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp17);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp18);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp19);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp26);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp30);
     ::g::Fuse::Controls::DockPanel::SetDock(temp4, 2);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp5);
     temp5->Background(temp16);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp5->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp6);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp5->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp7);
     temp6->LineNumber(2);
-    temp6->FileName(::STRINGS[13/*"TopBar.ux"*/]);
+    temp6->FileName(::STRINGS[12/*"TopBar.ux"*/]);
     temp6->File(::g::Uno::UX::BundleFileSource::New1(::g::GlobalPot_bundle::Recipes_APIb58471d9()));
     temp7->Height(::g::Uno::UX::Size__New1(45.0f, 1));
+    temp7->Margin(::g::Uno::Float4__New2(0.0f, 10.0f, 0.0f, 0.0f));
     ::g::Fuse::Controls::DockPanel::SetDock(temp7, 2);
     temp7->Background(temp15);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp7->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp8);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp7->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp10);
     temp8->Alignment(10);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp9);
-    temp9->Value(::STRINGS[14/*"Global Pot"*/]);
+    temp9->Value(::STRINGS[13/*"Global Pot"*/]);
     temp9->FontSize(30.0f);
     temp9->Color(::g::Uno::Float4__New2(0.0f, 0.2313726f, 0.3490196f, 1.0f));
     temp9->Font(::g::MainView::Patua());
@@ -352,11 +338,11 @@ void CookingPage::InitializeUX()
     temp14->RelativeTo(::g::Fuse::TranslationModes::Size());
     temp14->Easing(::g::Fuse::Animations::Easing::QuadraticInOut());
     temp17->LineNumber(8);
-    temp17->FileName(::STRINGS[15/*"CookingPage...*/]);
+    temp17->FileName(::STRINGS[14/*"CookingPage...*/]);
     temp17->File(::g::Uno::UX::BundleFileSource::New1(::g::GlobalPot_bundle::Recipe_APIdb3d6fac()));
-    temp18->Code(::STRINGS[16/*"var Observa...*/]);
+    temp18->Code(::STRINGS[15/*"var Observa...*/]);
     temp18->LineNumber(9);
-    temp18->FileName(::STRINGS[15/*"CookingPage...*/]);
+    temp18->FileName(::STRINGS[14/*"CookingPage...*/]);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp19->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp20);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp19->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp19->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), centerAttractor);
@@ -391,7 +377,7 @@ void CookingPage::InitializeUX()
     ::g::Fuse::Gestures::Clicked::AddHandler(temp27, uDelegate::New(::TYPES[5/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb1)));
     temp27->File(::g::Uno::UX::BundleFileSource::New1(::g::GlobalPot_bundle::Refresh24f88517()));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp27->Bindings()), ::TYPES[6/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb1);
-    temp28->Value(::STRINGS[17/*"Guten Appet...*/]);
+    temp28->Value(::STRINGS[16/*"Guten Appet...*/]);
     temp28->FontSize(30.0f);
     temp28->Color(::g::Fuse::Drawing::Colors::White());
     temp28->Alignment(10);
@@ -399,41 +385,17 @@ void CookingPage::InitializeUX()
     temp28->Font(::g::MainView::Patua());
     temp29->Height(::g::Uno::UX::Size__New1(100.0f, 1));
     temp29->File(::g::Uno::UX::BundleFileSource::New1(::g::GlobalPot_bundle::logo_v027e5cb5e9()));
-    temp30->Alignment(8);
-    temp30->Margin(::g::Uno::Float4__New2(50.0f, 20.0f, 50.0f, 0.0f));
-    ::g::Fuse::Controls::DockPanel::SetDock(temp30, 2);
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp30, uDelegate::New(::TYPES[5/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb2)));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp30->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp31);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp30->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp32);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp30->Bindings()), ::TYPES[6/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb2);
-    temp31->Value(::STRINGS[18/*"Let's cook!"*/]);
-    temp31->Color(::g::Fuse::Drawing::Colors::White());
-    temp31->Alignment(10);
-    temp31->Font(::g::MainView::Patua());
-    temp32->CornerRadius(::g::Uno::Float4__New2(5.0f, 5.0f, 5.0f, 5.0f));
-    temp32->Width(::g::Uno::UX::Size__New1(200.0f, 1));
-    temp32->Height(::g::Uno::UX::Size__New1(40.0f, 1));
-    temp32->Margin(::g::Uno::Float4__New2(0.0f, 0.0f, 0.0f, 0.0f));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp32->Strokes()), ::TYPES[9/*Uno.Collections.ICollection<Fuse.Drawing.Stroke>*/]), temp33);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp32->Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp34);
-    temp33->Color(::g::Fuse::Drawing::Colors::White());
-    temp33->Width(3.0f);
-    temp33->Offset(4.0f);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp34->Animators()), ::TYPES[7/*Uno.Collections.ICollection<Fuse.Animations.Animator>*/]), temp35);
-    temp35->Factor(0.8f);
-    temp35->Duration(0.3);
-    temp35->Easing(::g::Fuse::Animations::Easing::QuadraticInOut());
     uPtr(__g_nametable1)->This(this);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[10/*Uno.Collections.ICollection<object>*/]), router);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[10/*Uno.Collections.ICollection<object>*/]), centerAttractor);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[10/*Uno.Collections.ICollection<object>*/]), notVisitedAttractor);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[10/*Uno.Collections.ICollection<object>*/]), visitedAttractor);
-    Background(temp36);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[9/*Uno.Collections.ICollection<object>*/]), router);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[9/*Uno.Collections.ICollection<object>*/]), centerAttractor);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[9/*Uno.Collections.ICollection<object>*/]), notVisitedAttractor);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[9/*Uno.Collections.ICollection<object>*/]), visitedAttractor);
+    Background(temp30);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Node>*/]), temp3);
 }
 
-// public CookingPage New(Fuse.Navigation.Router router) [static] :400
+// public CookingPage New(Fuse.Navigation.Router router) [static] :420
 CookingPage* CookingPage::New5(::g::Fuse::Navigation::Router* router1)
 {
     CookingPage* obj1 = (CookingPage*)uNew(CookingPage_typeof());

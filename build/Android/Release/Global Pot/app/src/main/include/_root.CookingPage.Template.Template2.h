@@ -11,7 +11,7 @@ namespace g{struct CookingPage__Template__Template2;}
 
 namespace g{
 
-// public partial sealed class CookingPage.Template.Template2 :90
+// public partial sealed class CookingPage.Template.Template2 :108
 // {
 ::g::Uno::UX::Template_type* CookingPage__Template__Template2_typeof();
 void CookingPage__Template__Template2__ctor_1_fn(CookingPage__Template__Template2* __this, ::g::CookingPage__Template* parent, ::g::Fuse::Controls::Panel* parentInstance);

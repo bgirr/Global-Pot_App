@@ -448,8 +448,8 @@ public partial class RecipePage: Fuse.Controls.Page
     global::Uno.UX.Property<object> temp2_Items_inst;
     global::Uno.UX.Property<string> temp3_Value_inst;
     global::Uno.UX.Property<object> temp4_Items_inst;
+    internal Fuse.Reactive.EventBinding temp_eb4;
     internal Fuse.Reactive.EventBinding temp_eb5;
-    internal Fuse.Reactive.EventBinding temp_eb6;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
         "router"
@@ -495,7 +495,7 @@ public partial class RecipePage: Fuse.Controls.Page
         var temp19 = new Fuse.Gestures.Tapped();
         var temp20 = new Fuse.Animations.Scale();
         var temp21 = new Fuse.Animations.Move();
-        temp_eb5 = new Fuse.Reactive.EventBinding("overview_clicked");
+        temp_eb4 = new Fuse.Reactive.EventBinding("overview_clicked");
         var temp22 = new Fuse.Drawing.StaticSolidColor(float4(1f, 1f, 1f, 1f));
         var temp23 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
         var temp24 = new Fuse.Reactive.JavaScript(__g_nametable);
@@ -519,7 +519,7 @@ public partial class RecipePage: Fuse.Controls.Page
         var temp40 = new Fuse.Drawing.Stroke();
         var temp41 = new Fuse.Gestures.Tapped();
         var temp42 = new Fuse.Animations.Scale();
-        temp_eb6 = new Fuse.Reactive.EventBinding("recipe_id");
+        temp_eb5 = new Fuse.Reactive.EventBinding("recipe_id");
         var temp43 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
         var temp44 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0.2313726f, 0.3490196f, 1f));
         temp5.IsVisible = false;
@@ -557,10 +557,10 @@ public partial class RecipePage: Fuse.Controls.Page
         temp18.Width = new Uno.UX.Size(50f, Uno.UX.Unit.Unspecified);
         temp18.Height = new Uno.UX.Size(20f, Uno.UX.Unit.Unspecified);
         temp18.Margin = float4(10f, 0f, 0f, 0f);
-        global::Fuse.Gestures.Clicked.AddHandler(temp18, temp_eb5.OnEvent);
+        global::Fuse.Gestures.Clicked.AddHandler(temp18, temp_eb4.OnEvent);
         temp18.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../images/left-arrow.png"));
         temp18.Children.Add(temp19);
-        temp18.Bindings.Add(temp_eb5);
+        temp18.Bindings.Add(temp_eb4);
         temp19.Animators.Add(temp20);
         temp19.Animators.Add(temp21);
         temp20.Factor = 1f;
@@ -607,10 +607,10 @@ public partial class RecipePage: Fuse.Controls.Page
         temp4.Bindings.Add(temp36);
         temp37.Alignment = Fuse.Elements.Alignment.VerticalCenter;
         temp37.Margin = float4(50f, 0f, 50f, 0f);
-        global::Fuse.Gestures.Clicked.AddHandler(temp37, temp_eb6.OnEvent);
+        global::Fuse.Gestures.Clicked.AddHandler(temp37, temp_eb5.OnEvent);
         temp37.Children.Add(temp38);
         temp37.Children.Add(temp39);
-        temp37.Bindings.Add(temp_eb6);
+        temp37.Bindings.Add(temp_eb5);
         temp38.Value = "Let's cook!";
         temp38.Color = Fuse.Drawing.Colors.White;
         temp38.Alignment = Fuse.Elements.Alignment.Center;

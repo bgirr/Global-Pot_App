@@ -26,7 +26,6 @@
 #include <Fuse.Font.h>
 #include <Fuse.Gestures.Clicked.h>
 #include <Fuse.Gestures.ClickedHandler.h>
-#include <Fuse.Gestures.Tapped.h>
 #include <Fuse.Gestures.WhilePressed.h>
 #include <Fuse.iOS.StatusBarConfig.h>
 #include <Fuse.Layouts.Dock.h>
@@ -92,7 +91,7 @@ static void LoginPage_build(uType* type)
     type->SetFields(101,
         ::g::Uno::UX::NameTable_typeof(), offsetof(::g::LoginPage, __g_nametable1), 0,
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::LoginPage, router), 0,
-        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::LoginPage, temp_eb3), 0,
+        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::LoginPage, temp_eb2), 0,
         ::TYPES[0/*string[]*/], (uintptr_t)&::g::LoginPage::__g_static_nametable1_, uFieldFlagsStatic);
 }
 
@@ -186,9 +185,9 @@ void LoginPage::InitializeUX()
     ::g::Fuse::Controls::Text* temp9 = ::g::Fuse::Controls::Text::New3();
     ::g::Fuse::Controls::Rectangle* temp10 = ::g::Fuse::Controls::Rectangle::New3();
     ::g::Fuse::Drawing::Stroke* temp11 = ::g::Fuse::Drawing::Stroke::New2();
-    ::g::Fuse::Gestures::Tapped* temp12 = ::g::Fuse::Gestures::Tapped::New2();
+    ::g::Fuse::Gestures::Clicked* temp12 = ::g::Fuse::Gestures::Clicked::New2();
     ::g::Fuse::Animations::Scale* temp13 = ::g::Fuse::Animations::Scale::New2();
-    temp_eb3 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[1/*"login_clicked"*/]);
+    temp_eb2 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[1/*"login_clicked"*/]);
     ::g::Fuse::Controls::StatusBarBackground* temp14 = ::g::Fuse::Controls::StatusBarBackground::New3();
     ::g::Fuse::Controls::BottomBarBackground* temp15 = ::g::Fuse::Controls::BottomBarBackground::New3();
     temp->IsVisible(false);
@@ -216,10 +215,10 @@ void LoginPage::InitializeUX()
     temp8->Alignment(8);
     temp8->Margin(::g::Uno::Float4__New2(50.0f, 0.0f, 50.0f, 0.0f));
     ::g::Fuse::Controls::DockPanel::SetDock(temp8, 3);
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp8, uDelegate::New(::TYPES[3/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb3)));
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp8, uDelegate::New(::TYPES[3/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb2)));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp9);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp10);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Bindings()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb3);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Bindings()), ::TYPES[4/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb2);
     temp9->Value(::STRINGS[4/*"Let's cook!"*/]);
     temp9->Color(::g::Uno::Float4__New2(0.0f, 0.2313726f, 0.3490196f, 1.0f));
     temp9->Alignment(10);
@@ -234,7 +233,7 @@ void LoginPage::InitializeUX()
     temp11->Width(3.0f);
     temp11->Offset(4.0f);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp12->Animators()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Animations.Animator>*/]), temp13);
-    temp13->Factor(0.8f);
+    temp13->Factor(1.8f);
     temp13->Duration(0.3);
     temp13->Easing(::g::Fuse::Animations::Easing::QuadraticInOut());
     ::g::Fuse::Controls::DockPanel::SetDock(temp14, 2);

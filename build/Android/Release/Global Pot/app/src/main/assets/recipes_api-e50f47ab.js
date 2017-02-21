@@ -23,12 +23,12 @@ function overview_clicked(){
 
 function recipe_clicked(a){
 		var recipe = a.data.id;
-		router.push("CookingPage", { recipe: recipe });
+		router.push("RecipePage", { recipe: recipe });
 		}
 
 
 		module.exports = {
 		recipes: recipes,
 		recipe_clicked: recipe_clicked,
-		overview_clicked: overview_clicked,
+		overview_clicked: overview_clicked
 		}

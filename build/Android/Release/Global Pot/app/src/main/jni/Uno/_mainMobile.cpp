@@ -44,6 +44,7 @@ namespace g{uClassType* FuseDrawingPrimitives_bundle_typeof();}
 namespace g{uClassType* FuseEffects_bundle_typeof();}
 namespace g{uClassType* FuseElements_bundle_typeof();}
 namespace g{uClassType* FuseReactive_bundle_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template1__Template2_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template1_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template__Template2_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* CookingPage__Template_typeof();}
@@ -1229,6 +1230,7 @@ void uInitRtti()
         (uType*(*)())&::g::FuseEffects_bundle_typeof,
         (uType*(*)())&::g::FuseElements_bundle_typeof,
         (uType*(*)())&::g::FuseReactive_bundle_typeof,
+        (uType*(*)())&::g::CookingPage__Template__Template1__Template2_typeof,
         (uType*(*)())&::g::CookingPage__Template__Template1_typeof,
         (uType*(*)())&::g::CookingPage__Template__Template2_typeof,
         (uType*(*)())&::g::CookingPage__Template_typeof,
